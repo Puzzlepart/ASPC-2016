@@ -1,1 +1,1 @@
-Get-ChildItem .\SiteAssets\css\| Foreach-Object { lessc $_.FullName $_.FullName.Replace(".less", ".css") | Out-Null }
+lessc .\SiteAssets\css\dangerrom\main.less .\SiteAssets\css\dangerrom\main.css

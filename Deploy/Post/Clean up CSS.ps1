@@ -1,1 +1,1 @@
-Get-ChildItem ".\SiteAssets\css\*css" | Remove-Item
+Get-ChildItem ".\SiteAssets\css\*css" -Recurse | Remove-Item
