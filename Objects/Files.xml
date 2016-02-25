@@ -20,6 +20,7 @@
         </pnp:Properties>
     </pnp:File>
     <pnp:File Folder="SiteAssets/pzl/css/dangerroom" Src="SiteAssets\css\dangerroom\main.css" Overwrite="true" />    
+    <pnp:File Folder="SiteAssets/pzl/css/operationroom" Src="SiteAssets\css\operationroom\main.css" Overwrite="true" />    
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\DangerRoom.aspx" />
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\Hero.aspx" />
 </pnp:Files>

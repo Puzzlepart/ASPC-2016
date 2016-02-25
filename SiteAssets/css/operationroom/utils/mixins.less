@@ -1,0 +1,59 @@
+/*
+    @name: Mixins
+*/
+.glyph(@glyphicon)
+{
+    &:after{
+    font-family: @glyphs;
+    content:@glyphicon;
+    }
+}
+
+.square(@size) {
+    width: @size;
+    height: @size;
+}
+.arrowDown(@size, @thickness, @color) {
+    .square(@size);
+    border-right: @thickness solid @color;
+    border-bottom: @thickness solid @color;
+    .rotate(45deg);
+}
+.arrowUp(@size, @thickness, @color) {
+    .square(@size);
+    border-right: @thickness solid @color;
+    border-bottom: @thickness solid @color;
+    .rotate(225deg);
+}
+.rotate(@deg) {
+    -moz-transform:rotate(@deg);  
+    -webkit-transform:rotate(@deg);  
+    -o-transform:rotate(@deg);  
+    -ms-transform:rotate(@deg); 
+    transform: rotate(@deg);
+}
+.hoverBackground(@normal, @hover) {
+    background-color: @normal !important;
+
+    &:hover {
+        background-color: @hover !important;
+    }
+}
+.hoverColor(@normal, @hover) {
+    color: @normal !important;
+    &:hover {
+        color: @hover !important;
+        &:after, &:before{
+            color: @hover !important;
+        }
+    }
+}
+.inlineTop() {
+    vertical-align: top;
+    display: inline-block;
+}
+.transition(@property, @time, @type, @delay:0) {
+    -webkit-transition: @property @time @delay @type;
+    -moz-transition: @property @time @delay @type;
+    transition: @property @time @delay @type;
+}
