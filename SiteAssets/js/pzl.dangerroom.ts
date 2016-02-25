@@ -48,3 +48,7 @@ var mapsApp = angular.module('danger-room-app', ['uiGmapgoogle-maps'])
 
     });
 });
+
+angular.element(document).ready(function () {
+    angular.bootstrap(document.getElementById("danger-room-app"), ["danger-room-app"]);
+});
