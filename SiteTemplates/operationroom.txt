@@ -1,9 +1,23 @@
-{
+{   
+    "WebSettings": {
+        "WelcomePage": "SitePages/Home.aspx"
+    },
     "Lists": [
         {
             "Title": "Tasks",
             "Url": "Lists/Tasks",
             "TemplateType": 171
+        },
+        {
+            "Title": "Områdesider",
+            "Url": "SitePages",
+            "TemplateType": 119,
+            "ContentTypeBindings": [
+                {
+                    "ContentTypeId": "0x010109010092214CADC5FC4262A177C632F516412E",
+                    "Default": true
+                }
+            ]
         }
     ],
     "Navigation": {
@@ -15,6 +29,17 @@
             }
         ]
     },
+    "Files": [
+        {
+            "Dest": "SitePages/Home.aspx",
+            "Overwrite": true,
+            "Src": "{resources}/SitePages/Home.txt",
+            "RemoveExistingWebParts": true,
+            "Properties": {
+                "ContentTypeId": "0x010109010092214CADC5FC4262A177C632F516412E"
+            }
+        }
+    ],
     "CustomActions": [
         {
             "Location": "ScriptLink",

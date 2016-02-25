@@ -12,23 +12,19 @@
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" class="pzl-hero-page" runat="server">
 <SharePoint:UIVersionedContent UIVersion="4" runat="server">
-	<ContentTemplate>
-	   <div style="padding-left:5px">
-	</ContentTemplate>
 </SharePoint:UIVersionedContent>
     <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom.css">
-    <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom/main.css">
 <div class="pzl-hero-maincontent">
-    <div class="pzl-hero-header">
+    <div class="pzl-hero-header row map">
     <h1 class="pzl-hero-name">Iron Man</h1>
     <p class="pzl-hero-desc">
-        Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19. Tony went to work for Stark Industries, but showed more interest in living a reckless playboy lifestyle than using his engineering skills. At the age of 21, Tony inherited Stark Enterprises when his parents were killed in a car accident secretly orchestrated by rival corporation Republic Oil (later ROXXON). Still lacking in business acumen, Tony promoted secretary Virginia "Pepper" Potts to be his executive assistant and left the majority of his workload on her so that he could avoid what he saw as a burden. 
+        Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19.
     </p>
     <img src="http://pre03.deviantart.net/b4da/th/pre/f/2015/107/9/6/iron_man_avengers_age_of_ultron_render_by_sachso74-d8q051d.png" class="pzl-hero-img"/>
     </div>
 
-    <div class="pzl-hero-stats">
+    <div class="pzl-hero-stats row">
         <h2>Stats</h2>
         <div class="pzl-hero-stat">
         </div>
@@ -37,21 +33,21 @@
         <div class="pzl-hero-stat">
         </div>
     </div>
-    <div class="pzl-hero-items">
-            <div class="pzl-hero-docs">
+    <div class="pzl-hero-items row">
+            <div class="pzl-hero-docs half">
                 <h2>Documents</h2>
         
             </div>
-            <div class="pzl-hero-emails">
+            <div class="pzl-hero-emails half">
         <h2>E-mails</h2>
             </div>
     </div>
-    <div class="pzl-hero-oprooms">
+    <div class="pzl-hero-oprooms row">
         <h2>Operation Rooms</h2>
     </div>
-        <div class="pzl-hero-media">
+    <div class="pzl-hero-media row">
             <h2>Media</h2>
-        </div>
+    </div>
 </div>
     
     <SharePoint:UIVersionedContent UIVersion="4" runat="server">

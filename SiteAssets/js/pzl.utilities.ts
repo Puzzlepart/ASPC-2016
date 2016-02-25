@@ -10,6 +10,16 @@ module Pzl.Utilities {
             error: (response) => { errorCallback(response); }
         });
     }
+    export function getAjaxRequest(restUrl:string) {
+        return jQuery.ajax({
+            url: restUrl,
+            headers: {
+                "Accept": "application/json; odata=verbose",
+                "X-RequestDigest": jQuery("#__REQUESTDIGEST").val()
+            },
+            contentType: "application/json;odata=verbose",
+        });
+    }
     export function GetWelcomePageProperties() {
         var def = jQuery.Deferred();
         getJSON(`${_spPageContextInfo.webAbsoluteUrl}/_api/web/lists/getByTitle('Områdesider')/Items(1)`, (response) => {

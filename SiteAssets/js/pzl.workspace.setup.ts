@@ -4,17 +4,17 @@
 module NFDASD.Workspace.Setup {
     var setupConfig: any = {
         WaitMessage: {
-            Header: "Legger på malen",
-            Content: "Det skal ikke ta så lang tid...",
+            Header: "Preparing your room...",
+            Content: "",
             ShowProgress: true,
             ProgressOverrides: {
-                "PropertyBagEntries": "Setter egenskaper på området",
-                "Security": "Setter opp rettigheter",
-                "Lists": "Setter opp lister med innholdstyper og visninger",
-                "CustomActions": "Setter opp custom actions",
-                "Files": "Setter opp filer med webdeler",
-                "Navigation": "Setter opp venstrenavigasjon",
-                "ComposedLook": "Setter på farger og fonter"
+                "PropertyBagEntries": "",
+                "Security": "",
+                "Lists": "",
+                "CustomActions": "s",
+                "Files": "",
+                "Navigation": "",
+                "ComposedLook": ""
             }
         },
         Logging: {

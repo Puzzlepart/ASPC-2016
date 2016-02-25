@@ -1,2 +1,34 @@
-<pnp:SiteFields xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
+<pnp:SiteFields
+    xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
+    <Field 
+    ID="{e0728b92-4c64-4a1c-9fc1-752e154da79d}" 
+    Name="{parameter:GenericFieldsPrefix}Location"
+    DisplayName="Location"
+    Type="Text"
+    Group="{parameter:GenericFieldsGroup}"
+    JSLink="~sitecollection/siteassets/pzl/js/pzl.jslink.location.js"
+    Description="" />
+    <Field 
+    ID="{c0e7a097-15a9-40c4-84e1-9a3439546c5f}" 
+    Name="{parameter:GenericFieldsPrefix}Icon"
+    DisplayName="Icon"
+    Type="Text"
+    Group="{parameter:GenericFieldsGroup}"
+    JSLink="~sitecollection/siteassets/pzl/js/pzl.jslink.icon.js"
+    Description="" />
+    <Field
+    ID="{60b76630-782f-40db-ab7c-996885dfed8b}"
+    Name="{parameter:GenericFieldsPrefix}Villain"
+    DisplayName="Villain"
+    Type="User"
+    Group="{parameter:GenericFieldsGroup}"
+    Description=""></Field>
+    <Field
+    ID="{894338eb-0bc4-4b81-a596-4f90514740ce}"
+    Name="{parameter:GenericFieldsPrefix}Heroes"
+    DisplayName="Heroes"
+    Type="UserMulti"
+    Mult="TRUE"
+    Group="{parameter:GenericFieldsGroup}"
+    Description=""></Field>
 </pnp:SiteFields>
