@@ -1,0 +1,6 @@
+<pnp:ComposedLook xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema" 
+    Name="Pzl Look and Feel" 
+    ColorFile="{sitecollection}/_catalogs/Theme/15/Pzl.spcolor"
+    FontFile="{sitecollection}/_catalogs/Theme/15/Pzl.spfont"
+    BackgroundFile=""
+    Version="1" />
