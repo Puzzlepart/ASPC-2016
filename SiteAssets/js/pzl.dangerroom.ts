@@ -11,37 +11,32 @@ var mapsApp = angular.module('danger-room-app', ['uiGmapgoogle-maps'])
     });
 })
 .controller("operationOverview", function($scope, uiGmapGoogleMapApi) {
-    // Do stuff with your $scope.
-    // Note: Some of the directives require at least something to be defined originally!
-    // e.g. $scope.markers = []
-    $scope.map = {
-        markers: [
-            {
-                coords: {
-                    latitude: 12.3349940452867,
-                    longitude:-71.0353168884369
-                }
-            },
-            {
-                coords: {
-                    latitude: 62.3349940452867,
-                    longitude:-41.0353168884369
-                }
-            },
-            {
-                coords: {
-                    latitude: 72.3349940452867,
-                    longitude:-11.0353168884369
-                }
-            }
-        ],
-        center: { 
-            latitude: 45, 
-            longitude: -73 
-        }, 
-        zoom: 10
-    }
+    var searchQuery = "contentclass:STS_Web contenttypeid:0x010109010092214CADC5FC4262A177C632F516412E*";
+    Pzl.Utilities.getAjaxRequest(String["format"]("{0}/_api/search/query?querytext={1}", _spPageContextInfo.webAbsoluteUrl, searchQuery)).done(function(data) {
+        var markers = [];
+        data.d.results.forEach((operation) => {
+            markers.push({
+                title: operation.Title,
+                coords: operation.Coordinates.coords
+            })
+        });
     
+        $scope.map = {
+            markers: markers,
+            center: { 
+                latitude: 12, 
+                longitude: -12 
+            }, 
+            zoom: 10
+        }
+        var latlngbounds = uiGmapGoogleMapApi.LatLngBounds();
+        markers.forEach(function(n){
+            latlngbounds.extend(n);
+        });
+        $scope.map.setCenter(latlngbounds.getCenter());
+        $scope.map.fitBounds(latlngbounds); 
+
+    });   
     
     // uiGmapGoogleMapApi is a promise.
     // The "then" callback function provides the google.maps object.
