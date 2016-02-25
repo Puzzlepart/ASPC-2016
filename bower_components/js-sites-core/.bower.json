@@ -1,0 +1,42 @@
+{
+  "name": "js-sites-core",
+  "homepage": "https://github.com/olemp/js-sites-core",
+  "authors": [
+    "olemp <olemp@puzzlepart.com>",
+    "tarjeieo <tarjeieo@puzzlepart.com>",
+    "olekms <olekms@puzzlepart.com>"
+  ],
+  "description": "SharePoint Provisioning engine with pure JavaScript",
+  "main": [
+    "dist/pzl.sites.core.js",
+    "dist/pzl.sites.core.min.js",
+    "dist/schema.md"
+  ],
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "officedevpnp",
+    "pnp",
+    "officdev",
+    "provisioning"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "typings"
+  ],
+  "_release": "ebee53d788",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ebee53d788e7bfbd63c18d2085ebcc808676c6aa"
+  },
+  "_source": "git://github.com/olemp/js-sites-core.git",
+  "_target": "*",
+  "_originalSource": "js-sites-core"
+}
