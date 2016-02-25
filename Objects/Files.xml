@@ -16,9 +16,9 @@
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\comicstripbackground.png" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\comicstripbackgroundpurple.png" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\marvelintro.mp4" Overwrite="false" />    
-    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge.png" Overwrite="false" />    
-    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-1.png" Overwrite="false" />    
-    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-2.png" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge.jpg" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-1.jpg" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-2.jpg" Overwrite="false" />    
     <pnp:File Folder="SiteTemplates" Overwrite="true" Src="SiteTemplates\operationroom.txt">
         <pnp:Properties>
             <pnp:Property Key="Title" Value="Operation Room" />
