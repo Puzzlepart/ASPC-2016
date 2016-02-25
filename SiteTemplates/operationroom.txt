@@ -1,3 +1,27 @@
 {
-
+    "Lists": [
+        {
+            "Title": "Tasks",
+            "Url": "Lists/Tasks",
+            "TemplateType": 171
+        }
+    ],
+    "Navigation": {
+        "UseShared": true,
+        "QuickLaunch": [
+            {
+                "Url": "",
+                "Title": "Home"
+            }
+        ]
+    },
+    "CustomActions": [
+        {
+            "Location": "ScriptLink",
+            "Seqeuence": 100,
+            "ScriptBlock": "SP.SOD.registerSod('pzl.workspace.js', '~sitecollection/siteassets/pzl/js/pzl.workspace.js');SP.SOD.registerSodDep('pzl.workspace.js', 'jquery.min.js');EnsureScriptFunc('pzl.workspace.js', null, function() {SP.SOD.notifyScriptLoadedAndExecuteWaitingJobs('pzl.workspace.js');});",
+            "Name": "pzl.workspace.js",
+            "Title": "pzl.workspace.js"
+        }
+    ]
 }
