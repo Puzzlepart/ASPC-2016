@@ -1,0 +1,27 @@
+/*
+    @name: pageTitle
+*/
+
+@pageTitleOffsetLeft: 270px;
+@increment: 50;
+@spacingright: 10;
+
+.responsiveTitle (@index) when (@index >= 0) {
+  @minWidth: (@increment*@index);
+  @maxWidth: (@minWidth + @increment);
+  @titleMaxWidthMath: @minWidth - @pageTitleOffsetLeft - @sidebar_width - @spacingright;
+  @media screen and (min-width: ~"@{minWidth}px") and (max-width: ~"@{maxWidth}px") {
+      #pageTitle { max-width: ~"@{titleMaxWidthMath}" };
+	  #DeltaPlaceHolderPageTitleInTitleArea { max-width: ~"@{titleMaxWidthMath}" }
+  }
+  .responsiveTitle(@index - 1);
+}
+.responsiveTitle (0) {}
+
+#pageTitle {		
+	float:left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.responsiveTitle(40);

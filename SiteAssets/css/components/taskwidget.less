@@ -1,0 +1,41 @@
+#TaskWidget
+{
+	.donut {
+	  width: 70px;
+	  height: 70px;
+	  margin: 15px auto;
+	  display:inline-block;
+	  background-position:0;
+	  background-repeat:no-repeat;
+	  background-size:100%;
+	}
+	
+	.donut-text{
+		display:inline-block;
+		vertical-align:top;
+		margin: 25px 0 0 10px;
+		font-size: 16px;
+        
+        &:hover{
+            text-decoration: none;
+        }
+	}
+	
+	.donut text{display:none;}
+	
+	.donut-text-title{
+		font-weight:bold;
+		color: @profileblue;
+	}
+	.donut-text-tasksdone{
+		color: @linkblue;
+	}
+
+	path.color0 {
+	  fill: @linkblue;
+	}
+
+	path.color1 {
+	  fill: #ccc;
+	}
+}

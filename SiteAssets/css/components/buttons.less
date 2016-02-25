@@ -1,0 +1,79 @@
+.dss-btn {
+    &.primary {
+        .hoverBackground(@linkblue, @linkred);
+        .hoverColor(#fff, #fff);
+        &:hover{
+            &:after{
+                color:@linkred !important;
+                .transition(color,.2s,ease-in-out);
+            }
+        }
+    }
+
+    &.secondary {
+        .hoverBackground(#f4f1f0, #f4f1f0);
+        .hoverColor(@linkblue, @linkred);
+    }
+    
+    &:disabled {
+        .hoverBackground(#999, #999);
+        .hoverColor(#fff, #fff);
+        .transition(background-color, 0.2s, ease-in-out);
+    }
+    
+    .transition(background-color, 0.2s, ease-in-out);
+    -webkit-font-smoothing: antialiased !important;
+    position: relative;
+    display: block;
+    padding: 15px 20px;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none !important;
+
+    &.btn-up {.glyph(@iconup);}
+    &.btn-right {.glyph(@iconright);}
+    &.btn-down {.glyph(@icondown);}
+    &.btn-left {.glyph(@iconleft);}
+    &.btn-leftbig {.glyph(@iconleftbig);}
+    &.btn-rightbig {.glyph(@iconrightbig);}
+    &.btn-close {.glyph(@iconclose);}
+    &.btn-share {.glyph(@iconshare);}
+    &.btn-print {.glyph(@iconprint);}
+    &.btn-menu {.glyph(@iconmenu);}
+    &.btn-add {.glyph(@iconadd);}
+    &.btn-remove {.glyph(@iconremove);}
+    &.btn-search {.glyph(@iconsearch);}
+    &.btn-download {.glyph(@icondownload);}
+    &.btn-rss {.glyph(@iconrss);}
+    &.btn-play {.glyph(@iconplay);}
+    &.btn-globe {.glyph(@iconglobe);}
+    &.btn-lion {.glyph(@iconlion);}
+    &.btn-twitter {.glyph(@icontwitter);}
+    &.btn-facebook {.glyph(@iconfacebook);}
+    &.btn-checked {.glyph(@iconchecked);}
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        .square(30px);
+        margin-top: -15px;
+        background-color: #fff;
+        border-radius: 15px;
+        font-size: 22px;
+        text-align: center;
+        color: @linkblue;
+        line-height: 30px;
+        font-size: 16px;
+    }
+    
+    &.icon-right {
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 32px 32px;
+    }
+}
