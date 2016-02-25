@@ -1,4 +1,48 @@
 ﻿<pnp:Lists xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
   <pnp:ListInstance Title="Tasks" Url="Lists/Tasks" TemplateType="171" EnableFolderCreation="false" EnableVersioning="true">
   </pnp:ListInstance>
+  <pnp:ListInstance Title="Resources" Url="Resources" TemplateType="101" Hidden="true" />
+  <pnp:ListInstance Title="SiteTemplates" Url="SiteTemplates" TemplateType="101" Hidden="true" ContentTypesEnabled="true" RemoveExistingContentTypes="true">
+    <pnp:Views RemoveExistingViews="true">
+      <View Name="{7EF5171B-BD2F-40E6-923B-708007AA0ED4}" DefaultView="TRUE" Type="HTML" DisplayName="Alle maler" Url="{site}/SiteTemplates/Forms/AllTemplates.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=42" >
+        <Query></Query>
+        <ViewFields>
+          <FieldRef Name="LinkFilenameNoMenu" />
+          <FieldRef Name="Title" />
+          <FieldRef Name="Modified" />
+        </ViewFields>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Aggregations Value="Off" />
+        <JSLink>clienttemplates.js</JSLink>
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <Toolbar Type="Standard"/>
+      </View>
+    </pnp:Views>
+  </pnp:ListInstance>
+  <pnp:ListInstance Title="Logs" Url="Logs" TemplateType="101" Hidden="true">
+    <pnp:Views RemoveExistingViews="true">
+      <View Name="{5E3C154A-E600-41D6-ABBC-0F2D57187844}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="Alle logger" Url="{site}/Logs/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=42">
+        <ViewFields>
+          <FieldRef Name="LinkFilename" />
+          <FieldRef Name="Created" />
+        </ViewFields>
+        <ViewData />
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Created" Ascending="FALSE" />
+          </OrderBy>
+        </Query>
+        <Aggregations Value="Off" />
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <Mobile MobileItemLimit="3" MobileSimpleViewField="LinkFilename" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <Toolbar Type="Standard" />
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noitemsinview_doclibrary)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noitemsinview_doclibrary_howto2)" />
+        </ParameterBindings>
+      </View>
+    </pnp:Views>
+  </pnp:ListInstance>
 </pnp:Lists>
