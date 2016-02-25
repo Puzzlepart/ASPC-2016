@@ -17,6 +17,6 @@
         </pnp:Properties>
     </pnp:File>
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-32.png" Overwrite="true" />
-    <pnp:File Folder="SiteAssets/pzl/css" Src="SiteAssets\css\dangerroom.css" Overwrite="true" />    
+    <pnp:File Folder="SiteAssets/pzl/css/dangerroom" Src="SiteAssets\css\dangerroom\main.css" Overwrite="true" />    
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\DangerRoom.aspx" />
 </pnp:Files>
