@@ -17,14 +17,14 @@
     <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom/main.css">
 <div class="pzl-hero-maincontent">
     <div class="pzl-hero-header row map">
-    <h1 class="pzl-hero-name">Iron Man</h1>
-    <p class="pzl-hero-desc">
-        Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19.
-    </p>
-    <img src="http://pre03.deviantart.net/b4da/th/pre/f/2015/107/9/6/iron_man_avengers_age_of_ultron_render_by_sachso74-d8q051d.png" class="pzl-hero-img"/>
+        <h1 class="pzl-hero-name">Iron Man</h1>
+        <p class="pzl-hero-desc">
+            Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19.
+        </p>
+        <img src="http://pre03.deviantart.net/b4da/th/pre/f/2015/107/9/6/iron_man_avengers_age_of_ultron_render_by_sachso74-d8q051d.png" class="pzl-hero-img"/>
     </div>
 
-    <div class="pzl-hero-stats row">
+    <div class="container pzl-hero-stats">
         <h2>Stats</h2>
         <div class="pzl-hero-stat">
         </div>
@@ -33,7 +33,7 @@
         <div class="pzl-hero-stat">
         </div>
     </div>
-    <div class="pzl-hero-items row">
+    <div class="container pzl-hero-items">
             <div class="pzl-hero-docs half">
                 <h2>Documents</h2>
         
@@ -42,10 +42,10 @@
         <h2>E-mails</h2>
             </div>
     </div>
-    <div class="pzl-hero-oprooms row">
+    <div class="container pzl-hero-oprooms">
         <h2>Operation Rooms</h2>
     </div>
-    <div class="pzl-hero-media row">
+    <div class="container pzl-hero-media">
             <h2>Media</h2>
     </div>
 </div>
