@@ -17,8 +17,7 @@
 	</ContentTemplate>
 </SharePoint:UIVersionedContent>
     <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom.css">
-    <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom/main.css">
 <div class="pzl-hero-maincontent">
     <div class="pzl-hero-header">
     <h1 class="pzl-hero-name">Iron Man</h1>
