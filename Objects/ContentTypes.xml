@@ -2,6 +2,9 @@
   <pnp:ContentType ID="0x010109010092214CADC5FC4262A177C632F516412E" Name="Operation Room" Description="" Group="{parameter:GenericContentTypesGroup}">
         <pnp:FieldRefs>        
             <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Hidden="true" Required="false" />
+            <pnp:FieldRef ID="e0728b92-4c64-4a1c-9fc1-752e154da79d" Name="{parameter:GenericFieldsPrefix}Location" />
+            <pnp:FieldRef ID="60b76630-782f-40db-ab7c-996885dfed8b" Name="{parameter:GenericFieldsPrefix}Villain" />
+            <pnp:FieldRef ID="894338eb-0bc4-4b81-a596-4f90514740ce" Name="{parameter:GenericFieldsPrefix}Heroes" />
         </pnp:FieldRefs>
     </pnp:ContentType>
 </pnp:ContentTypes>
