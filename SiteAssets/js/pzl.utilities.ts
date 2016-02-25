@@ -14,12 +14,25 @@ module Pzl.Utilities {
         return jQuery.ajax({
             url: restUrl,
             headers: {
-                "Accept": "application/json; odata=verbose",
+                "Accept": "application/json; odata=minimalmetadata",
                 "X-RequestDigest": jQuery("#__REQUESTDIGEST").val()
             },
-            contentType: "application/json;odata=verbose",
+            contentType: "application/json;odata=minimalmetadata",
         });
     }
+    
+    export function transformSearchResultToAngularReadableFormat(data) {
+        var pages = [];
+        //We need to transform data from the search results index-array format to property-format
+        angular.forEach(data.PrimaryQueryResult.RelevantResults.Table.Rows, function (result) {
+            var resultObject = {};
+            angular.forEach(result.Cells, function (resultRow) {
+                resultObject[resultRow.Key] = resultRow.Value;
+            });
+            pages.push(resultObject);
+        });
+        return pages;
+    };
     export function GetWelcomePageProperties() {
         var def = jQuery.Deferred();
         getJSON(`${_spPageContextInfo.webAbsoluteUrl}/_api/web/lists/getByTitle('Områdesider')/Items(1)`, (response) => {
