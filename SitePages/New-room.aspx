@@ -26,7 +26,7 @@
                         <SharePoint:scriptblock runat="server">
                             var navBarHelpOverrideKey = "WSSEndUser";
                         </SharePoint:scriptblock>
-                        <SharePoint:ScriptLink Name="~sitecollection/siteassets/nfdasd/js/nfdasd.provisioning.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
+                        <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/pzl.provisioning.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
                     </asp:Content>
                     <asp:Content ContentPlaceHolderID="PlaceHolderSearchArea" runat="server">
                         <SharePoint:DelegateControl runat="server" ControlId="SmallSearchInputBox" />
@@ -44,7 +44,7 @@
                                 border: none;
                             }
                         </style>
-                        <table class="ms-propertysheet" border="0" cellspacing="0" cellpadding="0">
+                       <table class="ms-propertysheet" border="0" cellspacing="0" cellpadding="0">
 
                             <tbody>
                                 <tr>
@@ -58,9 +58,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="ms-sectionheader" style="padding-top: 4px;" height="22" valign="top">
-                                                        <h3 class="ms-standardheader ms-inputformheader">Tittel og beskrivelse
-
-                                    </h3>
+                                                        <h3 class="ms-standardheader ms-inputformheader">Title and Description</h3>
                                                     </td>
                                                 </tr>
 
@@ -105,7 +103,7 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td class="ms-authoringcontrols" colspan="2">
-                                                                        <span>Tittel:</span>
+                                                                        <span>Title:</span>
 
                                                                     </td>
                                                                 </tr>
@@ -131,7 +129,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="ms-authoringcontrols" colspan="2">
-                                                                        <span>Beskrivelse:</span>
+                                                                        <span>Description:</span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -203,9 +201,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="ms-sectionheader" style="padding-top: 4px;" height="22" valign="top">
-                                                        <h3 class="ms-standardheader ms-inputformheader">Adresse til nettsted
-
-                                    </h3>
+                                                        <h3 class="ms-standardheader ms-inputformheader">URL</h3>
                                                     </td>
                                                 </tr>
 
@@ -251,7 +247,7 @@
                                                                                 <tr nowrap="nowrap">
 
                                                                                     <td class="ms-authoringcontrols">
-                                                                                        <input id="SubwebName" type="text" maxlength="260" size="18" class="ms-input" title="Opprett navn på sekundært område" alwaysenablesilent="true"> 
+                                                                                        <input id="SubwebName" type="text" maxlength="260" size="18" class="ms-input" title="Opprett navn på sekundært område" alwaysenablesilent="true" disabled="disabled"> 
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>
@@ -300,7 +296,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="ms-sectionheader" style="padding-top: 4px;" height="22" valign="top">
-                                                        <h3 class="ms-standardheader ms-inputformheader">Valg av mal</h3>
+                                                        <h3 class="ms-standardheader ms-inputformheader">Template</h3>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -340,7 +336,7 @@
 
                                                                 <tr>
                                                                     <td class="ms-authoringcontrols" colspan="2">
-                                                                        <label for="ctl00_PlaceHolderMain_InputFormTemplatePickerControl_ctl00_ctl01_LbWebTemplate">Velg en mal:</label>
+                                                                        <label for="ctl00_PlaceHolderMain_InputFormTemplatePickerControl_ctl00_ctl01_LbWebTemplate">Pick a template:</label>
 
                                                                     </td>
                                                                 </tr>
@@ -355,7 +351,7 @@
 
                                                                         <div class="ms-templatepicker">
                                                                             <select id="Pzl_Template" size="12" class="ms-templatepicker-select ms-templatepicker ms-floatLeft">
-                                                                            </select>
+                                                                            <option value="operationroom" selected="selected">Operation Room</option></select>
                                                                             <div class="ms-descriptiontext ms-floatLeft" style="width: 440px; display: inline;">
                                                                                 <span id="LabelWebTemplateDescription"></span>
                                                                             </div>
@@ -399,129 +395,7 @@
                                         <img src="/_layouts/15/images/blank.gif?rev=42" width="1" height="1" alt="" data-accessibility-nocheck="true"></td>
                                 </tr>
 
-                                <tr>
-                                    <td class="ms-formdescriptioncolumn-wide" valign="top">
-                                        <table border="0" cellpadding="1" cellspacing="0" width="100%" summary="" role="presentation">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="ms-sectionheader" style="padding-top: 4px;" height="22" valign="top">
-                                                        <h3 class="ms-standardheader ms-inputformheader">Tillatelser
-
-                                    </h3>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="ms-descriptiontext ms-inputformdescription">Du kan gi tilgang til det nye området til de samme brukerne som har tilgang
-                                                        til dette overordnede området, eller du kan gi tillatelse til et
-                                                        unikt sett med brukere.
-                                                        <br>
-                                                        <br> Obs!&nbsp; Hvis du velger <b>Bruk samme tillatelser som overordnet område</b>,
-                                                        vil ett sett med brukertillatelser bli delt mellom områdene. Du kan
-                                                        dermed ikke endre brukertillatelsene på det nye området med mindre
-                                                        du er administrator for det overordnede området.
-                                                    </td>
-                                                    <td>
-                                                        <img src="/_layouts/15/images/blank.gif?rev=42" width="8" height="1" alt="" data-accessibility-nocheck="true"></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <img src="/_layouts/15/images/blank.gif?rev=42" width="150" height="19" alt="" data-accessibility-nocheck="true"></td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                    <td class="ms-authoringcontrols ms-inputformcontrols" valign="top" align="left">
-                                        <table border="0" width="100%" cellspacing="0" cellpadding="0" summary="" role="presentation">
-
-                                            <tbody>
-                                                <tr>
-
-                                                    <td width="9px"><img src="/_layouts/15/images/blank.gif?rev=42" width="9" height="7" alt="" data-accessibility-nocheck="true"></td>
-                                                    <td><img src="/_layouts/15/images/blank.gif?rev=42" width="150" height="7" alt="" data-accessibility-nocheck="true"></td>
-                                                    <td width="10px"><img src="/_layouts/15/images/blank.gif?rev=42" width="10" height="1" alt="" data-accessibility-nocheck="true"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td class="ms-authoringcontrols">
-
-                                                        <table class="ms-authoringcontrols" border="0" width="100%" cellspacing="0" cellpadding="0" summary="" role="presentation">
-
-
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td class="ms-authoringcontrols" colspan="2">
-                                                                        <span>Brukertillatelser:</span>
-
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <img src="/_layouts/15/images/blank.gif?rev=42" width="1" height="3" style="display: block" alt="" data-accessibility-nocheck="true"></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td width="3px">
-                                                                        <img src="/_layouts/15/images/blank.gif?rev=42" width="3" height="1" style="display: block" alt="" data-accessibility-nocheck="true"></td>
-                                                                    <td class="ms-authoringcontrols" width="99%">
-
-                                                                        <table border="0" width="100%" cellspacing="0" cellpadding="0">
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <td valign="top" width="1px">
-                                                                                        <input id="InheritedSubweb" value="InheritedSubweb"" name="Permissions" type="radio" checked="checked">
-                                                                                    </td>
-                                                                                    <td width="1px">
-                                                                                        <img src="/_layouts/15/images/blank.gif?rev=42" width="1" height="1" alt="" data-accessibility-nocheck="true"></td>
-                                                                                    <td nowrap="nowrap" class="ms-authoringcontrols">
-                                                                                        <label for="InheritedSubweb">Bruk samme tillatelser som overordnet
-                                                                                            område </label>
-                                                                                    </td>
-                                                                                </tr>
-                                                                                <tr>
-                                                                                    <td valign="top" width="1px">
-                                                                                        <input id="UniqueSubweb" value="UniqueSubweb" name="Permissions" type="radio">
-                                                                                    </td>
-                                                                                    <td width="1px">
-                                                                                        <img src="/_layouts/15/images/blank.gif?rev=42" width="1" height="1" alt="" data-accessibility-nocheck="true"></td>
-                                                                                    <td nowrap="nowrap" class="ms-authoringcontrols">
-                                                                                        <labe for="UniqueSubweb">Bruk unike tillatelser</label>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </tbody>
-                                                                        </table>
-
-
-                                                                    </td>
-                                                                </tr>
-
-                                                                <tr>
-                                                                    <td>
-                                                                        <img src="/_layouts/15/images/blank.gif?rev=42" width="1" height="6" style="display: block" alt="" data-accessibility-nocheck="true"></td>
-                                                                </tr>
-
-
-
-                                                            </tbody>
-                                                        </table>
-
-                                                    </td>
-                                                    <td width="10px">
-                                                        <img src="/_layouts/15/images/blank.gif?rev=42" width="10" height="1" alt="" data-accessibility-nocheck="true"></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td></td>
-                                                    <td>
-                                                        <img src="/_layouts/15/images/blank.gif?rev=42" width="150" height="13" alt="" data-accessibility-nocheck="true"></td>
-                                                    <td></td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
+                                
                                 <tr>
                                     <td colspan="2">
                                         <table cellpadding="0" cellspacing="0" width="100%" id="FormActions">
@@ -534,8 +408,8 @@
                                                     <td>&nbsp;</td>
                                                     <td nowrap="nowrap">
                                                         <img src="/_layouts/15/images/loadingcirclests16.gif?rev=42" class="ms-verticalAlignMiddle" style="display: none;" onclick="javascript:this.style.display='none';">
-                                                        <input type="button" disabled value="Opprett" onclick="Pzl.Provisioning.Create()" accesskey="O" class="ms-ButtonHeightWidth">
-                                                        <input type="button" disabled class="ms-ButtonHeightWidth" value="Avbryt" accesskey="C" onclick="Pzl.Provisioning.Cancel()">
+                                                        <input type="button" value="Opprett" onclick="Pzl.Provisioning.Create()" accesskey="O" class="ms-ButtonHeightWidth">
+                                                        <input type="button" class="ms-ButtonHeightWidth" value="Avbryt" accesskey="C" onclick="Pzl.Provisioning.Cancel()">
                                                     </td>
                                                 </tr>
                                             </tbody>

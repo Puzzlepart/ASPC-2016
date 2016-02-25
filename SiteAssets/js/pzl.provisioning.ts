@@ -118,8 +118,10 @@ module Pzl.Provisioning {
         jQuery(titleSelector).keyup(function() { jQuery(urlSelector).val(jQuery(this).val().split(' ').join('-')); })
     }
     function IntializeForm() {
-        RetrieveTemplates();
-        AutofillUrl();
+        ExecuteOrDelayUntilScriptLoaded(() => {
+            RetrieveTemplates();
+            AutofillUrl();
+        }, "jquery.min.js");
     }
     _spBodyOnLoadFunctions.push(IntializeForm);
 }
