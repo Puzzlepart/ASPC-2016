@@ -10,43 +10,49 @@
 <asp:Content ContentPlaceHolderId="PlaceHolderPageImage" runat="server">
 	<img src="/_layouts/15/images/blank.gif?rev=41" width='1' height='1' alt="" data-accessibility-nocheck="true"/>
 </asp:Content>
-<asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
+<asp:Content ContentPlaceHolderId="PlaceHolderMain" class="pzl-hero-page" runat="server">
 <SharePoint:UIVersionedContent UIVersion="4" runat="server">
 	<ContentTemplate>
 	   <div style="padding-left:5px">
 	</ContentTemplate>
 </SharePoint:UIVersionedContent>
     <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom.css">
-    <h1 class="room-title">Danger Room</h1>
-	<table class="ms-core-tableNoSpace pzl-hero-page" id="onetIDListForm" style="width:100%"> 
-	 <tr>
-	  <td style="vertical-align:top;width:100%" colspan="2">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone1" Title="loc:Zone1" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td >
-	 </tr>
-     <tr>
-	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone2Left" Title="loc:Zone2Left" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td>
-	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone2Right" Title="loc:Zone2Right" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td>
-    </tr>
-    <tr>
-	  <td style="vertical-align:top;width:100%" colspan="2">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone3" Title="loc:Zone3" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td >
-	 </tr>
-     <tr>
-	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone4Left" Title="loc:Zone4Left" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td>
-	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone4Right" Title="loc:Zone4Right" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td>
-    </tr>
-	</table>
+    <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom/main.css">
+<div class="pzl-hero-maincontent">
+    <div class="pzl-hero-header">
+    <h1 class="pzl-hero-name">Iron Man</h1>
+    <p class="pzl-hero-desc">
+        Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19. Tony went to work for Stark Industries, but showed more interest in living a reckless playboy lifestyle than using his engineering skills. At the age of 21, Tony inherited Stark Enterprises when his parents were killed in a car accident secretly orchestrated by rival corporation Republic Oil (later ROXXON). Still lacking in business acumen, Tony promoted secretary Virginia "Pepper" Potts to be his executive assistant and left the majority of his workload on her so that he could avoid what he saw as a burden. 
+    </p>
+    <img src="http://pre03.deviantart.net/b4da/th/pre/f/2015/107/9/6/iron_man_avengers_age_of_ultron_render_by_sachso74-d8q051d.png" class="pzl-hero-img"/>
+    </div>
+
+    <div class="pzl-hero-stats">
+        <h2>Stats</h2>
+        <div class="pzl-hero-stat">
+        </div>
+        <div class="pzl-hero-stat">
+        </div>
+        <div class="pzl-hero-stat">
+        </div>
+    </div>
+    <div class="pzl-hero-items">
+            <div class="pzl-hero-docs">
+                <h2>Documents</h2>
+        
+            </div>
+            <div class="pzl-hero-emails">
+        <h2>E-mails</h2>
+            </div>
+    </div>
+    <div class="pzl-hero-oprooms">
+        <h2>Operation Rooms</h2>
+    </div>
+        <div class="pzl-hero-media">
+            <h2>Media</h2>
+        </div>
+</div>
+    
     <SharePoint:UIVersionedContent UIVersion="4" runat="server">
 	<ContentTemplate>
 	</div>

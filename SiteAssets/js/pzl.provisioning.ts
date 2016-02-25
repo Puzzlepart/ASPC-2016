@@ -25,7 +25,7 @@ module Pzl.Provisioning {
             StampPropertyBag(web, createInfo.template).then(() => {
                 AddCustomActions(web).then(() => {
                     SetupFeatures(web).then(() => {
-                        RedirectToWeb(web, createInfo.inheritPermissions);
+                        RedirectToWeb(web);
                     });
                 });
             })
@@ -94,8 +94,8 @@ module Pzl.Provisioning {
 
         return def.promise();
     }
-    function RedirectToWeb(web: SP.Web, inheritPermissions: Boolean) {
-        document.location.href = `${web.get_url()}${!inheritPermissions ? '/_layouts/15/permsetup.aspx?hideCancel=1' : ''}`;
+    function RedirectToWeb(web: SP.Web) {
+        document.location.href = web.get_url();
     }
     export function Cancel() {
         document.location.href = _spPageContextInfo.webServerRelativeUrl;

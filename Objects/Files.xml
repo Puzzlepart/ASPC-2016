@@ -1,26 +1,26 @@
 ﻿<pnp:Files xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
-    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\jquery\dist\jquery.min.js" Overwrite="true" />
-    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\moment\min\moment-with-locales.min.js" Overwrite="true" />
-    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\js-sites-core\dist\pzl.sites.core.min.js" Overwrite="true" />
-    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\lodash\dist\lodash.min.js" Overwrite="true" />
-    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\angular\angular.min.js" Overwrite="true" />
-    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\angular-simple-logger\dist\angular-simple-logger.min.js" Overwrite="true" />
-    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\angular-google-maps\dist\angular-google-maps.min.js" Overwrite="true" />
-    <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.ribbonactions.notifytaskassignee.js" Overwrite="true" />    
+    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\jquery\dist\jquery.min.js" Overwrite="false" />
+    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\moment\min\moment-with-locales.min.js" Overwrite="false" />
+    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\js-sites-core\dist\pzl.sites.core.min.js" Overwrite="false" />
+    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\lodash\dist\lodash.min.js" Overwrite="false" />
+    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\angular\angular.min.js" Overwrite="false" />
+    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\angular-simple-logger\dist\angular-simple-logger.min.js" Overwrite="false" />
+    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\angular-google-maps\dist\angular-google-maps.min.js" Overwrite="false" />
+    <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.ribbonactions.notifytaskassignee.js" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.provisioning.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.dangerroom.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.workspace.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.workspace.setup.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-16.png" Overwrite="false" />
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-32.png" Overwrite="false" />    
-    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\DangerRoom.aspx" />
-    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\New-room.aspx" />
     <pnp:File Folder="SiteTemplates" Overwrite="true" Src="SiteTemplates\operationroom.txt">
         <pnp:Properties>
             <pnp:Property Key="Title" Value="Operation Room" />
         </pnp:Properties>
     </pnp:File>
     <pnp:File Folder="SiteAssets/pzl/css/dangerroom" Src="SiteAssets\css\dangerroom\main.css" Overwrite="true" />    
+    <pnp:File Folder="SiteAssets/pzl/css/operationroom" Src="SiteAssets\css\operationroom\main.css" Overwrite="true" />    
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\DangerRoom.aspx" />
+    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\New-room.aspx" />
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\Hero.aspx" />
 </pnp:Files>

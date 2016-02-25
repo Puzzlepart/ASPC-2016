@@ -1,1 +1,1 @@
-bower update | Out-Null
+bower update

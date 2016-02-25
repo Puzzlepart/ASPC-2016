@@ -244,3 +244,4 @@ build/
 *.DS_Store
 /Releases/*
 Icon?
+bower_components/
