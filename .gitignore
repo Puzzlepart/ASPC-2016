@@ -235,3 +235,12 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+#CUSTOM PZL IGNORES
+*.debug.xml
+node_modules/
+build/
+.vscode/
+*.DS_Store
+/Releases/*
+Icon?
