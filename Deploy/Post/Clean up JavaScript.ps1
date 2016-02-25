@@ -1,0 +1,1 @@
+Get-ChildItem ".\SiteAssets\js\*js" -Recurse | Remove-Item

@@ -1,0 +1,1 @@
+Get-ChildItem ".\SiteAssets\css\*css" | Remove-Item
