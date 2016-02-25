@@ -1,5 +1,4 @@
 ﻿<pnp:Files xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
-<<<<<<< HEAD
     <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\jquery\dist\jquery.min.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\moment\min\moment-with-locales.min.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\js-sites-core\dist\pzl.sites.core.min.js" Overwrite="true" />
