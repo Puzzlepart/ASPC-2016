@@ -23,4 +23,5 @@
     <pnp:File Folder="SiteAssets/pzl/css/operationroom" Src="SiteAssets\css\operationroom\main.css" Overwrite="true" />    
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\DangerRoom.aspx" />
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\Hero.aspx" />
+    <pnp:File Folder="Resources" Overwrite="true" Src="Resources\SitePages\Home.txt" />
 </pnp:Files>

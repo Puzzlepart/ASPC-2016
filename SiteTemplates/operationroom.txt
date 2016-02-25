@@ -1,4 +1,7 @@
-{
+{   
+    "WebSettings": {
+        "WelcomePage": "SitePages/Home.aspx"
+    },
     "Lists": [
         {
             "Title": "Tasks",
@@ -15,6 +18,14 @@
             }
         ]
     },
+    "Files": [
+        {
+            "Dest": "SitePages/Home.aspx",
+            "Overwrite": true,
+            "Src": "{resources}/SitePages/Home.txt",
+            "RemoveExistingWebParts": true
+        }
+    ],
     "CustomActions": [
         {
             "Location": "ScriptLink",
