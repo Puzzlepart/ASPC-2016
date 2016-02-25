@@ -3,6 +3,7 @@
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.ribbonactions.notifytaskassignee.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-16.png" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-32.png" Overwrite="true" />
+    <pnp:File Folder="SiteAssets/pzl/css" Src="SiteAssets\css\dangerroom.css" Overwrite="true" />
     
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\DangerRoom.aspx" >
     </pnp:File>
