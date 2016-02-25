@@ -8,6 +8,7 @@
     <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\angular-google-maps\dist\angular-google-maps.min.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.ribbonactions.notifytaskassignee.js" Overwrite="true" />    
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.provisioning.js" Overwrite="true" />
+    <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.dangerroom.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.workspace.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.workspace.setup.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-16.png" Overwrite="false" />

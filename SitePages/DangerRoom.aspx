@@ -21,34 +21,13 @@
     <script type="text/javascript" src="../SiteAssets/pzl/js/pzl.dangerroom.js"></script>
     
     <h1 class="room-title">Danger Room</h1>
-	<table class="ms-core-tableNoSpace danger-dashboard" id="onetIDListForm" style="width:100%"> 
-	 <tr>
-	  <td style="vertical-align:top;width:100%" colspan="2">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone1" Title="loc:Zone1" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td >
-	 </tr>
-     <tr>
-	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone2Left" Title="loc:Zone2Left" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td>
-	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone2Right" Title="loc:Zone2Right" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td>
-    </tr>
-    <tr>
-	  <td style="vertical-align:top;width:100%" colspan="2">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone3" Title="loc:Zone3" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td >
-	 </tr>
-     <tr>
-	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone4Left" Title="loc:Zone4Left" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td>
-	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone4Right" Title="loc:Zone4Right" style="vertical-align:top"></WebPartPages:WebPartZone>
-	  </td>
-    </tr>
-	</table>
+    <div ng-app="danger-room-app">
+        <div ng-controller="operationOverview">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="$index"></ui-gmap-marker>
+            </ui-gmap-google-map>
+        </div>
+    </div>
     <SharePoint:UIVersionedContent UIVersion="4" runat="server">
 	<ContentTemplate>
 	</div>
