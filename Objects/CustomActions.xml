@@ -1,5 +1,6 @@
 ﻿<pnp:CustomActions xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
    <pnp:SiteCustomActions>  
+     <pnp:CustomAction Name="jquery.min.js" Location="ScriptLink" Sequence="1" ScriptBlock="SP.SOD.registerSod('jquery.min.js', '~sitecolletion/siteassets/pzl/js/jquery.min.js');LoadSodByKey('jquery.min.js', function() { SP.SOD.notifyScriptLoadedAndExecuteWaitingJobs('jquery.min.js'); });" />
       <pnp:CustomAction Name="Ribbon.Tasks.Share.Notify" Title="Ribbon.Tasks.Share.Notify" Location="CommandUI.Ribbon" Sequence="5" RegistrationId="171" RegistrationType="List">
             <pnp:CommandUIExtension>
                 <CommandUIDefinitions>
@@ -9,8 +10,8 @@
                         Id="NotifyAssignee" 
                         Command="NotifyAssigneeButtonCommand" 
                         Sequence="5" 
-                        Image32by32="" 
-                        Image16by16="" 
+                        Image32by32="~sitecollection/siteassets/pzl/img/iconmonstr-error-5-32.png" 
+                        Image16by16="~sitecollection/siteassets/pzl/img/iconmonstr-error-5-16.png" 
                         Description="" 
                         LabelText="Nag" 
                         TemplateAlias="o1"/>
@@ -19,7 +20,6 @@
                 <CommandUIHandlers>
                     <CommandUIHandler 
                     Command="NotifyAssigneeButtonCommand" 
-                    EnabledScript="javascript:(function() { return CountDictionary(SP.ListOperation.Selection.getSelectedItems(SP.ClientContext.get_current())) == 1; })()"
                     CommandAction="javascript:if(!_v_dictSod.hasOwnProperty('pzl.ribbonactions.notifytaskassignee.js')){SP.SOD.registerSod('pzl.ribbonactions.notifytaskassignee.js', '~sitecollection/siteassets/pzl/js/pzl.ribbonactions.notifytaskassignee.js');EnsureScriptFunc('pzl.ribbonactions.notifytaskassignee.js', null, function(){Pzl.RibbonActions.NotifyTaskAssignee.init()});}else{Pzl.RibbonActions.NotifyTaskAssignee.init();}"/>
                 </CommandUIHandlers>
             </pnp:CommandUIExtension>

@@ -1,3 +1,6 @@
 ﻿<pnp:Files xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
+    <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\jquery\dist\jquery.min.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.ribbonactions.notifytaskassignee.js" Overwrite="true" />
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-16.png" Overwrite="true" />
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-32.png" Overwrite="true" />
 </pnp:Files>
