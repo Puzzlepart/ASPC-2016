@@ -17,6 +17,8 @@
 	</ContentTemplate>
 </SharePoint:UIVersionedContent>
     <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
     <script type="text/javascript" src="../SiteAssets/pzl/js/pzl.dangerroom.js"></script>
     <h1 class="room-title">Danger Room</h1>
     <div ng-app="danger-room-app">
@@ -24,6 +26,43 @@
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                 <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="$index"></ui-gmap-marker>
             </ui-gmap-google-map>
+        </div>
+        <div class="container comicblue">
+        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
+
+        <h2><span class="material-icons">face</span> Heros</h2>
+            <ul id="users">
+                <li class="animated flipInY">
+                    <img src="standard_xlarge.jpg">
+                    <div class="user-name">
+                            <h3>Iron Man </h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="standard_xlarge-1.jpg">
+                    <div class="user-name">
+                            <h3>Spider-Man </h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3>Hulk</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3>Hulk</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3>Hulk</h3>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
     <SharePoint:UIVersionedContent UIVersion="4" runat="server">
@@ -58,6 +97,7 @@
 	border: none;
 }
 </SharePoint:StyleBlock>
+
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderBodyLeftBorder" runat="server">
 <div class='ms-areaseparatorleft'><img src="/_layouts/15/images/blank.gif?rev=41" width='8' height='100%' alt="" data-accessibility-nocheck="true"/></div>
