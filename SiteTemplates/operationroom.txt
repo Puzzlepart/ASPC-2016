@@ -18,6 +18,13 @@
     "CustomActions": [
         {
             "Location": "ScriptLink",
+            "Seqeuence": 10,
+            "ScriptBlock": "registerCssLink('~sitecollection/siteassets/pzl/css/operationroom/main.css');",
+            "Name": "operationroom.css",
+            "Title": "operationroom.css"
+        },
+        {
+            "Location": "ScriptLink",
             "Seqeuence": 100,
             "ScriptBlock": "SP.SOD.registerSod('pzl.workspace.js', '~sitecollection/siteassets/pzl/js/pzl.workspace.js');SP.SOD.registerSodDep('pzl.workspace.js', 'jquery.min.js');EnsureScriptFunc('pzl.workspace.js', null, function() {SP.SOD.notifyScriptLoadedAndExecuteWaitingJobs('pzl.workspace.js');});",
             "Name": "pzl.workspace.js",
