@@ -30,9 +30,9 @@ var mapsApp = angular.module('danger-room-app', ['uiGmapgoogle-maps'])
             markers: markers,
             center: { 
                 latitude: 45, 
-                longitude: -72 
+                longitude: -22 
             }, 
-            zoom: 10
+            zoom: 5
         };
         // var latlngbounds = uiGmapGoogleMapApi.LatLngBounds();
         // markers.forEach(function(n){
