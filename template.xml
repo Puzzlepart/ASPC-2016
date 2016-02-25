@@ -9,6 +9,7 @@
   </pnp:Preferences>
   <pnp:Templates ID="Container-Pzl-Brigade">
     <pnp:ProvisioningTemplate ID="Pzl-Brigade" Version="1">
+     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Objects/Features.xml" />
      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Objects/SiteFields.xml" />
      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Objects/ContentTypes.xml" />
      <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Objects/Lists.xml" />
