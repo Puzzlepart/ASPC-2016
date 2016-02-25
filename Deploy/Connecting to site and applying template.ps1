@@ -2,5 +2,9 @@ Param(
   [string]$Url,
   [string]$WinCred
 )
-Connect-SPOnline $Url -Credentials $WinCred | Out-Null
+if ($WinCred -ne $null) {
+	Connect-SPOnline $Url -Credentials $WinCred | Out-Null
+} else {
+	Connect-SPOnline $Url | Out-Null
+}
 Apply-SPOProvisioningTemplate template.xml
