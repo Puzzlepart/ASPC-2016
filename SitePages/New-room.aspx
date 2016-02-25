@@ -354,7 +354,7 @@
                                                                     <td class="ms-authoringcontrols" width="99%">
 
                                                                         <div class="ms-templatepicker">
-                                                                            <select id="NFDASD_Template" size="12" class="ms-templatepicker-select ms-templatepicker ms-floatLeft">
+                                                                            <select id="Pzl_Template" size="12" class="ms-templatepicker-select ms-templatepicker ms-floatLeft">
                                                                             </select>
                                                                             <div class="ms-descriptiontext ms-floatLeft" style="width: 440px; display: inline;">
                                                                                 <span id="LabelWebTemplateDescription"></span>
@@ -534,8 +534,8 @@
                                                     <td>&nbsp;</td>
                                                     <td nowrap="nowrap">
                                                         <img src="/_layouts/15/images/loadingcirclests16.gif?rev=42" class="ms-verticalAlignMiddle" style="display: none;" onclick="javascript:this.style.display='none';">
-                                                        <input type="button" disabled value="Opprett" onclick="NFDASD.Provisioning.Create()" accesskey="O" class="ms-ButtonHeightWidth">
-                                                        <input type="button" disabled class="ms-ButtonHeightWidth" value="Avbryt" accesskey="C" onclick="NFDASD.Provisioning.Cancel()">
+                                                        <input type="button" disabled value="Opprett" onclick="Pzl.Provisioning.Create()" accesskey="O" class="ms-ButtonHeightWidth">
+                                                        <input type="button" disabled class="ms-ButtonHeightWidth" value="Avbryt" accesskey="C" onclick="Pzl.Provisioning.Cancel()">
                                                     </td>
                                                 </tr>
                                             </tbody>

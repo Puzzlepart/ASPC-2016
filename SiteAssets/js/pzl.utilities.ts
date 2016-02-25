@@ -1,6 +1,6 @@
-/// <reference path="..\..\..\typings\tsd.d.ts" />
+/// <reference path="..\..\typings\tsd.d.ts" />
 
-module NFDASD.Utilities {
+module Pzl.Utilities {
     export function getJSON(url: string, successCallback: Function, errorCallback: Function) {
         jQuery.ajax({
             url: url,

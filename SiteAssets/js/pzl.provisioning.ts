@@ -1,35 +1,15 @@
-/// <reference path="..\..\..\typings\tsd.d.ts" />
-/// <reference path="nfdasd.config.ts" />
-/// <reference path="nfdasd.utilities.ts" />
+/// <reference path="..\..\typings\tsd.d.ts" />
+/// <reference path="pzl.config.ts" />
+/// <reference path="pzl.utilities.ts" />
 
-module NFDASD.Provisioning {
+module Pzl.Provisioning {
     var titleSelector = "#SubwebTitle";
     var descSelector = "#SubwebDescription";
     var urlSelector = "#SubwebName";
     var inheritPermissionsSelector = "#InheritedSubweb";
-    var templateSelector = "#NFDASD_Template";
+    var templateSelector = "#Pzl_Template";
     var createWebWaitDialog;
-
-    export module Debug {
-        export function DeleteAllSubsites() {
-            var ctx = SP.ClientContext.get_current();
-            var web = ctx.get_web();
-            var webs = web.get_webs();
-            ctx.load(webs);
-            ctx.executeQueryAsync(function() {
-                var enumerator = webs.getEnumerator(),
-                    simpleArray = [];
-                while (enumerator.moveNext()) {
-                    simpleArray.push(enumerator.get_current());
-                }
-                for (var s in simpleArray) {
-                    simpleArray[s].deleteObject();
-                }
-                ctx.executeQueryAsync(function() { console.log(arguments); }, function() { console.log(arguments); });
-            });
-        }
-    }
-
+    
     export function Create() {
         var createInfo = {
             url: jQuery(urlSelector).val(),
@@ -55,10 +35,6 @@ module NFDASD.Provisioning {
             createWebWaitDialog.close();
         });
     }
-    
-    /*
-        Provisions a subsite
-    */
     function ProvisionSubsite(createInfo) {
         var def = jQuery.Deferred();
         ExecuteOrDelayUntilScriptLoaded(() => {
@@ -78,10 +54,6 @@ module NFDASD.Provisioning {
 
         return def.promise();
     }
-    
-    /*
-        Setting property bag values for web.
-    */
     function StampPropertyBag(web: SP.Web, template: string) {
         var def = jQuery.Deferred();
         var clientContext = web.get_context();
@@ -92,10 +64,6 @@ module NFDASD.Provisioning {
         clientContext.executeQueryAsync(def.resolve, def.reject);
         return def.promise();
     }
-    
-    /*
-        Adding custom actions for web.
-    */
     function AddCustomActions(web: SP.Web) {
         var def = jQuery.Deferred();
 
@@ -105,22 +73,15 @@ module NFDASD.Provisioning {
         var setupAction = webCustomActions.add();
         setupAction.set_location('ScriptLink');
         setupAction.set_sequence(100);
-        setupAction.set_scriptBlock("(_v_dictSod.hasOwnProperty('jquery') || SP.SOD.registerSod('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js'));SP.SOD.registerSod('nfdasd.workspace.setup.js', '~sitecollection/siteassets/nfdasd/js/nfdasd.workspace.setup.js');SP.SOD.registerSodDep('nfdasd.workspace.setup.js', 'jquery');EnsureScriptFunc('nfdasd.workspace.setup.js', null, function() {});")
-        setupAction.set_name("nfdasd.workspace.setup.js");
-        setupAction.set_title("nfdasd.workspace.setup.js");
+        setupAction.set_scriptBlock("(_v_dictSod.hasOwnProperty('jquery.min.js') || SP.SOD.registerSod('jquery.min.js', '~sitecollection/siteassets/pzl/js/jquery.min.js'));SP.SOD.registerSod('pzl.workspace.setup.js', '~sitecollection/siteassets/pzl/js/pzl.workspace.setup.js');SP.SOD.registerSodDep('pzl.workspace.setup.js', 'jquery.min.js');EnsureScriptFunc('pzl.workspace.setup.js', null, function() {});")
+        setupAction.set_name("pzl.workspace.setup.js");
+        setupAction.set_title("pzl.workspace.setup.js");
         setupAction.update();
 
         clientContext.load(web, 'Title', 'UserCustomActions');
         clientContext.executeQueryAsync(def.resolve, def.reject);
         return def.promise();
     }
-    
-    /*
-        Setting up features for web.
-        
-        Adding: N/A
-        Removing: Minimal Download Strategy  
-    */
     function SetupFeatures(web: SP.Web) {
         var def = jQuery.Deferred();
 
@@ -133,12 +94,6 @@ module NFDASD.Provisioning {
 
         return def.promise();
     }
-    
-    /*
-        Redirecting to web.
-        
-        If we're not inheriting permissions, we'll send the user to /_layouts/15/permsetup.aspx
-    */
     function RedirectToWeb(web: SP.Web, inheritPermissions: Boolean) {
         document.location.href = `${web.get_url()}${!inheritPermissions ? '/_layouts/15/permsetup.aspx?hideCancel=1' : ''}`;
     }
