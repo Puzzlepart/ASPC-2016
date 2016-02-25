@@ -13,7 +13,7 @@
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
 <SharePoint:UIVersionedContent UIVersion="4" runat="server">
 	<ContentTemplate>
-	   <div style="padding-left:5px">
+	   <div style="">
 	</ContentTemplate>
 </SharePoint:UIVersionedContent>
     <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
