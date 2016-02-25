@@ -32,31 +32,31 @@
         <h2><span class="material-icons">face</span> Heros</h2>
             <ul id="users">
                 <li class="animated flipInY">
-                    <img src="/SiteAssets/pzl/img/standard_xlarge.jpg">
+                    <img src="SiteAssets/pzl/img/standard_xlarge.jpg">
                     <div class="user-name">
                             <h3>Iron Man </h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
-                    <img src="/SiteAssets/pzl/img/standard_xlarge-1.jpg">
+                    <img src="SiteAssets/pzl/img/standard_xlarge-1.jpg">
                     <div class="user-name">
                             <h3>Spider-Man </h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
-                    <img src="/SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <img src="SiteAssets/pzl/img/standard_xlarge-2.jpg">
                     <div class="user-name">
                             <h3>Hulk</h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
-                    <img src="/SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <img src="SiteAssets/pzl/img/standard_xlarge-2.jpg">
                     <div class="user-name">
                             <h3>Hulk</h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
-                    <img src="/SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <img src="SiteAssets/pzl/img/standard_xlarge-2.jpg">
                     <div class="user-name">
                             <h3>Hulk</h3>
                     </div>
