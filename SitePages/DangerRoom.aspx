@@ -19,7 +19,6 @@
     <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
-    <script type="text/javascript" src="../SiteAssets/pzl/js/pzl.dangerroom.js"></script>
     <h1 class="room-title">Danger Room</h1>
     <div id="danger-room-app">
         <div ng-controller="operationOverview">
