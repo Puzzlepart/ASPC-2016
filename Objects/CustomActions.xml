@@ -1,6 +1,7 @@
 ﻿<pnp:CustomActions xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
    <pnp:SiteCustomActions>  
      <pnp:CustomAction Name="jquery.min.js" Location="ScriptLink" Sequence="1" ScriptSrc="~sitecollection/siteassets/pzl/js/jquery.min.js" />
+      <pnp:CustomAction Name="dangerroom.main.css" Location="ScriptLink" Sequence="5" ScriptBlock="registerCssLink('~sitecollection/siteassets/pzl/css/dangerroom/main.css')" />
      <pnp:CustomAction Name="lodash.min.js" Location="ScriptLink" Sequence="10" ScriptSrc="~sitecollection/siteassets/pzl/js/lodash.min.js" />
      <pnp:CustomAction Name="angular.min.js" Location="ScriptLink" Sequence="20" ScriptSrc="~sitecollection/SiteAssets/pzl/js/angular.min.js" />
      <pnp:CustomAction Name="angular-simple-logger.min.js" Location="ScriptLink" Sequence="30" ScriptSrc="~sitecollection/siteassets/pzl/js/angular-simple-logger.min.js" />
