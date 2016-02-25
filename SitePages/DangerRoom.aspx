@@ -17,7 +17,7 @@
 	</ContentTemplate>
 </SharePoint:UIVersionedContent>
     <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom.css">
+    <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom/main.css">
     <h1 class="room-title">Danger Room</h1>
 	<table class="ms-core-tableNoSpace danger-dashboard" id="onetIDListForm" style="width:100%"> 
 	 <tr>
