@@ -4,7 +4,7 @@
      ScriptBlock="SP.SOD.registerSod('jquery.min.js', '~sitecollection/siteassets/pzl/js/jquery.min.js');LoadSodByKey('jquery.min.js', function() { SP.SOD.notifyScriptLoadedAndExecuteWaitingJobs('jquery.min.js'); });" />
      <pnp:CustomAction Name="lodash.min.js" Location="ScriptLink" Sequence="10" 
      ScriptBlock="SP.SOD.registerSod('lodash.min.js', '~sitecollection/siteassets/pzl/js/lodash.min.js');LoadSodByKey('lodash.min.js', function() { SP.SOD.notifyScriptLoadedAndExecuteWaitingJobs('lodash.min.js'); });" />
-     <pnp:CustomAction Name="angular.min.js" Location="ScriptLink" Sequence="20" ScriptSrc="~sitecollection/SiteAssets/hemit/js/jquery.min.js" />
+     <pnp:CustomAction Name="angular.min.js" Location="ScriptLink" Sequence="20" ScriptSrc="~sitecollection/SiteAssets/pzl/js/angular.min.js" />
      <pnp:CustomAction Name="angular-simple-logger.min.js" Location="ScriptLink" Sequence="30" 
      ScriptBlock="SP.SOD.registerSod('angular-simple-logger.min.js', '~sitecollection/siteassets/pzl/js/angular-simple-logger.min.js');LoadSodByKey('angular-simple-logger.min.js', function() { SP.SOD.notifyScriptLoadedAndExecuteWaitingJobs('angular-simple-logger.min.js'); });" />
      <pnp:CustomAction Name="angular-google-maps.min.js" Location="ScriptLink" Sequence="40" 
