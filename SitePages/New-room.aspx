@@ -350,8 +350,7 @@
                                                                     <td class="ms-authoringcontrols" width="99%">
 
                                                                         <div class="ms-templatepicker">
-                                                                            <select id="Pzl_Template" size="12" class="ms-templatepicker-select ms-templatepicker ms-floatLeft">
-                                                                            <option value="operationroom" selected="selected">Operation Room</option></select>
+                                                                            <select id="Pzl_Template" size="12" class="ms-templatepicker-select ms-templatepicker ms-floatLeft"></select>
                                                                             <div class="ms-descriptiontext ms-floatLeft" style="width: 440px; display: inline;">
                                                                                 <span id="LabelWebTemplateDescription"></span>
                                                                             </div>

@@ -3,11 +3,11 @@
 /// <reference path="pzl.utilities.ts" />
 
 module Pzl.Provisioning {
-    var titleSelector = "#SubwebTitle";
-    var descSelector = "#SubwebDescription";
-    var urlSelector = "#SubwebName";
-    var inheritPermissionsSelector = "#InheritedSubweb";
-    var templateSelector = "#Pzl_Template";
+    var titleSelector = "#SubwebTitle",
+        descSelector = "#SubwebDescription",
+        urlSelector = "#SubwebName",
+        inheritPermissionsSelector = "#InheritedSubweb",
+        templateSelector = "#Pzl_Template";
     var createWebWaitDialog;
     
     export function Create() {
@@ -17,7 +17,7 @@ module Pzl.Provisioning {
             description: jQuery(descSelector).val(),
             webTemplate: Config.PROVISIONING_WEBTEMPLATE,
             webLanguage: Config.PROVISIONING_LANGUAGE,
-            inheritPermissions: jQuery(inheritPermissionsSelector).is(":checked"),
+            inheritPermissions: true,
             template: jQuery(templateSelector).val()
         };
         createWebWaitDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose(Config.PROVISIONING_WAITMESSAGE_TEXT, Config.PROVISIONING_WAITMESSAGE_DESCRIPTION, 130, 600);
