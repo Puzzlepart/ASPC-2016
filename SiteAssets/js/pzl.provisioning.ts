@@ -3,11 +3,11 @@
 /// <reference path="pzl.utilities.ts" />
 
 module Pzl.Provisioning {
-    var titleSelector = "#SubwebTitle";
-    var descSelector = "#SubwebDescription";
-    var urlSelector = "#SubwebName";
-    var inheritPermissionsSelector = "#InheritedSubweb";
-    var templateSelector = "#Pzl_Template";
+    var titleSelector = "#SubwebTitle",
+        descSelector = "#SubwebDescription",
+        urlSelector = "#SubwebName",
+        inheritPermissionsSelector = "#InheritedSubweb",
+        templateSelector = "#Pzl_Template";
     var createWebWaitDialog;
     
     export function Create() {
@@ -17,7 +17,7 @@ module Pzl.Provisioning {
             description: jQuery(descSelector).val(),
             webTemplate: Config.PROVISIONING_WEBTEMPLATE,
             webLanguage: Config.PROVISIONING_LANGUAGE,
-            inheritPermissions: jQuery(inheritPermissionsSelector).is(":checked"),
+            inheritPermissions: true,
             template: jQuery(templateSelector).val()
         };
         createWebWaitDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose(Config.PROVISIONING_WAITMESSAGE_TEXT, Config.PROVISIONING_WAITMESSAGE_DESCRIPTION, 130, 600);
@@ -25,7 +25,7 @@ module Pzl.Provisioning {
             StampPropertyBag(web, createInfo.template).then(() => {
                 AddCustomActions(web).then(() => {
                     SetupFeatures(web).then(() => {
-                        RedirectToWeb(web, createInfo.inheritPermissions);
+                        RedirectToWeb(web);
                     });
                 });
             })
@@ -94,8 +94,8 @@ module Pzl.Provisioning {
 
         return def.promise();
     }
-    function RedirectToWeb(web: SP.Web, inheritPermissions: Boolean) {
-        document.location.href = `${web.get_url()}${!inheritPermissions ? '/_layouts/15/permsetup.aspx?hideCancel=1' : ''}`;
+    function RedirectToWeb(web: SP.Web) {
+        document.location.href = web.get_url();
     }
     export function Cancel() {
         document.location.href = _spPageContextInfo.webServerRelativeUrl;
@@ -118,8 +118,10 @@ module Pzl.Provisioning {
         jQuery(titleSelector).keyup(function() { jQuery(urlSelector).val(jQuery(this).val().split(' ').join('-')); })
     }
     function IntializeForm() {
-        RetrieveTemplates();
-        AutofillUrl();
+        ExecuteOrDelayUntilScriptLoaded(() => {
+            RetrieveTemplates();
+            AutofillUrl();
+        }, "jquery.min.js");
     }
     _spBodyOnLoadFunctions.push(IntializeForm);
 }
