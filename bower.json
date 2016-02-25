@@ -1,0 +1,23 @@
+{
+  "name": "ASPC-2016",
+  "homepage": "https://github.com/Puzzlepart/ASPC-2016",
+  "authors": [
+    "olemp <olemp@puzzlepart.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "jquery": "^2.2.1",
+    "moment": "^2.11.2"
+  }
+}
