@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
     <h1 class="room-title">Danger Room</h1>
-    <div ng-app="danger-room-app">
+    <div id="danger-room-app">
         <div ng-controller="operationOverview">
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                 <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="$index"></ui-gmap-marker>
