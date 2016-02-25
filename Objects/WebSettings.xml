@@ -1,5 +1,5 @@
 <pnp:WebSettings xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema"
-      AlternateCSS="/sites/malressurser/SiteAssets/pzl/css/main.css"
       MasterPageUrl="{sitecollection}/_catalogs/MasterPage/Seattle.master"
-      CustomMasterPageUrl="{sitecollection}/_catalogs/MasterPage/Seattle.master">
+      CustomMasterPageUrl="{sitecollection}/_catalogs/MasterPage/Seattle.master"
+      WelcomePage="SitePages/DangerRoom.aspx">
 </pnp:WebSettings>
