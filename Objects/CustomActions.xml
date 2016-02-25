@@ -1,12 +1,24 @@
 ﻿<pnp:CustomActions xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
-   <pnp:SiteCustomActions>  
-     <pnp:CustomAction Name="jquery.min.js" Location="ScriptLink" Sequence="1" ScriptSrc="~sitecollection/siteassets/pzl/js/jquery.min.js" />
-      <pnp:CustomAction Name="dangerroom.main.css" Location="ScriptLink" Sequence="5" ScriptBlock="registerCssLink('~sitecollection/siteassets/pzl/css/dangerroom/main.css')" />
-     <pnp:CustomAction Name="lodash.min.js" Location="ScriptLink" Sequence="10" ScriptSrc="~sitecollection/siteassets/pzl/js/lodash.min.js" />
-     <pnp:CustomAction Name="angular.min.js" Location="ScriptLink" Sequence="20" ScriptSrc="~sitecollection/SiteAssets/pzl/js/angular.min.js" />
-     <pnp:CustomAction Name="angular-simple-logger.min.js" Location="ScriptLink" Sequence="30" ScriptSrc="~sitecollection/siteassets/pzl/js/angular-simple-logger.min.js" />
-     <pnp:CustomAction Name="angular-google-maps.min.js" Location="ScriptLink" Sequence="40" ScriptSrc="~sitecollection/siteassets/pzl/js/angular-google-maps.min.js" />
-     
+   <pnp:SiteCustomActions>
+     <pnp:CustomAction Name="dangerroom.main.css" Location="ScriptLink" Sequence="5" ScriptBlock="registerCssLink('~sitecollection/siteassets/pzl/css/dangerroom/main.css');" />
+     <pnp:CustomAction Name="angular-google-maps.min.js" Location="ScriptLink" Sequence="40" ScriptBlock="
+        SP.SOD.registerSod('jquery.min.js', '~sitecollection/siteassets/pzl/js/jquery.min.js');
+        SP.SOD.registerSod('lodash.min.js', '~sitecollection/siteassets/pzl/js/lodash.min.js');
+        SP.SOD.registerSod('angular.min.js', '~sitecollection/siteassets/pzl/js/angular.min.js');
+        SP.SOD.registerSod('angular-simple-logger.min.js', '~sitecollection/siteassets/pzl/js/angular-simple-logger.min.js');
+        SP.SOD.registerSod('angular-google-maps.min.js', '~sitecollection/siteassets/pzl/js/angular-google-maps.min.js');
+        SP.SOD.registerSod('pzl.dangerroom.js', '~sitecollection/siteassets/pzl/js/pzl.dangerroom.js');
+        SP.SOD.registerSodDep('angular-simple-logger.min.js', 'angular.min.js');
+        SP.SOD.registerSodDep('angular-google-maps.min.js', 'angular.min.js');    
+        SP.SOD.registerSodDep('angular-google-maps.min.js', 'lodash.min.js');          
+        SP.SOD.registerSodDep('pzl.dangerroom.js', 'jquery.min.js');        
+        SP.SOD.registerSodDep('pzl.dangerroom.js', 'angular-google-maps.min.js');
+        EnsureScriptFunc('pzl.dangerroom.js', null, function() {
+            SP.SOD.notifyScriptLoadedAndExecuteWaitingJobs('jquery.min.js');
+            SP.SOD.notifyScriptLoadedAndExecuteWaitingJobs('angular.min.js');
+            SP.SOD.notifyScriptLoadedAndExecuteWaitingJobs('pzl.dangerroom.js');
+        });
+     " />     
       <pnp:CustomAction Name="Ribbon.Tasks.Share.Notify" Title="Ribbon.Tasks.Share.Notify" Location="CommandUI.Ribbon" Sequence="5" RegistrationId="171" RegistrationType="List">
             <pnp:CommandUIExtension>
                 <CommandUIDefinitions>
