@@ -1,0 +1,75 @@
+#users { 
+    list-style:none; 
+    margin:50px auto; 
+    padding:0;
+    li { 
+        display:inline; 
+        float:left; 
+        margin-right:40px;
+        margin-bottom:50px;
+        /*-webkit-perspective: 500;*/
+        -webkit-transform-style: preserve-3d;
+        -webkit-transition-property: perspective; 
+        -webkit-transition-duration: 0.5s; 
+        
+        &:hover { 
+            -webkit-perspective: 5000;
+        }
+        img { 
+            width:165px;
+            border:5px solid #fcfafa; 
+            -webkit-transform: rotateY(30deg);
+            -moz-box-shadow:0 3px 10px #333; 
+            -webkit-box-shadow:0 3px 10px #333;
+            -webkit-transition-property: transform; 
+            -webkit-transition-duration: 0.5s; 
+        }
+        &:hover img { 
+            -webkit-transform: rotateY(0deg); 
+        }
+        .user-name { 
+            border:5px solid #fcfafa; 
+            padding:5px; 
+            width:190px; 
+            height:20px; 
+            background-color:#deddcd; 
+            margin:-45px 0 0 0px; 
+            position:absolute;
+            -moz-box-shadow:0 5px 30px #333; 
+            -webkit-box-shadow:0 5px 30px #333;
+            -webkit-transform: translateZ(30px) rotateY(30deg);
+            -webkit-transition-property: transform, box-shadow, margin; -webkit-transition-duration: 0.5s; 
+            h3 { 
+                color:#7a3f3a; 
+                font-variant: small-caps; 
+                font-family:Georgia,serif,Times; 
+                text-align:center; 
+                padding-bottom:15px; 
+                margin:0;
+            }
+            p { 
+                padding-bottom:15px; 
+            }
+            a { 
+                background-color:#7a3f3a; 
+                padding:5px 10px; 
+                color:#eee; 
+                text-decoration:none; 
+                display:block; 
+                width:80px; 
+                text-align:center; 
+                margin:0 auto;
+                -moz-border-radius:5px; 
+                -webkit-border-radius:5px; 
+                &:hover, &:focus { 
+                    background-color:#6a191f; color:#fff; 
+                }
+            }
+        }
+        &:hover .user-name { 
+            -webkit-transform: rotateY(0deg); 
+            -webkit-box-shadow:0 5px 10px #333; 
+            margin:-35px 0 0 -20px; 
+        }
+    }
+}
