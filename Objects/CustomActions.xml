@@ -1,3 +1,28 @@
 ﻿<pnp:CustomActions xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
-  
+   <pnp:SiteCustomActions>  
+      <pnp:CustomAction Name="Ribbon.Tasks.Share.Notify" Title="Ribbon.Tasks.Share.Notify" Location="CommandUI.Ribbon" Sequence="5" RegistrationId="171" RegistrationType="List">
+            <pnp:CommandUIExtension>
+                <CommandUIDefinitions>
+                    <CommandUIDefinition 
+                        Location="Ribbon.Tasks.Share.Controls._children">
+                        <Button 
+                        Id="NotifyAssignee" 
+                        Command="NotifyAssigneeButtonCommand" 
+                        Sequence="5" 
+                        Image32by32="" 
+                        Image16by16="" 
+                        Description="" 
+                        LabelText="Nag" 
+                        TemplateAlias="o1"/>
+                    </CommandUIDefinition>
+                </CommandUIDefinitions>
+                <CommandUIHandlers>
+                    <CommandUIHandler 
+                    Command="NotifyAssigneeButtonCommand" 
+                    EnabledScript="javascript:(function() { return CountDictionary(SP.ListOperation.Selection.getSelectedItems(SP.ClientContext.get_current())) == 1; })()"
+                    CommandAction="javascript:if(!_v_dictSod.hasOwnProperty('pzl.ribbonactions.notifytaskassignee.js')){SP.SOD.registerSod('pzl.ribbonactions.notifytaskassignee.js', '~sitecollection/siteassets/pzl/js/pzl.ribbonactions.notifytaskassignee.js');EnsureScriptFunc('pzl.ribbonactions.notifytaskassignee.js', null, function(){Pzl.RibbonActions.NotifyTaskAssignee.init()});}else{Pzl.RibbonActions.NotifyTaskAssignee.init();}"/>
+                </CommandUIHandlers>
+            </pnp:CommandUIExtension>
+        </pnp:CustomAction>
+    </pnp:SiteCustomActions>
 </pnp:CustomActions>
