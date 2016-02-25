@@ -19,6 +19,6 @@
     "angular": "latest",
     "jquery": "latest",
     "moment": "latest",
-    "js-sites-core":"latest"
+    "js-sites-core":"dev"
   }
 }
