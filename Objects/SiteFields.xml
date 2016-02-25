@@ -8,6 +8,14 @@
     Group="{parameter:GenericFieldsGroup}"
     JSLink="~sitecollection/siteassets/pzl/js/pzl.jslink.location.js"
     Description="" />
+    <Field 
+    ID="{c0e7a097-15a9-40c4-84e1-9a3439546c5f}" 
+    Name="{parameter:GenericFieldsPrefix}Icon"
+    DisplayName="Icon"
+    Type="Text"
+    Group="{parameter:GenericFieldsGroup}"
+    JSLink="~sitecollection/siteassets/pzl/js/pzl.jslink.icon.js"
+    Description="" />
     <Field
     ID="{60b76630-782f-40db-ab7c-996885dfed8b}"
     Name="{parameter:GenericFieldsPrefix}Villain"
