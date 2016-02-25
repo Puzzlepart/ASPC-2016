@@ -13,6 +13,12 @@
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.workspace.setup.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-16.png" Overwrite="false" />
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-32.png" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\comicstripbackground.png" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\comicstripbackgroundpurple.png" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\marvelintro.mp4" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge.jpg" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-1.jpg" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-2.jpg" Overwrite="false" />    
     <pnp:File Folder="SiteTemplates" Overwrite="true" Src="SiteTemplates\operationroom.txt">
         <pnp:Properties>
             <pnp:Property Key="Title" Value="Operation Room" />
