@@ -58,6 +58,11 @@
                 }
                 return items;
             }
+            
+            parseOWSUSER(userFieldStr: string) {
+                console.log(userFieldStr);
+                return userFieldStr;
+            }
 
             private getQueryString(obj: any) {
                 var arr = []; for (var k in obj) { if (k == 'groupby') continue; arr.push(`${k}='${obj[k]}'`); } return arr.join("&");
