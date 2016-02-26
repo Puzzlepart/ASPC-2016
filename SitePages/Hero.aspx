@@ -20,7 +20,7 @@
         <div class="container video-header map">
             <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="../SiteAssets/pzl/img/marvelintro.mp4" style=""></video>
             <img src="../SiteAssets/pzl/img/standard_xlarge.jpg" class="hero-img"/>
-            <h2>Iron Man</h2>
+            <h2 class="hero-name">Iron Man</h2>
             <p class="hero-desc">
                 Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19.
             </p>
