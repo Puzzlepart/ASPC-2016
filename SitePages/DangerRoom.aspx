@@ -50,8 +50,8 @@
                     <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;" class="ops-marker selected">
                         <div>
                             <h3>{{map.selectedMarker.Title}}</h3>
-                            <div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
-                            <div><b>Villains:</b> {{map.selectedMarker.PzlVillainOWSUSER}}</div>
+                            <!--<div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
+                            <div><b>Villains:</b> {{map.selectedMarker.PzlVillainOWSUSER}}</div>-->
                             <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
                             <div><b>Longitude:</b> {{map.selectedMarker.coords.longitude}}</div>
                             <div><a ng-href="{{map.selectedMarker.OriginalPath}}">Go to operation</a></div>
