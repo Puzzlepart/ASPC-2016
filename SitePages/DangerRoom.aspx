@@ -87,9 +87,9 @@
             <h2><span class="material-icons">mood</span>Featured Heroes</h2>
             <ul id="heroes" class="tiles">
                 <li class="animated flipInY" ng-repeat="hero in Heroes track by $index">
-                    <img class="tile-image" ng-src="{{hero.PictureURL}}">
+                    <a ng-href="Hero.aspx?hero={{hero.PreferredName}}"><img class="tile-image" ng-src="{{hero.PictureURL}}"></a>
                     <div class="tile-name">
-                        <h3>{{hero.PreferredName}}</h3>
+                        <h3><a ng-href="Hero.aspx?hero={{hero.PreferredName}}">{{hero.PreferredName}}</a></h3>
                     </div>
                 </li>
             </ul>

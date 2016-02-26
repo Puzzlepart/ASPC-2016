@@ -61,6 +61,13 @@
                 "ContentTypeId": "0x010109010092214CADC5FC4262A177C632F516412E"
             },
             "WebParts": []
+        },
+        {
+            "Dest": "SitePages/UploadImage.txt",
+            "Overwrite": true,
+            "Src": "{resources}/SitePages/UploadImage.txt",
+            "Properties": {},
+            "WebParts": []
         }
     ],
     "CustomActions": [

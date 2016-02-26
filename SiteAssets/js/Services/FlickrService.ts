@@ -10,7 +10,7 @@
             }
 
             getPicturesForLocation(latitude,longitude) {
-                var searchUrl = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1ba5cc005deb380e8b1cb2e271095f62&text=skyline&lat=${latitude}&lon=${longitude}&format=json&nojsoncallback=1`
+                var searchUrl = `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1ba5cc005deb380e8b1cb2e271095f62&accuracy=10&lat=${latitude}&lon=${longitude}&format=json&nojsoncallback=1`
                 
                 return this.$q((resolve, reject) => {
                     this.$http.get(searchUrl).success((response: any) => {

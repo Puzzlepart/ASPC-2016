@@ -48,14 +48,14 @@ module Pzl.heroPage{
     }
     
         export function getHeroById(heroId) {
-    var $q = jQuery.Deferred();
-    var Url = `https://gateway.marvel.com/v1/public/characters?id=${heroId}&ts=${_config.timeStamp}&apikey=${_config.apiKey}&hash=${_config.hash}`;
-    jQuery.ajax({
-        type: "GET",
-        url: Url,
-        success: function(response){
-            console.log(response.data.results[0]);
-            $q.resolve(response.data.results[0]);
+        var $q = jQuery.Deferred();
+        var Url = `https://gateway.marvel.com/v1/public/characters?id=${heroId}&ts=${_config.timeStamp}&apikey=${_config.apiKey}&hash=${_config.hash}`;
+        jQuery.ajax({
+            type: "GET",
+            url: Url,
+            success: function(response){
+                console.log(response.data.results[0]);
+                $q.resolve(response.data.results[0]);
              }
         });
     return $q.promise();
