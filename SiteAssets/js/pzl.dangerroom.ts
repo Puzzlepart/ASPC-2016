@@ -75,7 +75,6 @@ module Services {
                 };
                 this.getMarkers();
             }
-
             private getMarkers() {
                 this.$searchService.query({ querytext: 'contentclass:STS_Web contenttypeid:0x010109010092214CADC5FC4262A177C632F516412E*', selectproperties: 'Title,OriginalPath,PzlLocationOWSTEXT' }).then((operations: Array<any>) => {
                     operations.forEach((operation) => {
@@ -92,18 +91,6 @@ module Services {
         }
     }
 
-    SP.SOD.registerSod('jquery.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/jquery.min.js`);
-    SP.SOD.registerSod('lodash.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/lodash.min.js`);
-    SP.SOD.registerSod('angular.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/angular.min.js`);
-    SP.SOD.registerSod('angular-simple-logger.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/angular-simple-logger.min.js`);
-    SP.SOD.registerSod('angular-google-maps.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/angular-google-maps.min.js`);
-    SP.SOD.registerSod('maps.googleapis.com', `//maps.googleapis.com/maps/api/js?sensor=false`);
-    SP.SOD.registerSodDep('angular-simple-logger.min.js', 'angular.min.js');
-    SP.SOD.registerSodDep('angular-google-maps.min.js', 'angular-simple-logger.min.js');
-    SP.SOD.registerSodDep('angular-google-maps.min.js', 'angular.min.js');
-    SP.SOD.registerSodDep('angular-google-maps.min.js', 'lodash.min.js');
-    SP.SOD.registerSodDep('angular-google-maps.min.js', 'maps.googleapis.com');
-    SP.SOD.registerSodDep('angular-google-maps.min.js', 'jquery.min.js');
     EnsureScriptFunc('angular-google-maps.min.js', null, function() {
         var app = angular.module("app", ['uiGmapgoogle-maps']).config(
             ['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders) {

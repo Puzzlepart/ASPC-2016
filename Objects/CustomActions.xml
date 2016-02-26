@@ -1,7 +1,20 @@
 ﻿<pnp:CustomActions xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
    <pnp:SiteCustomActions>
      <pnp:CustomAction Name="dangerroom.main.css" Location="ScriptLink" Sequence="5" ScriptBlock="registerCssLink('~sitecollection/siteassets/pzl/css/dangerroom/main.css');" />
-      <pnp:CustomAction Name="Ribbon.Tasks.Share.Notify" Title="Ribbon.Tasks.Share.Notify" Location="CommandUI.Ribbon" Sequence="5" RegistrationId="171" RegistrationType="List">
+     <pnp:CustomAction Name="jquery.min.js" Location="ScriptLink" Sequence="5" ScriptBlock="
+            SP.SOD.registerSod('jquery.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/jquery.min.js`);
+            SP.SOD.registerSod('lodash.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/lodash.min.js`);
+            SP.SOD.registerSod('angular.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/angular.min.js`);
+            SP.SOD.registerSod('angular-simple-logger.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/angular-simple-logger.min.js`);
+            SP.SOD.registerSod('angular-google-maps.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/angular-google-maps.min.js`);
+            SP.SOD.registerSod('maps.googleapis.com', `//maps.googleapis.com/maps/api/js?sensor=false`);
+            SP.SOD.registerSodDep('angular-simple-logger.min.js', 'angular.min.js');
+            SP.SOD.registerSodDep('angular-google-maps.min.js', 'angular-simple-logger.min.js');
+            SP.SOD.registerSodDep('angular-google-maps.min.js', 'angular.min.js');
+            SP.SOD.registerSodDep('angular-google-maps.min.js', 'lodash.min.js');
+            SP.SOD.registerSodDep('angular-google-maps.min.js', 'maps.googleapis.com');
+            SP.SOD.registerSodDep('angular-google-maps.min.js', 'jquery.min.js');" />
+      <pnp:CustomAction Name="Ribbon.Tasks.Share.Notify" Title="Ribbzon.Tasks.Share.Notify" Location="CommandUI.Ribbon" Sequence="5" RegistrationId="171" RegistrationType="List">
             <pnp:CommandUIExtension>
                 <CommandUIDefinitions>
                     <CommandUIDefinition 
