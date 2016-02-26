@@ -75,7 +75,8 @@ module Pzl.heroPage{
     export function populateHeroPage(heroData){
         var hero = new Model.Hero(heroData);
         setHeroData('.hero-name',hero.Name);
-        setHeroData('.hero-desc',hero.Description);
+        if(!hero.Description)jQuery('.hero-desc').hide();
+        else setHeroData('.hero-desc',hero.Description);
         setHeroImg('.hero-img',hero.Photo);        
     }
     
