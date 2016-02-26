@@ -4,7 +4,7 @@ module Controllers {
     export class OperationSiteController {
         $scope: any;
 
-        constructor($scope) {
+        constructor($scope, $graphService : Services.GraphService, adalAuthenticationService) {
             this.$scope = $scope;
             this.$scope.map = {
                 markers: [],
