@@ -20,8 +20,7 @@ module Controllers {
                     latitude: 59.9756579,
                     longitude: 10.6593764
                 },
-                zoom: 3,
-                markersOptions: { animation: new window.google.maps.Animation.BOUNCE }
+                zoom: 3
             };
             this.attachMapEvents();
             this.getMarkers();
