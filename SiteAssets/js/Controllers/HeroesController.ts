@@ -19,16 +19,14 @@
             .then((heroes: Array<any>) => {
                 this.$scope.Heroes = heroes;
                 this.$scope.Heroes.forEach((hero, index) => {
-                    if (!hero.PictureURL) {
-                        if (this.$scope.Heroes[index]) {
-                            this.$scope.Heroes[index].PictureURL = "../SiteAssets/pzl/img/default_hero.jpg";
+                    if (this.$scope.Heroes[index]) {
+                        this.$scope.Heroes[index].PictureURL = "../SiteAssets/pzl/img/default_hero.jpg";
+                    }
+                    this.$marvelService.getHeroDataFromName(hero.PreferredName).then((data) => {
+                        if (this.$scope.Heroes[index] && data.thumbnail.path) {
+                            this.$scope.Heroes[index].PictureURL = data.thumbnail.path+"."+data.thumbnail.extension;
                         }
-                        this.$marvelService.getHeroDataFromName(hero.PreferredName).then((data) => {
-                            if (this.$scope.Heroes[index] && data.thumbnail.path) {
-                                this.$scope.Heroes[index].PictureURL = data.thumbnail.path+"."+data.thumbnail.extension;
-                            }
-                        });
-                    } 
+                    });
                 });
             })
         }
