@@ -1,6 +1,12 @@
 ﻿<pnp:Lists xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
   <pnp:ListInstance Title="Tasks" Url="Lists/Tasks" TemplateType="171" EnableFolderCreation="false" EnableVersioning="true">
   </pnp:ListInstance>
+  <pnp:ListInstance Title="Operations" Url="Lists/Operations" TemplateType="100" >
+    <pnp:Fields>
+        <Field Type="Text" DisplayName="OperationUrl" UnlimitedLengthInDocumentLibrary="TRUE" 
+        ID="{2AC66394-DF06-4C88-AE91-EC3EE1151AAF}" StaticName="OperationUrl" Name="OperationUrl" />
+    </pnp:Fields>
+  </pnp:ListInstance>
   <pnp:ListInstance Title="Resources" Url="Resources" TemplateType="101" Hidden="true" />
   <pnp:ListInstance Title="SiteTemplates" Url="SiteTemplates" TemplateType="101" Hidden="true" ContentTypesEnabled="true" RemoveExistingContentTypes="true">
     <pnp:Views RemoveExistingViews="true">

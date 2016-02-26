@@ -21,13 +21,15 @@ module Pzl.Provisioning {
             template: jQuery(templateSelector).val()
         };
         createWebWaitDialog = SP.UI.ModalDialog.showWaitScreenWithNoClose(Config.PROVISIONING_WAITMESSAGE_TEXT, Config.PROVISIONING_WAITMESSAGE_DESCRIPTION, 130, 600);
-        ProvisionSubsite(createInfo).then((web: SP.Web) => {
-            StampPropertyBag(web, createInfo.template).then(() => {
-                AddCustomActions(web).then(() => {
-                    SetupFeatures(web).then(() => {
-                        RedirectToWeb(web);
+        ProvisionOperationItem(createInfo.title, createInfo.url).then((listItem) => {
+            ProvisionSubsite(createInfo).then((web: SP.Web) => {
+                StampPropertyBag(web, createInfo.template).then(() => {
+                    AddCustomActions(web).then(() => {
+                        SetupFeatures(web).then(() => {
+                            RedirectToWeb(web);
+                        });
                     });
-                });
+                })
             })
         }).fail((sender, args) => {
             var sId = SP.UI.Status.addStatus(Config.PROVISIONING_FAILED, args.get_message(), true);
@@ -50,6 +52,25 @@ module Pzl.Provisioning {
             var newWeb = currentWeb.get_webs().add(webCreateInfo);
             clientContext.load(newWeb);
             clientContext.executeQueryAsync(() => def.resolve(newWeb), def.reject);
+        }, "sp.js");
+
+        return def.promise();
+    }
+    
+    function ProvisionOperationItem(title, url) {
+        var def = jQuery.Deferred();
+        ExecuteOrDelayUntilScriptLoaded(() => {
+            var clientContext = SP.ClientContext.get_current();
+            var operationsList = clientContext.get_web().get_lists().getByTitle('Operations');
+
+            var itemCreateInfo = new SP.ListItemCreationInformation();
+            var newOperation = operationsList.addItem(itemCreateInfo);
+            newOperation.set_item('Title', title);
+            newOperation.set_item('OperationUrl', url);
+            newOperation.update();
+
+            clientContext.load(newOperation);
+            clientContext.executeQueryAsync(() => def.resolve(newOperation), def.reject);
         }, "sp.js");
 
         return def.promise();
@@ -118,10 +139,8 @@ module Pzl.Provisioning {
         jQuery(titleSelector).keyup(function() { jQuery(urlSelector).val(jQuery(this).val().split(' ').join('-')); })
     }
     function IntializeForm() {
-        LoadSodByKey('jquery.min.js', () => {
-            RetrieveTemplates();
-            AutofillUrl();
-        });
+        RetrieveTemplates();
+        AutofillUrl();
     }
     _spBodyOnLoadFunctions.push(IntializeForm);
 }
