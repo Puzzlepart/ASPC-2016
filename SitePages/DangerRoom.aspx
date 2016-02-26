@@ -94,7 +94,7 @@
        <div class="container">
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
-        <h2><span class="material-icons">show chart</span> Operational Statistics</h2>
+        <h2><span class="material-icons">show_chart</span> Operational Statistics</h2>
             <ul id="users">
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
@@ -168,7 +168,7 @@
         <div class="container comicgrey">
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
-        <h2><span class="material-icons">mood bad</span> Top Villians</h2>
+        <h2><span class="material-icons">mood_bad</span> Top Villians</h2>
             <ul id="users">
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
