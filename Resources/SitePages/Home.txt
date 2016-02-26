@@ -51,10 +51,25 @@
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue">
-            <h2><span class="material-icons">public</span>Yammer</h2>
-            <ul class="tiles">
-            
-            </ul>
+			<div style="width:47%;vertical-align:top;display:inline-block;margin-right:2%;">
+				<h2><span class="material-icons">public</span>Yammer</h2>
+				<script type="text/javascript" src="https://c64.assets-yammer.com/assets/platform_embed.js"></script>
+			<div id="embedded-feed" style="height:400px;width:500px;"></div> 
+			<script>
+			yam.connect.embedFeed(
+			  { 
+				container: '#embedded-feed',
+				network: 'aspc1602.onmicrosoft.com' ,
+				config: {
+					header: false,
+					footer: false
+				}
+			});
+			</script>
+			</div>
+			<div style="width:47%;vertical-align:top;display:inline-block;margin-right:2%;">
+				<h2><span class="material-icons">public</span>Twitter</h2>
+			</div>
         </div>
         <div class="container comicgrey">
         <h2><span class="material-icons">mood</span> Tasks</h2>
