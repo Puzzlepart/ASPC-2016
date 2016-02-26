@@ -4,7 +4,7 @@ module Controllers {
     export class OperationSiteController {
         $scope: any;
 
-        constructor($scope) {
+        constructor($scope, $graphService : Services.GraphService) {
             this.$scope = $scope;
             this.$scope.map = {
                 markers: [],
@@ -15,6 +15,9 @@ module Controllers {
                 },
                 zoom: 3
             };
+            $graphService.getTasks().then(tasks => {
+                console.log(tasks);
+            })
         }
     
     }
