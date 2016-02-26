@@ -1,5 +1,5 @@
 module Pzl.Config {
-    export var PROVISIONING_LANGUAGE = 1044;
+    export var PROVISIONING_LANGUAGE = 1033;
     export var PROVISIONING_WEBTEMPLATE = "STS#0";    
     export var PROVISIONING_WAITMESSAGE_TEXT = "Creating your room";    
     export var PROVISIONING_WAITMESSAGE_DESCRIPTION = "";    
