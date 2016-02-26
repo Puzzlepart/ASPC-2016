@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
-    <div id="homeApp">
+    <div id="homeApp" ng-cloak>
         <div data-ng-controller="mapController">
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                 <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;">
@@ -66,16 +66,6 @@
                     <div class="operation-name">
                         <h3>{{op.Title}}</h3>
                     </div>
-                </li>
-            </ul>
-        </div>
-       <div class="container" data-ng-controller="statisticsController">
-        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
-
-        <h2><span class="material-icons">show_chart</span> Operational Statistics</h2>
-            <ul id="statistics">
-                <li class="animated flipInY">
-                   <div google-chart chart="chartObject" style="height:600px; width:100%;"></div>
                 </li>
             </ul>
         </div>
