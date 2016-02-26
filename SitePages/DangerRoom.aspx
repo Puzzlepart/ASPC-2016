@@ -60,7 +60,7 @@
             <h2><span class="material-icons">public</span>Active Operations</h2>
             <ul id="users">
                 <li class="animated flipInY" ng-repeat="op in Operations">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
+                    <img  ng-src="{{op.LocationImageUrl}}">
                     <div class="user-name">
                             <h3>{{op.Title}}</h3>
                     </div>
