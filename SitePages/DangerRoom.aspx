@@ -45,10 +45,10 @@
     <div id="homeApp">
         <div data-ng-controller="mapController">
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-                <ui-gmap-window coords="map.selectedMarker.PzlLocationOWSTEXT" show="map.selectedMarker">
+                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker">
                     <div>
                         <h3>{{map.selectedMarker.Title}}</h3>
-                        <div><b>Location:</b> {{map.selectedMarker.PzlLocationOWSTEXT}}</div>
+                        <div><b>Location:</b> {{map.selectedMarker.coords}}</div>
                     </div>
                 </ui-gmap-window>
                 <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
