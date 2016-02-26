@@ -12,18 +12,25 @@ module Controllers {
             this.$flickrService = $flickrService;
 
             this.getOperations();
-            
+
             this.$scope.map = {
-                    markers: [],
-                    selectedMarker: null,
-                    center: {
-                        latitude: 59.9756579,
-                        longitude: 10.6593764
-                    },
-                    zoom: 3
-                };
-                this.attachMapEvents();
-                this.getMarkers();
+                markers: [],
+                selectedMarker: null,
+                center: {
+                    latitude: 59.9756579,
+                    longitude: 10.6593764
+                },
+                zoom: 3
+            };
+            this.attachMapEvents();
+            this.getMarkers();
+            $scope.selectOperation = (op) => {
+                if (op.Location) {
+                    this.$scope.map.center = op.Location.coords;
+                    this.$scope.map.zoom = 8;
+                    this.$scope.map.selectedMarker = op;
+                }
+            }
         }
 
         private getOperations() {
