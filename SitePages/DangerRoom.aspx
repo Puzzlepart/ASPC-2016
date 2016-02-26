@@ -43,53 +43,52 @@
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
-    <div id="homeApp" ng-cloak>
-        <div data-ng-controller="opsController">
-            <div id="operation-map">
-                <ui-gmap-google-map center='map.center' zoom='map.zoom' id="ops-map">
-                    <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;" class="ops-marker selected">
-                        <div>
-                            <h3>{{map.selectedMarker.Title}}</h3>
-                            <div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
-                            <div><b>Villains:</b> {{map.selectedMarker.PzlVillainOWSUSER}}</div>
-                            <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
-                            <div><b>Longitude:</b> {{map.selectedMarker.coords.longitude}}</div>
-                            <div><a ng-href="{{map.selectedMarker.OriginalPath}}">Go to operation</a></div>
-                        </div>
-                    </ui-gmap-window>
-                    <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents" class="ops-marker"></ui-gmap-markers>
-                </ui-gmap-google-map>
-            </div>
-            <div class="container comicblue active-operations">
-                <h2><span class="material-icons">public</span>Active Operations</h2>
-                <ul id="operations" class="tiles">
-                    <li class="animated flipInY" ng-repeat="op in Operations" ng-click="selectOperation(op)">
-                        <img class="tile-image" ng-src="{{op.LocationImageUrl}}">
-                        <div class="tile-name">
-                            <h3>{{op.Title}}</h3>
-                        </div>
-                    </li>
-                </ul>
-            </div>    
-        <div class="container comicblue">
-        <h2><span class="material-icons">public</span> Operational Statistics</h2>
-            <ul id="statistics" class="tiles">
-              
-            </ul>
-        </div>        
-        </div>    
-        <div class="container comicgrey" data-ng-controller="heroesController">
-            <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
-            <h2><span class="material-icons">mood</span>Top Heroes</h2>
-            <ul id="heroes" class="tiles">
-                <li class="animated flipInY" ng-repeat="hero in Heroes">
-                    <img class="tile-image" ng-src="{{hero.PictureURL}}">
+   <div id="homeApp" ng-cloak>
+    <div data-ng-controller="opsController">
+        <div id="operation-map">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom' id="ops-map">
+                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;" class="ops-marker selected">
+                    <div>
+                        <h3>{{map.selectedMarker.Title}}</h3>
+                        <div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
+                        <div><b>Villains:</b> {{map.selectedMarker.PzlVillainOWSUSER}}</div>
+                        <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
+                        <div><b>Longitude:</b> {{map.selectedMarker.coords.longitude}}</div>
+                        <div><a ng-href="{{map.selectedMarker.OriginalPath}}">Go to operation</a></div>
+                    </div>
+                </ui-gmap-window>
+                <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents" class="ops-marker"></ui-gmap-markers>
+            </ui-gmap-google-map>
+        </div>
+        <div class="container comicblue active-operations">
+            <h2><span class="material-icons">public</span>Active Operations</h2>
+            <ul id="operations" class="tiles">
+                <li class="animated flipInY" ng-repeat="op in Operations" ng-click="selectOperation(op)">
+                    <img class="tile-image" ng-src="{{op.LocationImageUrl}}">
                     <div class="tile-name">
-                            <h3>{{hero.PreferredName}}</h3>
+                        <h3>{{op.Title}}</h3>
                     </div>
                 </li>
             </ul>
         </div>
+        <div class="container comicgrey">
+            <h2><span class="material-icons">public</span> Operational Statistics</h2>
+            <ul id="statistics" class="tiles">
+
+            </ul>
+        </div>
     </div>
+    <div class="container comicblue" data-ng-controller="heroesController">
+        <h2><span class="material-icons">mood</span>Featured Heroes</h2>
+        <ul id="heroes" class="tiles">
+            <li class="animated flipInY" ng-repeat="hero in Heroes">
+                <img class="tile-image" ng-src="{{hero.PictureURL}}">
+                <div class="tile-name">
+                    <h3>{{hero.PreferredName}}</h3>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
     <script src='../SiteAssets/pzl/js/pzl.dangerroom.js'></script>
 </asp:Content>
