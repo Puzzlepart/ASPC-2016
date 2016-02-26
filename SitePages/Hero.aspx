@@ -19,8 +19,8 @@
     <div class="hero-page">
         <div class="container video-header map">
             <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="../SiteAssets/pzl/img/marvelintro.mp4" style=""></video>
-            <img src="../SiteAssets/pzl/img/standard_xlarge.jpg" class="hero-img"/>
             <h2 class="hero-name">Iron Man</h2>
+            <img src="../SiteAssets/pzl/img/standard_xlarge.jpg" class="hero-img"/>
             <p class="hero-desc">
                 Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19.
             </p>
@@ -87,6 +87,7 @@
 </SharePoint:UIVersionedContent>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderAdditionalPageHead" runat="server">
+                            <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/jquery.min.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
                             <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/pzl.hero.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
 	<SharePoint:DelegateControl runat="server" ControlId="FormCustomRedirectControl" AllowMultipleControls="true"/>
 	<SharePoint:UIVersionedContent UIVersion="4" runat="server"><ContentTemplate>
