@@ -51,7 +51,7 @@
                         <div><b>Location:</b> {{map.selectedMarker.PzlLocationOWSTEXT}}</div>
                     </div>
                 </ui-gmap-window>
-                <ui-gmap-markers models="map.markers" idkey="map.markers.UniqueId" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
+                <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue">
