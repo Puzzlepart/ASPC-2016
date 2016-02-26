@@ -12,7 +12,6 @@ EnsureScriptFunc('angular-google-maps.min.js', null, function() {
         .config(["$httpProvider", ($httpProvider) => {
             $httpProvider.defaults.headers.common["Accept"] = "application/json; odata=verbose";
         }])
-        .service("$searchService", Services.Search)
-        .controller("opsController", Controllers.OperationsController)
+        .controller("operationSiteController", Controllers.OperationSiteController)
     angular.bootstrap(document.getElementById('homeApp'), ['app']);
 });

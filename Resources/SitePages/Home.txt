@@ -43,8 +43,8 @@
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
-    <div id="homeApp" ng-cloak>
-        <div data-ng-controller="opsController">
+    <div id="homeApp" ng-cloak data-ng-controller="operationSiteController">
+        <div>
         <div>
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                 <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
@@ -55,7 +55,6 @@
             <ul class="tiles">
             
             </ul>
-        </div>
         </div>
         <div class="container comicgrey">
         <h2><span class="material-icons">mood</span> Tasks</h2>
@@ -74,5 +73,5 @@
           
         </div>
     </div>
-    <script src='../../SiteAssets/pzl/js/pzl.dangerroom.js'></script>
+    <script src='../../SiteAssets/pzl/js/pzl.operationroom.js'></script>
 </asp:Content>
