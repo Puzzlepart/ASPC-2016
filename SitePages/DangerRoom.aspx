@@ -60,7 +60,7 @@
                 </ui-gmap-google-map>
             </div>
             <div class="container comicblue active-operations">
-                <h2><span class="material-icons">public</span> Active Operations                <a class="add-new" onClick="SP.UI.ModalDialog.showModalDialog({title: 'Add New Operation', url: 'New-room.aspx'});">
+                <h2><span class="material-icons">public</span> Active Operations                <a class="add-new" ng-click="createNewOperation()">
                     <span class="material-icons">add_circle_outline</span> New Operation</a></h2>
 
                 <ul id="operations" class="tiles">

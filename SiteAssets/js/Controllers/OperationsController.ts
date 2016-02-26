@@ -26,6 +26,10 @@ module Controllers {
             };
             this.attachMapEvents();
             this.getMarkers();
+            
+            $scope.createNewOperation = () => {
+                window.location.href = 'New-room.aspx'
+            }
             $scope.selectOperation = (op) => {
                 if (op.coords) {
                     this.$scope.map.center = op.coords;
@@ -56,7 +60,7 @@ module Controllers {
                 }
             ]
         }
-
+        
         private getOperations() {
             this.$searchService.query({ querytext: 'contentclass:STS_Web contenttypeid:0x010109010092214CADC5FC4262A177C632F516412E*', selectproperties: 'Title,OriginalPath,PzlLocationOWSTEXT' }).then((operations: Array<any>) => {
                 this.$scope.Operations = [];
