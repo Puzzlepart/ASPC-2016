@@ -46,8 +46,8 @@
     <div id="homeApp" ng-cloak>
         <div data-ng-controller="opsController">
         <div>
-            <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom' id="ops-map">
+                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;" class="ops-marker selected">
                     <div>
                         <h3>{{map.selectedMarker.Title}}</h3>
                         <div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
@@ -57,7 +57,7 @@
                         <div><a ng-href="{{map.selectedMarker.OriginalPath}}">Go to operation</a></div>
                     </div>
                 </ui-gmap-window>
-                <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
+                <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents" class="ops-marker"></ui-gmap-markers>
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue active-operations">
