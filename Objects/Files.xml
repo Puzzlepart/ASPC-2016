@@ -10,6 +10,7 @@
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.ribbonactions.notifytaskassignee.js" Overwrite="true" />    
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.provisioning.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.dangerroom.js" Overwrite="true" />
+    <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.fabricpanel.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.operationroom.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.workspace.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.workspace.setup.js" Overwrite="true" />

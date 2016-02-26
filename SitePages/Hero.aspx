@@ -83,46 +83,48 @@
    
     <SharePoint:UIVersionedContent UIVersion="4" runat="server">
 	<ContentTemplate>
-	</div>
+	   </div>
 	</ContentTemplate>
 </SharePoint:UIVersionedContent>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderAdditionalPageHead" runat="server">
-                            <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/jquery.min.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
-                            <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/pzl.hero.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
-	<SharePoint:DelegateControl runat="server" ControlId="FormCustomRedirectControl" AllowMultipleControls="true"/>
-	<SharePoint:UIVersionedContent UIVersion="4" runat="server"><ContentTemplate>
-		<SharePoint:CssRegistration Name="forms.css" runat="server"/>
-	</ContentTemplate></SharePoint:UIVersionedContent>
+    <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/jquery.min.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
+    <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/pzl.facbricpanel.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
+    <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/pzl.hero.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
+    <SharePoint:DelegateControl runat="server" ControlId="FormCustomRedirectControl" AllowMultipleControls="true"/>
+    <SharePoint:UIVersionedContent UIVersion="4" runat="server"><ContentTemplate>
+    <SharePoint:CssRegistration Name="forms.css" runat="server"/>
+    </ContentTemplate>
+    </SharePoint:UIVersionedContent>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderTitleLeftBorder" runat="server">
-<table cellpadding="0" height="100%" width="100%" cellspacing="0">
- <tr><td class="ms-areaseparatorleft"><img src="/_layouts/15/images/blank.gif?rev=41" width='1' height='1' alt="" data-accessibility-nocheck="true"/></td></tr>
-</table>
-</asp:Content>
-<asp:Content ContentPlaceHolderId="PlaceHolderTitleAreaClass" runat="server">
-<script type="text/javascript" id="onetidPageTitleAreaFrameScript">
-	if (document.getElementById("onetidPageTitleAreaFrame") != null)
-	{
-		document.getElementById("onetidPageTitleAreaFrame").className="ms-areaseparator";
-	}
-</script>
+    <table cellpadding="0" height="100%" width="100%" cellspacing="0">
+    <tr><td class="ms-areaseparatorleft"><img src="/_layouts/15/images/blank.gif?rev=41" width='1' height='1' alt="" data-accessibility-nocheck="true"/></td></tr>
+    </table>
+    </asp:Content>
+    <asp:Content ContentPlaceHolderId="PlaceHolderTitleAreaClass" runat="server">
+    <script type="text/javascript" id="onetidPageTitleAreaFrameScript">
+        if (document.getElementById("onetidPageTitleAreaFrame") != null)
+        {
+            document.getElementById("onetidPageTitleAreaFrame").className="ms-areaseparator";
+        }
+    </script>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderBodyAreaClass" runat="server">
 <SharePoint:StyleBlock runat="server">
-.ms-bodyareaframe {
-	padding: 8px;
-	border: none;
-}
+    .ms-bodyareaframe {
+        padding: 8px;
+        border: none;
+    }
 </SharePoint:StyleBlock>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderBodyLeftBorder" runat="server">
-<div class='ms-areaseparatorleft'><img src="/_layouts/15/images/blank.gif?rev=41" width='8' height='100%' alt="" data-accessibility-nocheck="true"/></div>
+    <div class='ms-areaseparatorleft'><img src="/_layouts/15/images/blank.gif?rev=41" width='8' height='100%' alt="" data-accessibility-nocheck="true"/></div>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderTitleRightMargin" runat="server">
-<div class='ms-areaseparatorright'><img src="/_layouts/15/images/blank.gif?rev=41" width='8' height='100%' alt="" data-accessibility-nocheck="true"/></div>
+    <div class='ms-areaseparatorright'><img src="/_layouts/15/images/blank.gif?rev=41" width='8' height='100%' alt="" data-accessibility-nocheck="true"/></div>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderBodyRightMargin" runat="server">
-<div class='ms-areaseparatorright'><img src="/_layouts/15/images/blank.gif?rev=41" width='8' height='100%' alt="" data-accessibility-nocheck="true"/></div>
+    <div class='ms-areaseparatorright'><img src="/_layouts/15/images/blank.gif?rev=41" width='8' height='100%' alt="" data-accessibility-nocheck="true"/></div>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderTitleAreaSeparator" runat="server"/>
