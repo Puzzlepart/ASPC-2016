@@ -4,8 +4,6 @@
 	<SharePoint:ListFormPageTitle runat="server"/>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderPageTitleInTitleArea" runat="server">
-	<span class="die">
-	</span>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderPageImage" runat="server">
 	<img src="/_layouts/15/images/blank.gif?rev=41" width='1' height='1' alt="" data-accessibility-nocheck="true"/>
@@ -57,6 +55,7 @@
 </SharePoint:UIVersionedContent>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderAdditionalPageHead" runat="server">
+                            <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/pzl.hero.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
 	<SharePoint:DelegateControl runat="server" ControlId="FormCustomRedirectControl" AllowMultipleControls="true"/>
 	<SharePoint:UIVersionedContent UIVersion="4" runat="server"><ContentTemplate>
 		<SharePoint:CssRegistration Name="forms.css" runat="server"/>
