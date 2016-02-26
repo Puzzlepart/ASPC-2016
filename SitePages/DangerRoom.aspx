@@ -41,16 +41,16 @@
    <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
-    <h1 class="room-title">Danger Room</h1>
     <div id="homeApp">
         <div data-ng-controller="mapController">
-            <ui-gmap-google-map center='map.center' zoom='map.zoom' marker-events="map.markerEvents">
-                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;">
                     <div>
-                        <div><b>Location:</b> {{map.window.coords}}</div>
+                        <h3>{{map.selectedMarker.Title}}</h3>
+                        <div><b>Location:</b> {{map.selectedMarker.coords}}</div>
                     </div>
                 </ui-gmap-window>
-                <ui-gmap-markers idkey="marker.$index" models="map.markers" coords="'self'" events="map.markersEvent""></ui-gmap-markers>
+                <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue active-operations" data-ng-controller="opsController">
@@ -67,7 +67,7 @@
        <div class="container">
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
-        <h2><span class="material-icons">show chart</span> Operational Statistics</h2>
+        <h2><span class="material-icons">show_chart</span> Operational Statistics</h2>
             <ul id="users">
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
@@ -141,7 +141,7 @@
         <div class="container comicgrey">
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
-        <h2><span class="material-icons">mood bad</span> Top Villians</h2>
+        <h2><span class="material-icons">mood_bad</span> Top Villians</h2>
             <ul id="users">
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">

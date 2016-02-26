@@ -6,7 +6,7 @@
     <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\angular\angular.min.js" Overwrite="false" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\angular-simple-logger\dist\angular-simple-logger.min.js" Overwrite="false" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="bower_components\angular-google-maps\dist\angular-google-maps.min.js" Overwrite="false" />
-    <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.ribbonactions.notifytaskassignee.js" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.ribbonactions.notifytaskassignee.js" Overwrite="true" />    
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.provisioning.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.dangerroom.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.workspace.js" Overwrite="true" />
@@ -29,6 +29,7 @@
     <pnp:File Folder="SiteAssets/pzl/css/operationroom" Src="SiteAssets\css\operationroom\main.css" Overwrite="true" />    
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\DangerRoom.aspx" />
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\Hero.aspx" />    
+    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\New-room.aspx" />   
     <pnp:File Folder="Resources/SitePages" Overwrite="true" Src="Resources\SitePages\Home.txt" />
     <pnp:File Folder="Resources/WebParts" Overwrite="true" Src="Resources\WebParts\Documents.webpart" />
     <pnp:File Folder="Resources/WebParts" Overwrite="true" Src="Resources\WebParts\Media.webpart" />
