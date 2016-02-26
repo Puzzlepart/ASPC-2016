@@ -41,6 +41,8 @@
    <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
+    <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
+    <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
     <div id="homeApp">
         <div data-ng-controller="mapController">
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
