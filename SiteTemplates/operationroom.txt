@@ -43,40 +43,7 @@
             "Properties": {
                 "ContentTypeId": "0x010109010092214CADC5FC4262A177C632F516412E"
             },
-             "WebParts": [
-                {
-                    "Title": "Documents",
-                    "Zone": "Zone3",
-                    "Order": 0,
-                    "Contents": {
-                        "FileUrl": "{resources}/WebParts/Documents.webpart"
-                    }
-                },
-                {
-                    "Title": "Media",
-                    "Zone": "Zone3",
-                    "Order": 1,
-                    "Contents": {
-                        "FileUrl": "{resources}/WebParts/Media.webpart"
-                    }
-                },
-                {
-                    "Title": "Tasks",
-                    "Zone": "Zone2Left",
-                    "Order": 0,
-                    "Contents": {
-                        "FileUrl": "{resources}/WebParts/Tasks.webpart"
-                    }
-                },
-                {
-                    "Title": "Twitter",
-                    "Zone": "Zone2Right",
-                    "Order": 0,
-                    "Contents": {
-                        "FileUrl": "{resources}/WebParts/Twitter.webpart"
-                    }
-                }
-            ]
+             "WebParts": []
         }
     ],
     "CustomActions": [
