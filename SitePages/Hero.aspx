@@ -19,15 +19,15 @@
     <div class="hero-page">
         <div class="container video-header map">
             <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="../SiteAssets/pzl/img/marvelintro.mp4" style=""></video>
-            <h2 class="hero-name">Iron Man</h2>
-            <img src="../SiteAssets/pzl/img/standard_xlarge.jpg" class="hero-img"/>
+            <h2 class="hero-name"></h2>
+            <img src="" class="hero-img"/>
             <p class="hero-desc">
-                Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19.
+
             </p>
             
         </div>
 
-        <div class="container pzl-hero-stats">
+        <div class="container comicgrey pzl-hero-stats">
             <h2>Stats</h2>
             <div class="pzl-hero-stat">
             </div>
@@ -36,7 +36,7 @@
             <div class="pzl-hero-stat">
             </div>
         </div>
-        <div class="container pzl-hero-items">
+        <div class="container comicblue pzl-hero-items">
                 <div class="pzl-hero-docs half">
                     <h2>Documents</h2>
             
@@ -45,13 +45,13 @@
             <h2>E-mails</h2>
                 </div>
         </div>
-        <div class="container pzl-hero-oprooms">
+        <div class="container comicgrey pzl-hero-oprooms">
             <h2>Operation Rooms</h2>
         </div>
         <div class="container pzl-hero-media">
                 <h2>Media</h2>
         </div>
-        <div class="container">
+        <div class="container comicblue">
             <button class="ms-Button js-togglePanel"> <span class="ms-Button-label">See Tasks</span> </button>
             <div class="ms-Panel">
             <div class="ms-Overlay ms-Overlay--dark js-togglePanel"></div>
@@ -80,6 +80,7 @@
             </div>
         </div>
     </div>
+   
     <SharePoint:UIVersionedContent UIVersion="4" runat="server">
 	<ContentTemplate>
 	</div>

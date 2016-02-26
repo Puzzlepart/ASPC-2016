@@ -11,6 +11,9 @@
 
             query(queryParameters: any) {
                 var searchUrl = `${_spPageContextInfo.siteAbsoluteUrl}/_api/search/query?${this.getQueryString(queryParameters)}`;
+                if (queryParameters.sourceId) {
+                    searchUrl += `&sourceid='${searchUrl}'`
+                }
                 return this.$q((resolve, reject) => {
                     this.$http.get(searchUrl).success((response: any) => {
                         resolve(this.parseSearchResults(response, queryParameters.groupby));
