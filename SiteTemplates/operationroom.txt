@@ -9,7 +9,7 @@
             "TemplateType": 171
         },
         {
-            "Title": "Områdesider",
+            "Title": "Site Pages",
             "Url": "SitePages",
             "TemplateType": 119,
             "ContentTypeBindings": [
