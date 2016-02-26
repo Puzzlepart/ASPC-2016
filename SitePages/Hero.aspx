@@ -28,7 +28,7 @@
         </div>
 
         <div class="container comicgrey pzl-hero-stats">
-            <h2>Stats</h2>
+            <h2><span class="material-icons">assessment</span> Stats</h2>
             <div class="pzl-hero-stat">
             </div>
             <div class="pzl-hero-stat">
@@ -38,18 +38,18 @@
         </div>
         <div class="container comicblue pzl-hero-items">
                 <div class="pzl-hero-docs half">
-                    <h2>Documents</h2>
+                    <h2><span class="material-icons">insert_drive_file</span> Documents</h2>
             
                 </div>
                 <div class="pzl-hero-emails half">
-            <h2>E-mails</h2>
+            <h2><span class="material-icons">mail</span> E-mails</h2>
                 </div>
         </div>
         <div class="container comicgrey pzl-hero-oprooms">
-            <h2>Operation Rooms</h2>
+            <h2><span class="material-icons">public</span> Operation Rooms</h2>
         </div>
         <div class="container pzl-hero-media">
-                <h2>Media</h2>
+                <h2><span class="material-icons">burst_mode</span> Media</h2>
         </div>
         <div class="container comicblue">
             <button class="ms-Button js-togglePanel"> <span class="ms-Button-label">See Tasks</span> </button>
