@@ -5,12 +5,10 @@
         export class MapController {
             $scope: any;
             $searchService: Services.Search;
-            $siteService: Services.SiteService;
 
-            constructor($scope, $searchService, $siteService) {
+            constructor($scope, $searchService) {
                 this.$scope = $scope;
                 this.$searchService = $searchService;
-                this.$siteService = $siteService;
 
                 this.$scope.map = {
                     markers: [],
@@ -45,9 +43,6 @@
                         }, coords))
                     });
                 })
-            }
-            createOperationRoom(name) {
-                this.$siteService.create(name);
             }
         }
  }

@@ -61,10 +61,10 @@
         </div>
         <div class="container comicblue active-operations" data-ng-controller="opsController">
             <h2><span class="material-icons">public</span>Active Operations</h2>
-            <ul id="operations">
+            <ul id="operations" class="tiles">
                 <li class="animated flipInY" ng-repeat="op in Operations">
-                    <img class="operation-image" ng-src="{{op.LocationImageUrl}}">
-                    <div class="operation-name">
+                    <img class="tile-image" ng-src="{{op.LocationImageUrl}}">
+                    <div class="tile-name">
                         <h3>{{op.Title}}</h3>
                     </div>
                 </li>
@@ -74,34 +74,34 @@
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
         <h2><span class="material-icons">mood</span> Top Heroes</h2>
-            <ul id="users">
+            <ul id="users" class="tiles">
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
-                    <div class="user-name">
+                    <div class="tile-name">
                             <h3>Iron Man </h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
-                    <div class="user-name">
+                    <div class="tile-name">
                             <h3>Spider-Man </h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
+                    <div class="tile-name">
                             <h3>Hulk</h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
+                    <div class="tile-name">
                             <h3>Hulk</h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
+                    <div class="tile-name">
                             <h3>Hulk</h3>
                     </div>
                 </li>
@@ -111,34 +111,34 @@
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
         <h2><span class="material-icons">mood_bad</span> Top Villians</h2>
-            <ul id="users">
+            <ul id="villains" class="tiles">
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
-                    <div class="user-name">
+                    <div class="tile-name">
                             <h3>Iron Man </h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
-                    <div class="user-name">
+                    <div class="tile-name">
                             <h3>Spider-Man </h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
+                    <div class="tile-name">
                             <h3>Hulk</h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
+                    <div class="tile-name">
                             <h3>Hulk</h3>
                     </div>
                 </li>
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
+                    <div class="tile-name">
                             <h3>Hulk</h3>
                     </div>
                 </li>
