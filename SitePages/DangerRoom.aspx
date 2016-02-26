@@ -61,7 +61,7 @@
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue active-operations">
-            <h2><span class="material-icons">public</span>Active Operations</h2>
+            <h2><span class="material-icons">public</span> Active Operations</h2>
             <ul id="operations" class="tiles">
                 <li class="animated flipInY" ng-repeat="op in Operations" ng-click="selectOperation(op)">
                     <img class="tile-image" ng-src="{{op.LocationImageUrl}}">
