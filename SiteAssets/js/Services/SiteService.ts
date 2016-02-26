@@ -10,7 +10,13 @@
             }
             
             getSiteProperties(siteUrl: string) {
-                return this.$http.get(`${siteUrl}/_api/web/lists/getByTitle('Site Pages')/Items(1)/FieldValuesAsHtml`);
+                return this.$q((resolve, reject) => {
+                    this.$http.get(`${siteUrl}/_api/web/lists/getByTitle('Site Pages')/Items(1)`).success((response: any) => {
+                        resolve(response.d);
+                    }).error(() => {
+                        reject();
+                    });
+                });
             }
         }
  }

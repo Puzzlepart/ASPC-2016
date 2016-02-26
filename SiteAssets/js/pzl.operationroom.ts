@@ -24,6 +24,7 @@ EnsureScriptFunc('adal-angular.min.js', null, function() {
                     $httpProvider
                 );
             })
+            .service("$siteService", Services.SiteService)
             .service("$graphService", Services.GraphService)
             .controller("operationSiteController", Controllers.OperationSiteController)
         angular.bootstrap(document.getElementById('homeApp'), ['app']);
