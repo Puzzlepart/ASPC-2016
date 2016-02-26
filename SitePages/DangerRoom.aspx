@@ -44,16 +44,14 @@
     <h1 class="room-title">Danger Room</h1>
     <div id="homeApp">
         <div data-ng-controller="mapController">
-            <ui-gmap-google-map center='map.center' zoom='map.zoom' events="map.events">
-                <ui-gmap-window coords="map.window.coords" show="map.window.show">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker">
                     <div>
-                        <h3>Create operation room</h3>
-                        <div><b>Location:</b> {{map.window.coords}}</div>
-                        <div><input type="text" placeholder="Operation name" /></div>
-                        <input type="button" value="Create" />
+                        <h3>{{map.selectedMarker.Title}}</h3>
+                        <div><b>Location:</b> {{map.selectedMarker.coords}}</div>
                     </div>
                 </ui-gmap-window>
-                <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="$index"></ui-gmap-marker>
+                <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue">
