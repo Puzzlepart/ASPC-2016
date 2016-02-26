@@ -11,75 +11,75 @@
 <asp:Content ContentPlaceHolderId="PlaceHolderMain" class="pzl-hero-page" runat="server">
 <SharePoint:UIVersionedContent UIVersion="4" runat="server">
 </SharePoint:UIVersionedContent>
-    <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom/main.css">
-    <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
-    <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
+    <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
+    <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
 
-
-    <div class="container pzl-hero-header map">
-        <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video>
-
-        <h1 class="pzl-hero-name">Iron Man</h1>
-        <p class="pzl-hero-desc">
-            Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19.
-        </p>
-        <img src="http://pre03.deviantart.net/b4da/th/pre/f/2015/107/9/6/iron_man_avengers_age_of_ultron_render_by_sachso74-d8q051d.png" class="pzl-hero-img"/>
-    </div>
-
-    <div class="container pzl-hero-stats">
-        <h2>Stats</h2>
-        <div class="pzl-hero-stat">
+    <div class="hero-page">
+        <div class="container video-header map">
+            <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="../SiteAssets/pzl/img/marvelintro.mp4" style=""></video>
+            <img src="../SiteAssets/pzl/img/standard_xlarge.jpg" class="hero-img"/>
+            <h2>Iron Man</h2>
+            <p class="hero-desc">
+                Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19.
+            </p>
+            
         </div>
-        <div class="pzl-hero-stat">
-        </div>
-        <div class="pzl-hero-stat">
-        </div>
-    </div>
-    <div class="container pzl-hero-items">
-            <div class="pzl-hero-docs half">
-                <h2>Documents</h2>
-        
+
+        <div class="container pzl-hero-stats">
+            <h2>Stats</h2>
+            <div class="pzl-hero-stat">
             </div>
-            <div class="pzl-hero-emails half">
-        <h2>E-mails</h2>
+            <div class="pzl-hero-stat">
             </div>
-    </div>
-    <div class="container pzl-hero-oprooms">
-        <h2>Operation Rooms</h2>
-    </div>
-    <div class="container pzl-hero-media">
-            <h2>Media</h2>
-    </div>
-    <div class="container">
-        <button class="ms-Button js-togglePanel"> <span class="ms-Button-label">See Tasks</span> </button>
-        <div class="ms-Panel">
-        <div class="ms-Overlay ms-Overlay--dark js-togglePanel"></div>
-        <div class="ms-Panel-main">
-            <div class="ms-Panel-commands">
-            <div class="ms-CommandBar">
-                <div class="ms-CommandBar-sideCommands">
-                    <div class="ms-CommandBarItem icon-only">
-                        <div class="ms-CommandBarItem-linkWrapper">
-                        <div class="ms-CommandBarItem-link"><span class="ms-CommandBarItem-icon ms-Icon ms-Icon--circleFilled"></span> <span class="ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular">Stars</span> <i class="ms-CommandBarItem-chevronDown ms-Icon ms-Icon--chevronDown"></i></div>
+            <div class="pzl-hero-stat">
+            </div>
+        </div>
+        <div class="container pzl-hero-items">
+                <div class="pzl-hero-docs half">
+                    <h2>Documents</h2>
+            
+                </div>
+                <div class="pzl-hero-emails half">
+            <h2>E-mails</h2>
+                </div>
+        </div>
+        <div class="container pzl-hero-oprooms">
+            <h2>Operation Rooms</h2>
+        </div>
+        <div class="container pzl-hero-media">
+                <h2>Media</h2>
+        </div>
+        <div class="container">
+            <button class="ms-Button js-togglePanel"> <span class="ms-Button-label">See Tasks</span> </button>
+            <div class="ms-Panel">
+            <div class="ms-Overlay ms-Overlay--dark js-togglePanel"></div>
+            <div class="ms-Panel-main">
+                <div class="ms-Panel-commands">
+                <div class="ms-CommandBar">
+                    <div class="ms-CommandBar-sideCommands">
+                        <div class="ms-CommandBarItem icon-only">
+                            <div class="ms-CommandBarItem-linkWrapper">
+                            <div class="ms-CommandBarItem-link"><span class="ms-CommandBarItem-icon ms-Icon ms-Icon--circleFilled"></span> <span class="ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular">Stars</span> <i class="ms-CommandBarItem-chevronDown ms-Icon ms-Icon--chevronDown"></i></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="ms-CommandBarItem">
-                        <div class="ms-CommandBarItem-linkWrapper">
-                        <div class="ms-CommandBarItem-link"><span class="ms-CommandBarItem-icon ms-Icon ms-Icon--circleFilled"></span> <span class="ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular">Stars</span> <i class="ms-CommandBarItem-chevronDown ms-Icon ms-Icon--chevronDown"></i></div>
+                        <div class="ms-CommandBarItem">
+                            <div class="ms-CommandBarItem-linkWrapper">
+                            <div class="ms-CommandBarItem-link"><span class="ms-CommandBarItem-icon ms-Icon ms-Icon--circleFilled"></span> <span class="ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular">Stars</span> <i class="ms-CommandBarItem-chevronDown ms-Icon ms-Icon--chevronDown"></i></div>
+                            </div>
                         </div>
+                    
                     </div>
-                
+                </div>
+                </div>
+                <div class="ms-Panel-contentInner"><span class="ms-Panel-headerText">Panel</span>
+                <p class="ms-font-m">Content goes here.</p>
                 </div>
             </div>
             </div>
-            <div class="ms-Panel-contentInner"><span class="ms-Panel-headerText">Panel</span>
-            <p class="ms-font-m">Content goes here.</p>
-            </div>
-        </div>
         </div>
     </div>
-    
     <SharePoint:UIVersionedContent UIVersion="4" runat="server">
 	<ContentTemplate>
 	</div>
