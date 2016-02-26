@@ -4,13 +4,12 @@
         export class OperationsController {
             $scope: any;
             $searchService: Services.Search;
-            $siteService: Services.SiteService;
             $flickrService: Services.Flickr;
             
-            constructor($scope, $searchService, $siteService) {
+            constructor($scope, $searchService, $flickrService) {
                 this.$scope = $scope;
                 this.$searchService = $searchService;
-                this.$siteService = $siteService;
+                this.$flickrService = $flickrService;
                 
                 this.getOperations();
             }
@@ -18,16 +17,18 @@
             private getOperations() {
                 this.$searchService.query({ querytext: 'contentclass:STS_Web contenttypeid:0x010109010092214CADC5FC4262A177C632F516412E*', selectproperties: 'Title,OriginalPath,PzlLocationOWSTEXT' }).then((operations: Array<any>) => {
                     this.$scope.Operations = operations;
-                    operations.forEach((operation) => {
+                    this.$scope.Operations.forEach((operation) => {
                         if (operation.PzlLocationOWSTEXT) {
                             var location = angular.fromJson(operation.PzlLocationOWSTEXT);
                             operation.Location = {
                                 title: operation.Title,
                                 coords: location.coords
                             };
-                            this.$flickrService.getPicturesForLocation(location.coords.latitude, location.coords.longtitude).then((data) => {
-                                operation.LocationImageUrl = data;
-                            });
+                            if (location.coords.latitude && location.coords.longitude) {
+                                this.$flickrService.getPicturesForLocation(location.coords.latitude, location.coords.longitude).then((data) => {
+                                    operation.LocationImageUrl = data;
+                                });
+                            }
                         }
                     });
                 })
