@@ -50,7 +50,6 @@
             }
             
             parseOWSUSER(userFieldStr: string) {
-                console.log(userFieldStr);
                 return userFieldStr;
             }
 

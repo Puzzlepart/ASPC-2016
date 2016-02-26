@@ -44,7 +44,8 @@
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
     <div id="homeApp" ng-cloak>
-        <div data-ng-controller="mapController">
+        <div data-ng-controller="opsController">
+        <div>
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                 <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;">
                     <div>
@@ -59,16 +60,17 @@
                 <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
             </ui-gmap-google-map>
         </div>
-        <div class="container comicblue active-operations" data-ng-controller="opsController">
+        <div class="container comicblue active-operations">
             <h2><span class="material-icons">public</span>Active Operations</h2>
             <ul id="operations" class="tiles">
-                <li class="animated flipInY" ng-repeat="op in Operations">
+                <li class="animated flipInY" ng-repeat="op in Operations" ng-click="selectOperation(op)">
                     <img class="tile-image" ng-src="{{op.LocationImageUrl}}">
                     <div class="tile-name">
                         <h3>{{op.Title}}</h3>
                     </div>
                 </li>
             </ul>
+        </div>
         </div>
         <div class="container comicgrey">
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
