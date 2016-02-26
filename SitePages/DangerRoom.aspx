@@ -41,14 +41,16 @@
    <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
+    <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
+    <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
     <div id="homeApp">
         <div data-ng-controller="mapController">
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                 <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;">
                     <div>
                         <h2><a ng-href="{{map.selectedMarker.OriginalPath}}">{{map.selectedMarker.Title}}</a></h2>
-                        <div><b>Heroes:</b> {{map.selectedMarker.coords}}</div>
-                        <div><b>Villains:</b> {{map.selectedMarker.coords}}</div>
+                        <div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
+                        <div><b>Villains:</b> {{map.selectedMarker.PzlVillainOWSUSER}}</div>
                         <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
                         <div><b>Longitude:</b> {{map.selectedMarker.coords.longitude}}</div>
                     </div>
@@ -67,40 +69,13 @@
                 </li>
             </ul>
         </div>
-       <div class="container">
+       <div class="container" data-ng-controller="statisticsController">
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
         <h2><span class="material-icons">show_chart</span> Operational Statistics</h2>
             <ul id="users">
                 <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
-                    <div class="user-name">
-                            <h3>London</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
-                    <div class="user-name">
-                            <h3>Paris</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3>Syria</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3>Washington D.C.</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3></h3>
-                    </div>
+                   <div google-chart chart="chartObject" style="height:600px; width:100%;"></div>
                 </li>
             </ul>
         </div>
@@ -141,7 +116,7 @@
                 </li>
             </ul>
         </div>
-        <div class="container comicgrey">
+        <div class="container comicblue">
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
         <h2><span class="material-icons">mood_bad</span> Top Villians</h2>

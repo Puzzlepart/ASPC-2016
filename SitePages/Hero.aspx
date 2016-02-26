@@ -4,8 +4,6 @@
 	<SharePoint:ListFormPageTitle runat="server"/>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderPageTitleInTitleArea" runat="server">
-	<span class="die">
-	</span>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderPageImage" runat="server">
 	<img src="/_layouts/15/images/blank.gif?rev=41" width='1' height='1' alt="" data-accessibility-nocheck="true"/>
@@ -15,8 +13,13 @@
 </SharePoint:UIVersionedContent>
     <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom/main.css">
-<div class="pzl-hero-maincontent">
-    <div class="pzl-hero-header row map">
+    <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
+    <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
+
+
+    <div class="container pzl-hero-header map">
+        <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video>
+
         <h1 class="pzl-hero-name">Iron Man</h1>
         <p class="pzl-hero-desc">
             Anthony "Tony" Stark was born to Howard Anthony Stark and Maria Collins Carbonell Stark, owners of the prominent US firm, Stark Industries. As a boy, Tony was fascinated with building and controlling machines. At the age of 15 Tony entered the undergraduate electrical engineering program at the Massachusetts Institute of Technology (MIT), and graduated with two master’s degrees by age 19.
@@ -48,7 +51,34 @@
     <div class="container pzl-hero-media">
             <h2>Media</h2>
     </div>
-</div>
+    <div class="container">
+        <button class="ms-Button js-togglePanel"> <span class="ms-Button-label">See Tasks</span> </button>
+        <div class="ms-Panel">
+        <div class="ms-Overlay ms-Overlay--dark js-togglePanel"></div>
+        <div class="ms-Panel-main">
+            <div class="ms-Panel-commands">
+            <div class="ms-CommandBar">
+                <div class="ms-CommandBar-sideCommands">
+                    <div class="ms-CommandBarItem icon-only">
+                        <div class="ms-CommandBarItem-linkWrapper">
+                        <div class="ms-CommandBarItem-link"><span class="ms-CommandBarItem-icon ms-Icon ms-Icon--circleFilled"></span> <span class="ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular">Stars</span> <i class="ms-CommandBarItem-chevronDown ms-Icon ms-Icon--chevronDown"></i></div>
+                        </div>
+                    </div>
+                    <div class="ms-CommandBarItem">
+                        <div class="ms-CommandBarItem-linkWrapper">
+                        <div class="ms-CommandBarItem-link"><span class="ms-CommandBarItem-icon ms-Icon ms-Icon--circleFilled"></span> <span class="ms-CommandBarItem-commandText ms-font-m ms-font-weight-regular">Stars</span> <i class="ms-CommandBarItem-chevronDown ms-Icon ms-Icon--chevronDown"></i></div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            </div>
+            <div class="ms-Panel-contentInner"><span class="ms-Panel-headerText">Panel</span>
+            <p class="ms-font-m">Content goes here.</p>
+            </div>
+        </div>
+        </div>
+    </div>
     
     <SharePoint:UIVersionedContent UIVersion="4" runat="server">
 	<ContentTemplate>
@@ -57,6 +87,7 @@
 </SharePoint:UIVersionedContent>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderAdditionalPageHead" runat="server">
+                            <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/pzl.hero.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
 	<SharePoint:DelegateControl runat="server" ControlId="FormCustomRedirectControl" AllowMultipleControls="true"/>
 	<SharePoint:UIVersionedContent UIVersion="4" runat="server"><ContentTemplate>
 		<SharePoint:CssRegistration Name="forms.css" runat="server"/>

@@ -2,7 +2,6 @@
 /// <reference path="Controllers\controllers.d.ts" />
 /// <reference path="Services\services.d.ts" />
 
-
 EnsureScriptFunc('angular-google-maps.min.js', null, function() {
     var app = angular.module("app", ['uiGmapgoogle-maps']).config(
         ['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders) {
@@ -17,6 +16,7 @@ EnsureScriptFunc('angular-google-maps.min.js', null, function() {
         .service("$siteService", Services.SiteService)
         .service("$flickrService", Services.Flickr)
         .controller("mapController", Controllers.MapController)
-        .controller("opsController", Controllers.OperationsController);
+        .controller("opsController", Controllers.OperationsController)
+        .controller("statisticsController", Controllers.StatisticsController);
     angular.bootstrap(document.getElementById('homeApp'), ['app']);
 });
