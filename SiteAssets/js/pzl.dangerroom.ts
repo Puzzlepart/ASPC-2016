@@ -14,7 +14,9 @@ module Services {
                 this.$q = $q;
             }
 
+            create(name: string) {
 
+            }
         }
         export class Search {
             $http: ng.IHttpService;
@@ -71,10 +73,12 @@ module Services {
         export class MapController {
             $scope: any;
             $searchService: Services.Search;
+            $siteService: Services.SiteService;
 
-            constructor($scope, $searchService) {
+            constructor($scope, $searchService, $siteService) {
                 this.$scope = $scope;
                 this.$searchService = $searchService;
+                this.$siteService = $siteService;
 
                 this.$scope.map = {
                     markers: [],
@@ -91,6 +95,14 @@ module Services {
                     },
                     zoom: 5
                 };
+                this.$scope.operationroom = {
+                    show: true,
+                    coords: {
+                        latitude: 45,
+                        longitude: -22
+                    },
+                    name: ""
+                }
                 this.attachMapEvents();
                 this.getMarkers();
             }
@@ -98,11 +110,11 @@ module Services {
                 this.$scope.map.events = {
                     rightclick: (map, eventName, originalEventArgs) => {
                         this.$scope.$apply(() => {
-                            this.$scope.map.window.coords = {
+                            this.$scope.operationroom.coords = {
                                 latitude: originalEventArgs[0].latLng.lat(),
                                 longitude: originalEventArgs[0].latLng.lng()
                             };
-                            this.$scope.map.show = true;
+                            this.$scope.operationroom.show = true;
                         });
                     }
                 };
@@ -120,6 +132,9 @@ module Services {
                     });
                 })
             }
+            createOperationRoom(name) {
+                this.$siteService.create(name);
+            }
         }
     }
 
@@ -134,6 +149,7 @@ module Services {
                 $httpProvider.defaults.headers.common["Accept"] = "application/json; odata=verbose";
             }])
             .service("$searchService", Services.Search)
+            .service("$siteService", Services.SiteService)
             .controller("mapController", Controllers.MapController);
         angular.bootstrap(document.getElementById('homeApp'), ['app']);
     });

@@ -45,12 +45,12 @@
     <div id="homeApp">
         <div data-ng-controller="mapController">
             <ui-gmap-google-map center='map.center' zoom='map.zoom' events="map.events">
-                <ui-gmap-window coords="map.window.coords" show="map.window.show">
+                <ui-gmap-window coords="operationroom.coords" show="operationroom.show">
                     <div>
                         <h3>Create operation room</h3>
                         <div><b>Location:</b> {{map.window.coords}}</div>
                         <div><input type="text" placeholder="Operation name" /></div>
-                        <input type="button" value="Create" />
+                        <input type="button" value="Create" ng-click="createOperationRoom()" ng-model="operationroom.name" />
                     </div>
                 </ui-gmap-window>
                 <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="$index"></ui-gmap-marker>
