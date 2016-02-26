@@ -1,18 +1,5 @@
 /// <reference path="..\..\..\typings\tsd.d.ts" />
  module Services {
-        export class SiteService {
-            $http: ng.IHttpService;
-            $q: ng.IQService;
-
-            constructor($http, $q: ng.IQService) {
-                this.$http = $http;
-                this.$q = $q;
-            }
-
-            create(name: string) {
-
-            }
-        }
         export class Search {
             $http: ng.IHttpService;
             $q: ng.IQService;

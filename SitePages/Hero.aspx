@@ -87,6 +87,7 @@
 </SharePoint:UIVersionedContent>
 </asp:Content>
 <asp:Content ContentPlaceHolderId="PlaceHolderAdditionalPageHead" runat="server">
+                            <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/jquery.min.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
                             <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/pzl.hero.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
 	<SharePoint:DelegateControl runat="server" ControlId="FormCustomRedirectControl" AllowMultipleControls="true"/>
 	<SharePoint:UIVersionedContent UIVersion="4" runat="server"><ContentTemplate>

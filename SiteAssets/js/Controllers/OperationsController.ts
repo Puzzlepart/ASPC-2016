@@ -18,7 +18,7 @@
                 this.$searchService.query({ querytext: 'contentclass:STS_Web contenttypeid:0x010109010092214CADC5FC4262A177C632F516412E*', selectproperties: 'Title,OriginalPath,PzlLocationOWSTEXT' }).then((operations: Array<any>) => {
                     this.$scope.Operations = operations;
                     this.$scope.Operations.forEach((operation, index) => {
-                        this.$scope.Operations[index].LocationImageUrl = "../SiteAssets/pzl/img/standard_xlarge.jpg";
+                        this.$scope.Operations[index].LocationImageUrl = "../SiteAssets/pzl/img/location.jpg";
                         if (operation.PzlLocationOWSTEXT) {
                             var location = angular.fromJson(operation.PzlLocationOWSTEXT);
                             operation.Location = {
