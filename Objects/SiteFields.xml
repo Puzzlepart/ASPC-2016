@@ -31,4 +31,33 @@
     Mult="TRUE"
     Group="{parameter:GenericFieldsGroup}"
     Description=""></Field>
+    <Field
+    ID="{3e52b825-5210-483d-aefd-595c73df8a78}"
+    Name="{parameter:GenericFieldsPrefix}CatsSaved"
+    DisplayName="Cats saved from trees"
+    Type="Number"
+    Group="{parameter:GenericFieldsGroup}"
+    Description="">
+        <Default>0</Default>
+    </Field>
+    <Field
+    ID="{1b3349ba-f723-48ff-bb47-a556279a4294}"
+    Name="{parameter:GenericFieldsPrefix}FiresPutOut"
+    DisplayName="Fires put out"
+    Type="Number"
+    Group="{parameter:GenericFieldsGroup}"
+    Description="">
+    <Default>0</Default>
+    </Field>
+    <Field
+    ID="{740b11fc-6840-4102-b6e0-2af07b43b044}"
+    Name="{parameter:GenericFieldsPrefix}CivilliansSaved"
+    DisplayName="Civillians saved"
+    Type="Number"
+    Group="{parameter:GenericFieldsGroup}"
+    Description="">
+    <Default>0</Default>
+    </Field>
 </pnp:SiteFields>
+
+
