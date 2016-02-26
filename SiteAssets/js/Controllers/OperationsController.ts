@@ -11,6 +11,7 @@ module Controllers {
             this.$searchService = $searchService;
             this.$flickrService = $flickrService;
 
+            this.$scope.Operations = [];
             this.getOperations();
 
             this.$scope.map = {
@@ -32,6 +33,28 @@ module Controllers {
                     this.$scope.map.selectedMarker = op;
                 }
             }
+            
+            this.getStats();
+        }
+        
+        getStats() {
+             this.$scope.basicStats = [
+                {
+                    image: 'https://upload.wikimedia.org/wikipedia/commons/8/81/Cat_in_a_tree.jpg',
+                    name: "Cats saved from trees",
+                    count: 12
+                },
+                {
+                    image: 'https://farm1.staticflickr.com/76/157961324_add27e337c_o_d.jpg',
+                    name: "Fires put out",
+                    count: 8
+                },
+                {
+                    image: 'http://everydaylife.globalpost.com/DM-Resize/photos.demandstudios.com/getty/article/117/20/78155249.jpg?w=600&h=600&keep_ratio=1&webp=1',
+                    name: "Civillians saved",
+                    count: 130
+                }
+            ]
         }
 
         private getOperations() {
