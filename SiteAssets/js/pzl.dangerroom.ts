@@ -15,6 +15,8 @@ EnsureScriptFunc('angular-google-maps.min.js', null, function() {
         }])
         .service("$searchService", Services.Search)
         .service("$siteService", Services.SiteService)
-        .controller("mapController", Controllers.MapController);
+        .service("$flickrService", Services.Flickr)
+        .controller("mapController", Controllers.MapController)
+        .controller("opsController", Controllers.OperationsController);
     angular.bootstrap(document.getElementById('homeApp'), ['app']);
 });
