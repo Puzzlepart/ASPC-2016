@@ -16,10 +16,10 @@
                     markers: [],
                     selectedMarker: null,
                     center: {
-                        latitude: 45,
-                        longitude: -22
+                        latitude: 59.9756579,
+                        longitude: 10.6593764
                     },
-                    zoom: 5
+                    zoom: 3
                 };
                 this.attachMapEvents();
                 this.getMarkers();

@@ -60,11 +60,11 @@
         </div>
         <div class="container comicblue active-operations" data-ng-controller="opsController">
             <h2><span class="material-icons">public</span>Active Operations</h2>
-            <ul id="users">
+            <ul id="operations">
                 <li class="animated flipInY" ng-repeat="op in Operations">
-                    <img  ng-src="{{op.LocationImageUrl}}">
-                    <div class="user-name">
-                            <h3>{{op.Title}}</h3>
+                    <img class="operation-image" ng-src="{{op.LocationImageUrl}}">
+                    <div class="operation-name">
+                        <h3>{{op.Title}}</h3>
                     </div>
                 </li>
             </ul>
@@ -73,7 +73,7 @@
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
         <h2><span class="material-icons">show_chart</span> Operational Statistics</h2>
-            <ul id="users">
+            <ul id="statistics">
                 <li class="animated flipInY">
                    <div google-chart chart="chartObject" style="height:600px; width:100%;"></div>
                 </li>
