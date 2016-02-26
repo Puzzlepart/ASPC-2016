@@ -15,15 +15,20 @@
         }
         
         private getTopHeroes() {
-            this.$searchService.query({ querytext: 'NOT PreferredName:"_spocrwl_311_15487" AND NOT PreferredName:"Support" AND NOT PreferredName:"_spoapp_311_15507"', sourceid: 'b09a7990-05ea-4af9-81ef-edfab16c4e31' })
+            this.$searchService.query({ querytext: 'NOT PreferredName:"MOD Administrator" AND NOT PreferredName:"_spocrwl_311_15487" AND NOT PreferredName:"Support" AND NOT PreferredName:"_spoapp_311_15507"', sourceid: 'b09a7990-05ea-4af9-81ef-edfab16c4e31' })
             .then((heroes: Array<any>) => {
                 this.$scope.Heroes = heroes;
                 this.$scope.Heroes.forEach((hero, index) => {
-                   if (!hero.PictureURL) {
-                       this.$marvelService.getHeroDataFromName(hero.PreferredName).then((data) => {
-                           this.$scope.Heroes[index].PictureUrl = data.thumbnail.path+"."+data.thumbnail.extension;
-                       });
-                   } 
+                    if (!hero.PictureURL) {
+                        if (this.$scope.Heroes[index]) {
+                            this.$scope.Heroes[index].PictureURL = "../SiteAssets/pzl/img/default_hero.jpg";
+                        }
+                        this.$marvelService.getHeroDataFromName(hero.PreferredName).then((data) => {
+                            if (this.$scope.Heroes[index] && data.thumbnail.path) {
+                                this.$scope.Heroes[index].PictureURL = data.thumbnail.path+"."+data.thumbnail.extension;
+                            }
+                        });
+                    } 
                 });
             })
         }

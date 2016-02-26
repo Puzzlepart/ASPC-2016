@@ -86,7 +86,7 @@
         <div class="container comicblue" data-ng-controller="heroesController">
             <h2><span class="material-icons">mood</span>Featured Heroes</h2>
             <ul id="heroes" class="tiles">
-                <li class="animated flipInY" ng-repeat="hero in Heroes">
+                <li class="animated flipInY" ng-repeat="hero in Heroes track by $index">
                     <img class="tile-image" ng-src="{{hero.PictureURL}}">
                     <div class="tile-name">
                         <h3>{{hero.PreferredName}}</h3>
