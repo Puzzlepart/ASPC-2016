@@ -19,28 +19,28 @@
 	<table class="ms-core-tableNoSpace" style="width:100%"> 
 	 <tr>
 	  <td style="vertical-align:top;width:100%" colspan="2">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone1" Title="loc:Zone1" style="vertical-align:top"></WebPartPages:WebPartZone>
+        <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="Zone1" Title="loc:Zone1" style="vertical-align:top"></WebPartPages:WebPartZone>
 	  </td >
 	 </tr>
      <tr>
 	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone2Left" Title="loc:Zone2Left" style="vertical-align:top"></WebPartPages:WebPartZone>
+        <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="Zone2Left" Title="loc:Zone2Left" style="vertical-align:top"></WebPartPages:WebPartZone>
 	  </td>
 	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone2Right" Title="loc:Zone2Right" style="vertical-align:top"></WebPartPages:WebPartZone>
+        <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="Zone2Right" Title="loc:Zone2Right" style="vertical-align:top"></WebPartPages:WebPartZone>
 	  </td>
     </tr>
     <tr>
 	  <td style="vertical-align:top;width:100%" colspan="2">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone3" Title="loc:Zone3" style="vertical-align:top"></WebPartPages:WebPartZone>
+        <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="Zone3" Title="loc:Zone3" style="vertical-align:top"></WebPartPages:WebPartZone>
 	  </td >
 	 </tr>
      <tr>
 	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone4Left" Title="loc:Zone4Left" style="vertical-align:top"></WebPartPages:WebPartZone>
+        <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="Zone4Left" Title="loc:Zone4Left" style="vertical-align:top"></WebPartPages:WebPartZone>
 	  </td>
 	  <td style="vertical-align:top;width:50%;">
-        <WebPartPages:WebPartZone runat="server" FrameType="None" ID="Zone4Right" Title="loc:Zone4Right" style="vertical-align:top"></WebPartPages:WebPartZone>
+        <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" ID="Zone4Right" Title="loc:Zone4Right" style="vertical-align:top"></WebPartPages:WebPartZone>
 	  </td>
     </tr>
 	</table>
