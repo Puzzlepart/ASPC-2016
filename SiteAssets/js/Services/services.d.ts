@@ -2,3 +2,4 @@
 /// <reference path="FlickrService.ts" />
 /// <reference path="SiteService.ts" />
 /// <reference path="MarvelService.ts" />
+/// <reference path="GraphService.ts" />

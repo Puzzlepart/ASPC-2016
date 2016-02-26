@@ -74,7 +74,6 @@
         </div>
         <div class="container comicgrey" data-ng-controller="heroesController">
             <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
-
             <h2><span class="material-icons">mood</span>Top Heroes</h2>
             <ul id="heroes" class="tiles">
                 <li class="animated flipInY" ng-repeat="hero in Heroes">

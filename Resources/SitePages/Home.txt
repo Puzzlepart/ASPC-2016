@@ -43,19 +43,33 @@
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
-    <div id="homeApp" ng-cloak>
-        <div data-ng-controller="opsController">
+    <div id="homeApp" ng-cloak data-ng-controller="operationSiteController">
+        <div>
         <div>
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                 <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue">
-            <h2><span class="material-icons">public</span>Yammer</h2>
-            <ul class="tiles">
-            
-            </ul>
-        </div>
+			<div style="width:47%;vertical-align:top;display:inline-block;margin-right:2%;">
+				<h2><span class="material-icons">public</span>Yammer</h2>
+				<script type="text/javascript" src="https://c64.assets-yammer.com/assets/platform_embed.js"></script>
+			<div id="embedded-feed" style="height:400px;width:500px;"></div> 
+			<script>
+			yam.connect.embedFeed(
+			  { 
+				container: '#embedded-feed',
+				network: 'aspc1602.onmicrosoft.com' ,
+				config: {
+					header: false,
+					footer: false
+				}
+			});
+			</script>
+			</div>
+			<div style="width:47%;vertical-align:top;display:inline-block;margin-right:2%;">
+				<h2><span class="material-icons">public</span>Twitter</h2>
+			</div>
         </div>
         <div class="container comicgrey">
         <h2><span class="material-icons">mood</span> Tasks</h2>
@@ -74,5 +88,5 @@
           
         </div>
     </div>
-    <script src='../../SiteAssets/pzl/js/pzl.dangerroom.js'></script>
+    <script src='../../SiteAssets/pzl/js/pzl.operationroom.js'></script>
 </asp:Content>
