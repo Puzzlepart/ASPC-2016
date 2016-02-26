@@ -44,13 +44,14 @@
     <h1 class="room-title">Danger Room</h1>
     <div id="homeApp">
         <div data-ng-controller="mapController">
-            <ui-gmap-google-map center='map.center' zoom='map.zoom' marker-events="map.markerEvents">
-                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                <ui-gmap-window coords="map.selectedMarker.PzlLocationOWSTEXT" show="map.selectedMarker">
                     <div>
-                        <div><b>Location:</b> {{map.window.coords}}</div>
+                        <h3>{{map.selectedMarker.Title}}</h3>
+                        <div><b>Location:</b> {{map.selectedMarker.PzlLocationOWSTEXT}}</div>
                     </div>
                 </ui-gmap-window>
-                <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="$index"></ui-gmap-marker>
+                <ui-gmap-markers models="map.markers" idkey="map.markers.UniqueId" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue">
