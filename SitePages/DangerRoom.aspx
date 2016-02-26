@@ -46,7 +46,7 @@
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                 <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;">
                     <div>
-                        <h3>{{map.selectedMarker.Title}}</h3>
+                        <h2><a ng-href="{{map.selectedMarker.OriginalPath}}">{{map.selectedMarker.Title}}</a></h2>
                         <div><b>Heroes:</b> {{map.selectedMarker.coords}}</div>
                         <div><b>Villains:</b> {{map.selectedMarker.coords}}</div>
                         <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
