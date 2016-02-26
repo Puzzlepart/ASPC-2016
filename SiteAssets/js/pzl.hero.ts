@@ -8,7 +8,7 @@ module Pzl.heroPage{
     module _config{
     export const apiKey:string = "326b9124ce39cf26bf0c3746d03d5e73";
     export const hash:string = "9921fd504791b84506e01303bb73edbe";
-    export const timeStamp:number = new Date().getTime();
+    export const timeStamp:number = 1;
     }
     
     module Model{
