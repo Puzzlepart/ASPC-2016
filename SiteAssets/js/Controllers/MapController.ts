@@ -38,9 +38,8 @@
                     operations.forEach((operation) => {
                         var coords = operation.PzlLocationOWSTEXT ? angular.fromJson(operation.PzlLocationOWSTEXT): null;
                         this.$scope.map.markers.push(angular.extend(operation, { 
-                            id: Math.floor((Math.random()*1000)), 
-                            coords: coords
-                        }))
+                            id: Math.floor((Math.random()*1000))
+                        }, coords))
                     });
                 })
             }
