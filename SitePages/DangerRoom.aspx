@@ -45,66 +45,42 @@
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
     <div id="homeApp" ng-cloak>
         <div data-ng-controller="opsController">
-        <div>
-            <ui-gmap-google-map center='map.center' zoom='map.zoom' id="ops-map">
-                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;" class="ops-marker selected">
-                    <div>
-                        <h3>{{map.selectedMarker.Title}}</h3>
-                        <div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
-                        <div><b>Villains:</b> {{map.selectedMarker.PzlVillainOWSUSER}}</div>
-                        <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
-                        <div><b>Longitude:</b> {{map.selectedMarker.coords.longitude}}</div>
-                        <div><a ng-href="{{map.selectedMarker.OriginalPath}}">Go to operation</a></div>
-                    </div>
-                </ui-gmap-window>
-                <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents" class="ops-marker"></ui-gmap-markers>
-            </ui-gmap-google-map>
+            <div id="operation-map">
+                <ui-gmap-google-map center='map.center' zoom='map.zoom' id="ops-map">
+                    <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;" class="ops-marker selected">
+                        <div>
+                            <h3>{{map.selectedMarker.Title}}</h3>
+                            <div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
+                            <div><b>Villains:</b> {{map.selectedMarker.PzlVillainOWSUSER}}</div>
+                            <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
+                            <div><b>Longitude:</b> {{map.selectedMarker.coords.longitude}}</div>
+                            <div><a ng-href="{{map.selectedMarker.OriginalPath}}">Go to operation</a></div>
+                        </div>
+                    </ui-gmap-window>
+                    <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents" class="ops-marker"></ui-gmap-markers>
+                </ui-gmap-google-map>
+            </div>
+            <div class="container comicblue active-operations">
+                <h2><span class="material-icons">public</span>Active Operations</h2>
+                <ul id="operations" class="tiles">
+                    <li class="animated flipInY" ng-repeat="op in Operations" ng-click="selectOperation(op)">
+                        <img class="tile-image" ng-src="{{op.LocationImageUrl}}">
+                        <div class="tile-name">
+                            <h3>{{op.Title}}</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="container comicblue active-operations">
-            <h2><span class="material-icons">public</span>Active Operations</h2>
-            <ul id="operations" class="tiles">
-                <li class="animated flipInY" ng-repeat="op in Operations" ng-click="selectOperation(op)">
-                    <img class="tile-image" ng-src="{{op.LocationImageUrl}}">
-                    <div class="tile-name">
-                        <h3>{{op.Title}}</h3>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        </div>
-        <div class="container comicgrey">
-        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
+        <div class="container comicgrey" data-ng-controller="heroesController">
+            <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
-        <h2><span class="material-icons">mood</span> Top Heroes</h2>
-            <ul id="users" class="tiles">
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
+            <h2><span class="material-icons">mood</span>Top Heroes</h2>
+            <ul id="heroes" class="tiles">
+                <li class="animated flipInY" ng-repeat="hero in Heroes">
+                    <img class="tile-image" ng-src="{{hero.PictureURL}}">
                     <div class="tile-name">
-                            <h3>Iron Man </h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
-                    <div class="tile-name">
-                            <h3>Spider-Man </h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
+                            <h3>{{hero.PreferredName}}</h3>
                     </div>
                 </li>
             </ul>
@@ -112,7 +88,7 @@
         <div class="container comicblue">
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
-        <h2><span class="material-icons">mood_bad</span> Top Villians</h2>
+        <h2><span class="material-icons">mood_bad</span>Top Villians</h2>
             <ul id="villains" class="tiles">
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
