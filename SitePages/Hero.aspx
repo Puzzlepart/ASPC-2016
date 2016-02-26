@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../SiteAssets/pzl/css/dangerroom/main.css">
     <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
     <link rel="stylesheet" href="//appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
 
     <div class="hero-page">
         <div class="container video-header map">
