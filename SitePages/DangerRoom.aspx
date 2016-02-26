@@ -57,7 +57,118 @@
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue">
-        <h2><span class="material-icons">face</span> Heros</h2>
+       <h2><span class="material-icons">public</span> Top Operations</h2>
+            <ul id="users">
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
+                    <div class="user-name">
+                            <h3>London</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
+                    <div class="user-name">
+                            <h3>Paris</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3>Syria</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3>Washington D.C.</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3></h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+       <div class="container">
+        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
+
+        <h2><span class="material-icons">show chart</span> Operational Statistics</h2>
+            <ul id="users">
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
+                    <div class="user-name">
+                            <h3>London</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
+                    <div class="user-name">
+                            <h3>Paris</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3>Syria</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3>Washington D.C.</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3></h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="container comicgrey">
+        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
+
+        <h2><span class="material-icons">mood</span> Top Heroes</h2>
+            <ul id="users">
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
+                    <div class="user-name">
+                            <h3>Iron Man </h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
+                    <div class="user-name">
+                            <h3>Spider-Man </h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3>Hulk</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3>Hulk</h3>
+                    </div>
+                </li>
+                <li class="animated flipInY">
+                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
+                    <div class="user-name">
+                            <h3>Hulk</h3>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="container comicgrey">
+        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
+
+        <h2><span class="material-icons">mood bad</span> Top Villians</h2>
             <ul id="users">
                 <li class="animated flipInY">
                     <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
