@@ -10,6 +10,7 @@
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.ribbonactions.notifytaskassignee.js" Overwrite="true" />    
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.provisioning.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.dangerroom.js" Overwrite="true" />
+    <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.operationroom.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.workspace.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/js" Src="SiteAssets\js\pzl.workspace.setup.js" Overwrite="true" />
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-16.png" Overwrite="false" />
@@ -32,5 +33,5 @@
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\DangerRoom.aspx" />
     <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\Hero.aspx" />    
     <pnp:File Folder="SitePages" Overwrite="false" Src="SitePages\New-room.aspx" />   
-    <pnp:File Folder="Resources/SitePages" Overwrite="false" Src="Resources\SitePages\Home.txt" />
+    <pnp:File Folder="Resources/SitePages" Overwrite="true" Src="Resources\SitePages\Home.txt" />
 </pnp:Files>
