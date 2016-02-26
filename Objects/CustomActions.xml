@@ -9,13 +9,16 @@
             SP.SOD.registerSod('angular-google-maps.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/angular-google-maps.min.js`);
             SP.SOD.registerSod('ng-google-chart.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/ng-google-chart.min.js`);
             SP.SOD.registerSod('maps.googleapis.com', `//maps.googleapis.com/maps/api/js?sensor=false`);
+            SP.SOD.registerSod('adal-angular.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/adal-angular.min.js`);
+            SP.SOD.registerSod('adal.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/adal.min.js`);
             SP.SOD.registerSodDep('angular-simple-logger.min.js', 'angular.min.js');
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'angular-simple-logger.min.js');
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'angular.min.js');
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'lodash.min.js');
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'maps.googleapis.com');
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'jquery.min.js');
-            SP.SOD.registerSodDep('ng-google-chart.min.js', 'angular.min.js');" />
+            SP.SOD.registerSodDep('angular-google-maps.min.js', 'jquery.min.js');
+            SP.SOD.registerSodDep('adal-angular.min.js', 'adal.min.js');" />
       <pnp:CustomAction Name="Ribbon.Tasks.Share.Notify" Title="Ribbzon.Tasks.Share.Notify" Location="CommandUI.Ribbon" Sequence="5" RegistrationId="171" RegistrationType="List">
             <pnp:CommandUIExtension>
                 <CommandUIDefinitions>
