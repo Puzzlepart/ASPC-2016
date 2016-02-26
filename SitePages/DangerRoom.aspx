@@ -58,37 +58,13 @@
                 <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
             </ui-gmap-google-map>
         </div>
-        <div class="container comicblue">
-       <h2><span class="material-icons">public</span> Top Operations</h2>
+        <div class="container comicblue active-operations" data-ng-controller="opsController">
+            <h2><span class="material-icons">public</span>Active Operations</h2>
             <ul id="users">
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
+                <li class="animated flipInY" ng-repeat="op in Operations">
+                    <img  ng-src="{{op.LocationImageUrl}}">
                     <div class="user-name">
-                            <h3>London</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
-                    <div class="user-name">
-                            <h3>Paris</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3>Syria</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3>Washington D.C.</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3></h3>
+                            <h3>{{op.Title}}</h3>
                     </div>
                 </li>
             </ul>
