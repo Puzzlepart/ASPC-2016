@@ -43,14 +43,14 @@
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
-    <div id="homeApp">
+    <div id="homeApp" ng-cloak>
         <div data-ng-controller="mapController">
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                 <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;">
                     <div>
                         <h2><a ng-href="{{map.selectedMarker.OriginalPath}}">{{map.selectedMarker.Title}}</a></h2>
-                        <div><b>Heroes:</b> {{map.selectedMarker.coords}}</div>
-                        <div><b>Villains:</b> {{map.selectedMarker.coords}}</div>
+                        <div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
+                        <div><b>Villains:</b> {{map.selectedMarker.PzlVillainOWSUSER}}</div>
                         <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
                         <div><b>Longitude:</b> {{map.selectedMarker.coords.longitude}}</div>
                     </div>
@@ -58,74 +58,13 @@
                 <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
             </ui-gmap-google-map>
         </div>
-        <div class="container comicblue">
-       <h2><span class="material-icons">public</span> Top Operations</h2>
-            <ul id="users">
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
-                    <div class="user-name">
-                            <h3>London</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
-                    <div class="user-name">
-                            <h3>Paris</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3>Syria</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3>Washington D.C.</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3></h3>
-                    </div>
-                </li>
-            </ul>
-        </div>
-       <div class="container">
-        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
-
-        <h2><span class="material-icons">show_chart</span> Operational Statistics</h2>
-            <ul id="users">
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
-                    <div class="user-name">
-                            <h3>London</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
-                    <div class="user-name">
-                            <h3>Paris</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3>Syria</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3>Washington D.C.</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="user-name">
-                            <h3></h3>
+        <div class="container comicblue active-operations" data-ng-controller="opsController">
+            <h2><span class="material-icons">public</span>Active Operations</h2>
+            <ul id="operations">
+                <li class="animated flipInY" ng-repeat="op in Operations">
+                    <img class="operation-image" ng-src="{{op.LocationImageUrl}}">
+                    <div class="operation-name">
+                        <h3>{{op.Title}}</h3>
                     </div>
                 </li>
             </ul>
@@ -167,7 +106,7 @@
                 </li>
             </ul>
         </div>
-        <div class="container">
+        <div class="container comicblue">
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
         <h2><span class="material-icons">mood_bad</span> Top Villians</h2>

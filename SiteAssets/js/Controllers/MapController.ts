@@ -16,10 +16,10 @@
                     markers: [],
                     selectedMarker: null,
                     center: {
-                        latitude: 45,
-                        longitude: -22
+                        latitude: 59.9756579,
+                        longitude: 10.6593764
                     },
-                    zoom: 5
+                    zoom: 3
                 };
                 this.attachMapEvents();
                 this.getMarkers();
@@ -34,7 +34,7 @@
                 };
             }
             private getMarkers() {
-                this.$searchService.query({ querytext: 'contentclass:STS_Web contenttypeid:0x010109010092214CADC5FC4262A177C632F516412E*', selectproperties: 'Title,OriginalPath,PzlLocationOWSTEXT' }).then((operations: Array<any>) => {
+                this.$searchService.query({ querytext: 'contentclass:STS_Web contenttypeid:0x010109010092214CADC5FC4262A177C632F516412E*', selectproperties: 'Title,OriginalPath,PzlLocationOWSTEXT,PzlHeroesOWSUSER,PzlVillainOWSUSER' }).then((operations: Array<any>) => {
                     operations.forEach((operation) => {
                         var coords = operation.PzlLocationOWSTEXT ? angular.fromJson(operation.PzlLocationOWSTEXT): null;
                         this.$scope.map.markers.push(angular.extend(operation, { 

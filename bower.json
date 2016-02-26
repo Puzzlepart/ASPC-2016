@@ -20,6 +20,7 @@
     "jquery": "latest",
     "moment": "latest",
     "js-sites-core": "dev",
-    "angular-google-maps": "^2.3.2"
+    "angular-google-maps": "^2.3.2",
+    "angular-google-chart": "0.1.0"
   }
 }
