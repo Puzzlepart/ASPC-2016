@@ -71,9 +71,30 @@ module Services {
                         latitude: 45,
                         longitude: -22
                     },
+                    window: {
+                        show: true,
+                        coords: {
+                            latitude: 45,
+                            longitude: -22
+                        }
+                    },
                     zoom: 5
                 };
+                this.attachMapEvents();
                 this.getMarkers();
+            }
+            private attachMapEvents() {
+                this.$scope.map.events = {
+                    rightclick: (map, eventName, originalEventArgs) => {
+                        this.$scope.$apply(() => {
+                            this.$scope.map.window.coords = {
+                                latitude: originalEventArgs[0].latLng.lat(),
+                                longitude: originalEventArgs[0].latLng.lng()
+                            };
+                            this.$scope.map.show = true;
+                        });
+                    }
+                };
             }
             private getMarkers() {
                 this.$searchService.query({ querytext: 'contentclass:STS_Web contenttypeid:0x010109010092214CADC5FC4262A177C632F516412E*', selectproperties: 'Title,OriginalPath,PzlLocationOWSTEXT' }).then((operations: Array<any>) => {
