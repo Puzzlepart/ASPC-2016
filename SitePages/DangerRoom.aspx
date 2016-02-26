@@ -50,7 +50,7 @@
                         <div><b>Location:</b> {{map.window.coords}}</div>
                     </div>
                 </ui-gmap-window>
-                <ui-gmap-markers idkey="marker.$index" models="map.markers" coords="'self'" events="map.markersEvent""></ui-gmap-markers>
+                <ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="$index"></ui-gmap-marker>
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue">
