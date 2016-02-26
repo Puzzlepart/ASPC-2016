@@ -27,11 +27,11 @@
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge.jpg" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-1.jpg" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-2.jpg" Overwrite="false" />    
-    <pnp:File Folder="SiteAssets/pzl/fonts" Src="SiteAssets\css\fonts\AVENGEANCE HEROIC AVENGER.eot" Overwrite="false" />    
-    <pnp:File Folder="SiteAssets/pzl/fonts" Src="SiteAssets\css\fonts\AVENGEANCE HEROIC AVENGER.otf" Overwrite="false" />    
-    <pnp:File Folder="SiteAssets/pzl/fonts" Src="SiteAssets\css\fonts\AVENGEANCE HEROIC AVENGER.svg" Overwrite="false" />    
-    <pnp:File Folder="SiteAssets/pzl/fonts" Src="SiteAssets\css\fonts\AVENGEANCE HEROIC AVENGER.ttf" Overwrite="false" />    
-    <pnp:File Folder="SiteAssets/pzl/fonts" Src="SiteAssets\css\fonts\AVENGEANCE HEROIC AVENGER.woff" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/css/fonts" Src="SiteAssets\css\dangerroom\fonts\AVENGEANCE HEROIC AVENGER.eot" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/css/fonts" Src="SiteAssets\css\dangerrom\fonts\AVENGEANCE HEROIC AVENGER.otf" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/css/fonts" Src="SiteAssets\css\dangerroom\fonts\AVENGEANCE HEROIC AVENGER.svg" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/css/fonts" Src="SiteAssets\css\dangerroom\fonts\AVENGEANCE HEROIC AVENGER.ttf" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/css/fonts" Src="SiteAssets\css\dangerroom\fonts\AVENGEANCE HEROIC AVENGER.woff" Overwrite="false" />    
     <pnp:File Folder="SiteTemplates" Overwrite="false" Src="SiteTemplates\operationroom.txt">
         <pnp:Properties>
             <pnp:Property Key="Title" Value="Operation Room" />
