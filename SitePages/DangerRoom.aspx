@@ -41,11 +41,10 @@
    <link href='https://fonts.googleapis.com/css?family=Marvel:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
-    <h1 class="room-title">Danger Room</h1>
     <div id="homeApp">
         <div data-ng-controller="mapController">
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker">
+                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;">
                     <div>
                         <h3>{{map.selectedMarker.Title}}</h3>
                         <div><b>Location:</b> {{map.selectedMarker.coords}}</div>
