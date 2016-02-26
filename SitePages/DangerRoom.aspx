@@ -62,6 +62,7 @@
         </div>
         <div class="container comicblue active-operations">
             <h2><span class="material-icons">public</span> Active Operations</h2>
+            <a onClick="SP.UI.ModalDialog.showModalDialog({title: "Add New Operation", url: "../SitePages/new-room.aspx"});"><span class="material-icons">add_circle_outline</span> New Operation</a>
             <ul id="operations" class="tiles">
                 <li class="animated flipInY" ng-repeat="op in Operations" ng-click="selectOperation(op)">
                     <img class="tile-image" ng-src="{{op.LocationImageUrl}}">
