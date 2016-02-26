@@ -57,7 +57,7 @@
                         <div><a ng-href="{{map.selectedMarker.OriginalPath}}">Go to operation</a></div>
                     </div>
                 </ui-gmap-window>
-                <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
+                <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents" options="map.markersOptions"></ui-gmap-markers>
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue active-operations">

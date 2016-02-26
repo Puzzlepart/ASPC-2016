@@ -20,14 +20,15 @@ module Controllers {
                     latitude: 59.9756579,
                     longitude: 10.6593764
                 },
-                zoom: 3
+                zoom: 3,
+                markersOptions: { animation: new window.google.maps.Animation.BOUNCE }
             };
             this.attachMapEvents();
             this.getMarkers();
             $scope.selectOperation = (op) => {
-                if (op.Location) {
-                    this.$scope.map.center = op.Location.coords;
-                    this.$scope.map.zoom = 8;
+                if (op.coords) {
+                    this.$scope.map.center = op.coords;
+                    this.$scope.map.zoom = 6;
                     this.$scope.map.selectedMarker = op;
                 }
             }
@@ -35,27 +36,22 @@ module Controllers {
 
         private getOperations() {
             this.$searchService.query({ querytext: 'contentclass:STS_Web contenttypeid:0x010109010092214CADC5FC4262A177C632F516412E*', selectproperties: 'Title,OriginalPath,PzlLocationOWSTEXT' }).then((operations: Array<any>) => {
-                this.$scope.Operations = operations;
-                this.$scope.Operations.forEach((operation, index) => {
-                    this.$scope.Operations[index].LocationImageUrl = "../SiteAssets/pzl/img/location.jpg";
-                    if (operation.PzlLocationOWSTEXT) {
-                        var location = angular.fromJson(operation.PzlLocationOWSTEXT);
-                        operation.Location = {
-                            title: operation.Title,
-                            coords: location.coords
-                        };
-                        if (location.coords.latitude && location.coords.longitude) {
-                            this.$flickrService.getPicturesForLocation(location.coords.latitude, location.coords.longitude).then((data) => {
-                                if (data.photos && data.photos.photo.length > 0) {
-                                    var photo = data.photos.photo[0];
-                                    var url = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`
-                                    this.$scope.Operations[index].LocationImageUrl = url;
-                                    this.$scope.Operations[index].ImageSet = true;
-
-                                }
-                            });
-                        }
+                this.$scope.Operations = [];
+                operations.forEach((operation, index) => {
+                    var coords = operation.PzlLocationOWSTEXT ? angular.fromJson(operation.PzlLocationOWSTEXT) : null;
+                    if(!coords) return;
+                    this.$scope.Operations.push(angular.extend(operation, coords,  { LocationImageUrl: "../SiteAssets/pzl/img/location.jpg" }));
+                    if (coords.latitude && coords.longitude) {
+                        this.$flickrService.getPicturesForLocation(coords.latitude, coords.longitude).then((data) => {
+                            if (data.photos && data.photos.photo.length > 0) {
+                                var photo = data.photos.photo[0];
+                                var url = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`
+                                this.$scope.Operations[index].LocationImageUrl = url;
+                                this.$scope.Operations[index].ImageSet = true;
+                            }
+                        });
                     }
+
                 });
             })
         }
@@ -74,6 +70,7 @@ module Controllers {
             $search.query({ querytext: 'contentclass:STS_Web contenttypeid:0x010109010092214CADC5FC4262A177C632F516412E*', selectproperties: 'Title,OriginalPath,PzlLocationOWSTEXT,PzlHeroesOWSUSER,PzlVillainOWSUSER' }).then((operations: Array<any>) => {
                 operations.forEach((operation) => {
                     var coords = operation.PzlLocationOWSTEXT ? angular.fromJson(operation.PzlLocationOWSTEXT) : null;
+                    if(!coords) return;
                     this.$scope.map.markers.push(angular.extend(operation, {
                         id: Math.floor((Math.random() * 1000)),
                         Heroes: $search.parseOWSUSER(operation.PzlHeroesOWSUSER),
