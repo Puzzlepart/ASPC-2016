@@ -1,4 +1,4 @@
-{   
+{
     "WebSettings": {
         "WelcomePage": "SitePages/Home.aspx"
     },
@@ -6,8 +6,25 @@
         {
             "Title": "Tasks",
             "Url": "Lists/Tasks",
-            "TemplateType": 171
-        }, 
+            "TemplateType": 171,
+            "RemoveExistingViews": true,
+            "Views": [
+                {
+                    "Title": "My Grouped Tasks",
+                    "SetAsDefaultView": true,
+                    "ViewFields": [
+                        "Checkmark",
+                        "StartDate",
+                        "LinkTitle",
+                        "DueDate",
+                        "AssignedTo",
+                        "PercentComplete"
+                    ],
+                    "Query": " <GroupBy Collapse=\"TRUE\" GroupLimit=\"30\"><FieldRef Name=\"Status\" Ascending=\"FALSE\" /></GroupBy><OrderBy><FieldRef Name=\"DueDate\" Ascending=\"FALSE\" /></OrderBy><Where><And><Eq><FieldRef Name=\"AssignedTo\" /><Value Type=\"Integer\"><UserID Type=\"Integer\" /></Value></Eq><Eq><FieldRef Name=\"Checkmark\" /><Value Type=\"Boolean\">0</Value></Eq></And></Where>",
+                    "RowLimit": 30
+                }
+            ]
+        },
         {
             "Title": "Media",
             "Url": "Media",
@@ -43,7 +60,7 @@
             "Properties": {
                 "ContentTypeId": "0x010109010092214CADC5FC4262A177C632F516412E"
             },
-             "WebParts": []
+            "WebParts": []
         }
     ],
     "CustomActions": [
