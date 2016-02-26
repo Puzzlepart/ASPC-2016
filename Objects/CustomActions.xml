@@ -18,7 +18,8 @@
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'maps.googleapis.com');
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'jquery.min.js');
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'jquery.min.js');
-            SP.SOD.registerSodDep('adal-angular.min.js', 'adal.min.js');" />
+            SP.SOD.registerSodDep('adal-angular.min.js', 'adal.min.js');
+            SP.SOD.registerSodDep('adal-angular.min.js', 'angular.min.js');" />
       <pnp:CustomAction Name="Ribbon.Tasks.Share.Notify" Title="Ribbzon.Tasks.Share.Notify" Location="CommandUI.Ribbon" Sequence="5" RegistrationId="171" RegistrationType="List">
             <pnp:CommandUIExtension>
                 <CommandUIDefinitions>
