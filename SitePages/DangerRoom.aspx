@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="../SiteAssets/pzl/css/animate.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css">
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
-    <div id="homeApp">
+    <div id="homeApp" ng-cloak>
         <div data-ng-controller="mapController">
             <ui-gmap-google-map center='map.center' zoom='map.zoom'>
                 <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;">
@@ -99,7 +99,7 @@
         <h2><span class="material-icons">show_chart</span> Operational Statistics</h2>
             <ul id="users">
                 <li class="animated flipInY">
-                   <div google-chart chart="chartObject" style="height:600px; width:100%;"></div>
+                   <div google-chart chart="chartObject"></div>
                 </li>
             </ul>
         </div>
