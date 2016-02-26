@@ -8,7 +8,7 @@
       <properties>
         <property name="ListUrl" type="string">{site}/Shared Documents</property>
         <property name="TitleUrl" type="string">{site}/Shared Documents</property>
-        <property name="Title" type="string">Document</property>    
+        <property name="Title" type="string">Documents</property>    
       </properties>
     </data>
   </webPart>

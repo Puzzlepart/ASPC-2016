@@ -7,6 +7,11 @@
             "Title": "Tasks",
             "Url": "Lists/Tasks",
             "TemplateType": 171
+        }, 
+        {
+            "Title": "Media",
+            "Url": "Media",
+            "TemplateType": 109
         },
         {
             "Title": "Site Pages",
