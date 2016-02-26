@@ -15,7 +15,7 @@
         }
         
         private getTopHeroes() {
-            this.$searchService.query({ querytext: '*', sourceid: 'b09a7990-05ea-4af9-81ef-edfab16c4e31' })
+            this.$searchService.query({ querytext: 'NOT PreferredName:"_spocrwl_311_15487" AND NOT PreferredName:"Support" AND NOT PreferredName:"_spoapp_311_15507"', sourceid: 'b09a7990-05ea-4af9-81ef-edfab16c4e31' })
             .then((heroes: Array<any>) => {
                 this.$scope.Heroes = heroes;
                 this.$scope.Heroes.forEach((hero, index) => {
