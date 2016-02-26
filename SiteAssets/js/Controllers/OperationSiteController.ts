@@ -17,10 +17,6 @@ module Controllers {
             $siteService.getSiteProperties(_spPageContextInfo.webAbsoluteUrl).then((properties:any) => {
                var loc = properties.PzlLocation ? angular.fromJson(properties.PzlLocation) : null;
                this.$scope.map.center = loc.coords;
-               this.$scope.map.markers.push({
-                   id: Math.floor(Math.random()*1000),
-                   coords: loc
-               })
             });
         }
     
