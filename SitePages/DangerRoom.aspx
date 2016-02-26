@@ -69,16 +69,6 @@
                 </li>
             </ul>
         </div>
-       <div class="container" data-ng-controller="statisticsController">
-        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
-
-        <h2><span class="material-icons">show_chart</span> Operational Statistics</h2>
-            <ul id="users">
-                <li class="animated flipInY">
-                   <div google-chart chart="chartObject"></div>
-                </li>
-            </ul>
-        </div>
         <div class="container comicgrey">
         <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
 
