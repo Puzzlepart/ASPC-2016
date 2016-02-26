@@ -24,6 +24,7 @@
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\comicstripbackgroundpurple.png" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\comicstripbackgroundgrey.png" Overwrite="false" /> 
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\marvelintro.mp4" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\default_hero.jpg" Overwrite="false" />  
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge.jpg" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-1.jpg" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-2.jpg" Overwrite="false" />    
@@ -39,8 +40,16 @@
     </pnp:File>
     <pnp:File Folder="SiteAssets/pzl/css/dangerroom" Src="SiteAssets\css\dangerroom\main.css" Overwrite="true" />    
     <pnp:File Folder="SiteAssets/pzl/css/operationroom" Src="SiteAssets\css\operationroom\main.css" Overwrite="true" />    
-    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\DangerRoom.aspx" />
-    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\Hero.aspx" />    
+    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\DangerRoom.aspx" >
+        <pnp:Properties>
+            <pnp:Property Key="Title" Value="Danger Room" />
+        </pnp:Properties>
+    </pnp:File>
+    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\Hero.aspx" >
+        <pnp:Properties>
+            <pnp:Property Key="Title" Value="Hero Page" />
+        </pnp:Properties>
+    </pnp:File>    
     <pnp:File Folder="SitePages" Overwrite="false" Src="SitePages\New-room.aspx" />   
     <pnp:File Folder="Resources/SitePages" Overwrite="true" Src="Resources\SitePages\Home.txt" />
 </pnp:Files>
