@@ -47,7 +47,10 @@
                 <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;">
                     <div>
                         <h3>{{map.selectedMarker.Title}}</h3>
-                        <div><b>Location:</b> {{map.selectedMarker.coords}}</div>
+                        <div><b>Heroes:</b> {{map.selectedMarker.coords}}</div>
+                        <div><b>Villains:</b> {{map.selectedMarker.coords}}</div>
+                        <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
+                        <div><b>Longitude:</b> {{map.selectedMarker.coords.longitude}}</div>
                     </div>
                 </ui-gmap-window>
                 <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents"></ui-gmap-markers>
