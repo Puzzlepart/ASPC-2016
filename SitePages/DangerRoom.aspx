@@ -70,8 +70,14 @@
                         </div>
                     </li>
                 </ul>
-            </div>
-        </div>
+            </div>    
+        <div class="container comicblue">
+        <h2><span class="material-icons">public</span> Operational Statistics</h2>
+            <ul id="statistics" class="tiles">
+              
+            </ul>
+        </div>        
+        </div>    
         <div class="container comicgrey" data-ng-controller="heroesController">
             <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
             <h2><span class="material-icons">mood</span>Top Heroes</h2>
@@ -80,43 +86,6 @@
                     <img class="tile-image" ng-src="{{hero.PictureURL}}">
                     <div class="tile-name">
                             <h3>{{hero.PreferredName}}</h3>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="container comicblue">
-        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
-
-        <h2><span class="material-icons">sentiment_very_dissatisfied</span> Top Villians</h2>
-            <ul id="villains" class="tiles">
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
-                    <div class="tile-name">
-                            <h3>Iron Man </h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
-                    <div class="tile-name">
-                            <h3>Spider-Man </h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
                     </div>
                 </li>
             </ul>
