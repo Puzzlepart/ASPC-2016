@@ -45,104 +45,51 @@
     <link rel="stylesheet" href="http://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css">
     <div id="homeApp" ng-cloak>
         <div data-ng-controller="opsController">
-        <div>
-            <ui-gmap-google-map center='map.center' zoom='map.zoom' id="ops-map">
-                <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;" class="ops-marker selected">
-                    <div>
-                        <h3>{{map.selectedMarker.Title}}</h3>
-                        <div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
-                        <div><b>Villains:</b> {{map.selectedMarker.PzlVillainOWSUSER}}</div>
-                        <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
-                        <div><b>Longitude:</b> {{map.selectedMarker.coords.longitude}}</div>
-                        <div><a ng-href="{{map.selectedMarker.OriginalPath}}">Go to operation</a></div>
-                    </div>
-                </ui-gmap-window>
-                <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents" class="ops-marker"></ui-gmap-markers>
-            </ui-gmap-google-map>
+            <div id="operation-map">
+                <ui-gmap-google-map center='map.center' zoom='map.zoom' id="ops-map">
+                    <ui-gmap-window coords="map.selectedMarker.coords" show="map.selectedMarker" closeClick="map.selectedMarker=null;" class="ops-marker selected">
+                        <div>
+                            <h3>{{map.selectedMarker.Title}}</h3>
+                            <!--<div><b>Heroes:</b> {{map.selectedMarker.PzlHeroesOWSUSER}}</div>
+                            <div><b>Villains:</b> {{map.selectedMarker.PzlVillainOWSUSER}}</div>-->
+                            <div><b>Latitude:</b> {{map.selectedMarker.coords.latitude}}</div>
+                            <div><b>Longitude:</b> {{map.selectedMarker.coords.longitude}}</div>
+                            <div><a ng-href="{{map.selectedMarker.OriginalPath}}">Go to operation</a></div>
+                        </div>
+                    </ui-gmap-window>
+                    <ui-gmap-markers models="map.markers" idkey="map.markers.id" coords="'coords'" events="map.markerEvents" class="ops-marker"></ui-gmap-markers>
+                </ui-gmap-google-map>
+            </div>
+            <div class="container comicblue active-operations">
+                <h2><span class="material-icons">public</span> Active Operations</h2>
+                <ul id="operations" class="tiles">
+                    <li class="animated flipInY" ng-repeat="op in Operations" ng-click="selectOperation(op)">
+                        <img class="tile-image" ng-src="{{op.LocationImageUrl}}">
+                        <div class="tile-name">
+                            <h3>{{op.Title}}</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="container comicgrey">
+                <h2><span class="material-icons">public</span> Operational Statistics</h2>
+                <ul id="statistics" class="tiles">
+                    <li class="animated flipInY" ng-repeat="stat in basicStats">
+                        <img class="tile-image" ng-src="{{stat.image}}">
+                        <div class="tile-name">
+                            <h3>{{stat.name}} ({{stat.count}})</h3> 
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="container comicblue active-operations">
-            <h2><span class="material-icons">public</span> Active Operations</h2>
-            <a onClick="SP.UI.ModalDialog.showModalDialog({title: "Add New Operation", url: "../SitePages/new-room.aspx"});"><span class="material-icons">add_circle_outline</span> New Operation</a>
-            <ul id="operations" class="tiles">
-                <li class="animated flipInY" ng-repeat="op in Operations" ng-click="selectOperation(op)">
-                    <img class="tile-image" ng-src="{{op.LocationImageUrl}}">
+        <div class="container comicblue" data-ng-controller="heroesController">
+            <h2><span class="material-icons">mood</span> Featured Heroes</h2>
+            <ul id="heroes" class="tiles">
+                <li class="animated flipInY" ng-repeat="hero in Heroes track by $index">
+                    <a ng-href="Hero.aspx?hero={{hero.PreferredName}}"><img class="tile-image" ng-src="{{hero.PictureURL}}"></a>
                     <div class="tile-name">
-                        <h3>{{op.Title}}</h3>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        </div>
-        <div class="container comicgrey">
-        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
-
-        <h2><span class="material-icons">sentiment_very_satisfied</span> Top Heroes</h2>
-            <ul id="users" class="tiles">
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
-                    <div class="tile-name">
-                            <h3>Iron Man </h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
-                    <div class="tile-name">
-                            <h3>Spider-Man </h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="container comicblue">
-        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
-
-        <h2><span class="material-icons">sentiment_very_dissatisfied</span> Top Villians</h2>
-            <ul id="villains" class="tiles">
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge.jpg">
-                    <div class="tile-name">
-                            <h3>Iron Man </h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-1.jpg">
-                    <div class="tile-name">
-                            <h3>Spider-Man </h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
-                    </div>
-                </li>
-                <li class="animated flipInY">
-                    <img src="../SiteAssets/pzl/img/standard_xlarge-2.jpg">
-                    <div class="tile-name">
-                            <h3>Hulk</h3>
+                        <h3><a ng-href="Hero.aspx?hero={{hero.PreferredName}}">{{hero.PreferredName}}</a></h3>
                     </div>
                 </li>
             </ul>

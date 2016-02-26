@@ -1,37 +1,34 @@
 /// <reference path="..\..\..\typings\tsd.d.ts" />
-/// <reference path="..\Services\services.d.ts" />
 
  module Controllers {
-        export class OperationsController {
-            $scope: any;
-            $searchService: Services.Search;
+    export class HeroesController {
+        $scope: any;
+        $searchService: Services.Search;
+        $marvelService: Services.Marvel;
+        
+        constructor($scope, $searchService, $flickrService, $marvelService) {
+            this.$scope = $scope;
+            this.$searchService = $searchService;
+            this.$marvelService = $marvelService;
             
-            constructor($scope, $searchService, $flickrService) {
-                this.$scope = $scope;
-                this.$searchService = $searchService;
-                
-                this.getTopHeroes();
-            }
-            
-            private getTopHeroes() {
-                this.$searchService.query({ querytext: '*', selectproperties: 'DisplayName,AccountName', sourceid: 'b09a7990-05ea-4af9-81ef-edfab16c4e31' })
-                .then((heroes: Array<any>) => {
-                    this.$scope.Heroes = heroes;
-                    this.$scope.Heroes.forEach((hero, index) => {
-                        // this.$scope.Heroes[index].LocationImageUrl = "../SiteAssets/pzl/img/location.jpg";
-                        
-                        // this.$flickrService.getPicturesForLocation(location.coords.latitude, location.coords.longitude).then((data) => {
-                        //     if (data.photos && data.photos.photo.length > 0)
-                        //     {
-                        //         var photo = data.photos.photo[0];
-                        //         var url = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`
-                        //         this.$scope.Operations[index].LocationImageUrl = url;
-                        //         this.$scope.Operations[index].ImageSet = true;
-                        //         
-                        //     }
-                        // });
-                    });
-                })
-            }
+            this.getTopHeroes();
         }
+        
+        private getTopHeroes() {
+            this.$searchService.query({ querytext: 'NOT PreferredName:"MOD Administrator" AND NOT PreferredName:"_spocrwl_311_15487" AND NOT PreferredName:"Support" AND NOT PreferredName:"_spoapp_311_15507"', sourceid: 'b09a7990-05ea-4af9-81ef-edfab16c4e31' })
+            .then((heroes: Array<any>) => {
+                this.$scope.Heroes = heroes;
+                this.$scope.Heroes.forEach((hero, index) => {
+                    if (this.$scope.Heroes[index]) {
+                        this.$scope.Heroes[index].PictureURL = "../SiteAssets/pzl/img/default_hero.jpg";
+                    }
+                    this.$marvelService.getHeroDataFromName(hero.PreferredName).then((data) => {
+                        if (this.$scope.Heroes[index] && data.thumbnail.path) {
+                            this.$scope.Heroes[index].PictureURL = data.thumbnail.path+"."+data.thumbnail.extension;
+                        }
+                    });
+                });
+            })
+        }
+    }
  }
