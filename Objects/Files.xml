@@ -15,6 +15,7 @@
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\iconmonstr-error-5-32.png" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\comicstripbackground.png" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\comicstripbackgroundpurple.png" Overwrite="false" />    
+    <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\comicstripbackgroundgrey.png" Overwrite="false" /> 
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\marvelintro.mp4" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge.jpg" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/img" Src="SiteAssets\img\standard_xlarge-1.jpg" Overwrite="false" />    
