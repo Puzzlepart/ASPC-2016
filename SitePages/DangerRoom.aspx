@@ -57,8 +57,6 @@
             </ui-gmap-google-map>
         </div>
         <div class="container comicblue">
-        <!-- <video class="videobackground" muted loop="loop" preload="auto" data-setup="{}" webkit-playsinline="" autoplay="" poster="null" src="marvelintro.mp4" style=""></video> -->
-
         <h2><span class="material-icons">face</span> Heros</h2>
             <ul id="users">
                 <li class="animated flipInY">
