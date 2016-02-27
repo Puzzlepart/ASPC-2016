@@ -29,15 +29,15 @@ CSS and JavaScript files are forbidden, and will be deleted after deployment. Yo
 * OfficePnP PowerShell
 
 ### Install the solution
-1. After you've gotten the latest from Git, you only have to run build.ps1
-2. Run build.ps1 which will do the following
-2.1 Get bower packages
-2.2 Run Pre-Build scripts
-2.3 Build LESS files
-2.4 Build TypeScript files
-2.5 Provision the template
-2.6 Run Post-Build scripts
-2.7 Delete all JavaScript and CSS files
+* After you've gotten the latest from Git, you only have to run build.ps1
+* Run build.ps1 which will do the following
+** Get bower packages
+** Run Pre-Build scripts
+** Build LESS files
+** Build TypeScript files
+** Provision the template
+** Run Post-Build scripts
+** Delete all JavaScript and CSS files
 
 ### Maintainers
 * Gissur
