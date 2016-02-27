@@ -65,7 +65,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="ms-sectionheader" style="padding-top: 4px;" height="22" valign="top">
-                                                        <h3 class="ms-standardheader ms-inputformheader">Title and Description</h3>
+                                                        <h3 class="ms-font-xxl"><i class="ms-Icon ms-Icon--pencil ms-fontSize-su" aria-hidden="true"></i>Title and Description</h3>
                                                     </td>
                                                 </tr>
 
@@ -110,7 +110,7 @@
                                                             <tbody>
                                                                 <tr>
                                                                     <td class="ms-authoringcontrols" colspan="2">
-                                                                        <span>Title:</span>
+                                                                        <span class="ms-font-xxl">Title</span>
 
                                                                     </td>
                                                                 </tr>
@@ -136,7 +136,7 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="ms-authoringcontrols" colspan="2">
-                                                                        <span>Description:</span>
+                                                                        <span class="ms-font-xxl">Description:</span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
@@ -208,7 +208,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="ms-sectionheader" style="padding-top: 4px;" height="22" valign="top">
-                                                        <h3 class="ms-standardheader ms-inputformheader">URL</h3>
+                                                        <h3 class="ms-font-xxl"><i class="ms-Icon ms-Icon--link ms-fontSize-su" aria-hidden="true"></i>URL</h3>
                                                     </td>
                                                 </tr>
 
@@ -303,7 +303,7 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="ms-sectionheader" style="padding-top: 4px;" height="22" valign="top">
-                                                        <h3 class="ms-standardheader ms-inputformheader">Template</h3>
+                                                        <h3 class="ms-font-xxl"><i class="ms-Icon ms-Icon--document ms-fontSize-su" aria-hidden="true"></i>Template</h3>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -343,7 +343,7 @@
 
                                                                 <tr>
                                                                     <td class="ms-authoringcontrols" colspan="2">
-                                                                        <label for="ctl00_PlaceHolderMain_InputFormTemplatePickerControl_ctl00_ctl01_LbWebTemplate">Pick a template:</label>
+                                                                        <span class="ms-font-xxl">Pick a template</span>
 
                                                                     </td>
                                                                 </tr>
