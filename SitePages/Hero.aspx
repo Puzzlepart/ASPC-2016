@@ -48,6 +48,9 @@
         <div class="container comicblue pzl-hero-items">
                 <div class="pzl-hero-docs half">
                     <h2><span class="material-icons">insert_drive_file</span> Documents</h2>
+                    <div class="container comicblue" data-ng-controller="heroDocumentsController">
+                      <div id="hero-documents" />                   
+                    </div>
                     
                 </div>
                 <div class="pzl-hero-emails half">
