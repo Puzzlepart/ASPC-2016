@@ -17,6 +17,10 @@ module Controllers {
             $siteService.getSiteProperties(_spPageContextInfo.webAbsoluteUrl).then((properties:any) => {
                var loc = properties.PzlLocation ? angular.fromJson(properties.PzlLocation) : null;
                this.$scope.map.center = loc.coords;
+            //    
+            //    jQuery.get("https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139").then(function(data) {
+            //        console.log(data);
+            //    });
             });
         }
     
