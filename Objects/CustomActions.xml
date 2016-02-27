@@ -1,7 +1,7 @@
 ﻿<pnp:CustomActions xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
    <pnp:SiteCustomActions>
      <pnp:CustomAction Name="dangerroom.main.css" Location="ScriptLink" Sequence="5" ScriptBlock="registerCssLink('~sitecollection/siteassets/pzl/css/dangerroom/main.css');" />
-     <pnp:CustomAction Name="jquery.min.js" Location="ScriptLink" Sequence="5" ScriptBlock="
+     <pnp:CustomAction Name="jquery.min.js" Location="ScriptLink" Sequence="6" ScriptBlock="
             SP.SOD.registerSod('jquery.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/jquery.min.js`);
             SP.SOD.registerSod('lodash.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/lodash.min.js`);
             SP.SOD.registerSod('angular.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/angular.min.js`);
@@ -20,7 +20,7 @@
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'jquery.min.js');
             SP.SOD.registerSodDep('adal-angular.min.js', 'adal.min.js');
             SP.SOD.registerSodDep('adal-angular.min.js', 'angular.min.js');" />
-      <pnp:CustomAction Name="Ribbon.Tasks.Share.Notify" Title="Ribbzon.Tasks.Share.Notify" Location="CommandUI.Ribbon" Sequence="5" RegistrationId="171" RegistrationType="List">
+      <pnp:CustomAction Name="Ribbon.Tasks.Share.Notify" Title="Ribbzon.Tasks.Share.Notify" Location="CommandUI.Ribbon" Sequence="7" RegistrationId="171" RegistrationType="List">
             <pnp:CommandUIExtension>
                 <CommandUIDefinitions>
                     <CommandUIDefinition 
