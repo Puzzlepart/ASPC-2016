@@ -43,5 +43,17 @@
                 </CommandUIHandlers>
             </pnp:CommandUIExtension>
         </pnp:CustomAction>
+    <pnp:CustomAction 
+     Name="NoMoreReplaceMentNagging_NastyHack"
+     Location="ScriptLink"
+     Sequence="666" 
+     ScriptBlock="
+     document.addEventListener('DOMContentLoaded', function(event) { 
+	   setInterval(function(){
+	       if(document.getElementById('ms-conflictDlgReplaceBtn')){
+        	document.getElementById('ms-conflictDlgReplaceBtn').click();
+        	}
+         }, 1000);
+    });"/>
     </pnp:SiteCustomActions>
 </pnp:CustomActions>

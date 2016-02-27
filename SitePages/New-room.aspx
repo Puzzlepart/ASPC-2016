@@ -19,6 +19,8 @@
                         <SharePoint:ProjectProperty Property="Title" runat="server" />
                     </asp:Content>
                     <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
+                          <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css" />
+                          <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css" />
                         <meta name="CollaborationServer" content="SharePoint Team Web Site" />
                         <SharePoint:styleblock runat="server">
                             .s4-nothome { display:none; }
@@ -27,6 +29,7 @@
                             var navBarHelpOverrideKey = "WSSEndUser";
                         </SharePoint:scriptblock>
                         <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/pzl.provisioning.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
+                        <SharePoint:ScriptLink Name="~sitecollection/siteassets/pzl/js/jquery.fabric.min.js" runat="server" Language="javascript"></SharePoint:ScriptLink>
                     </asp:Content>
                     <asp:Content ContentPlaceHolderID="PlaceHolderSearchArea" runat="server">
                         <SharePoint:DelegateControl runat="server" ControlId="SmallSearchInputBox" />
