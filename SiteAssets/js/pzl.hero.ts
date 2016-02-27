@@ -48,14 +48,14 @@ module Pzl.heroPage{
     }
     
         export function getHeroById(heroId) {
-        var $q = jQuery.Deferred();
-        var Url = `https://gateway.marvel.com/v1/public/characters?id=${heroId}&ts=${_config.timeStamp}&apikey=${_config.apiKey}&hash=${_config.hash}`;
-        jQuery.ajax({
-            type: "GET",
-            url: Url,
-            success: function(response){
-                console.log(response.data.results[0]);
-                $q.resolve(response.data.results[0]);
+    var $q = jQuery.Deferred();
+    var Url = `https://gateway.marvel.com/v1/public/characters?id=${heroId}&ts=${_config.timeStamp}&apikey=${_config.apiKey}&hash=${_config.hash}`;
+    jQuery.ajax({
+        type: "GET",
+        url: Url,
+        success: function(response){
+            console.log(response.data.results[0]);
+            $q.resolve(response.data.results[0]);
              }
         });
     return $q.promise();
@@ -63,6 +63,8 @@ module Pzl.heroPage{
     
     export function init(){
       var hero = GetUrlKeyValue("hero");
+      //fuck you guys because the query string is LOWERCASE OK?!! SHIIIIET
+      if(!hero) hero = GetUrlKeyValue("Hero");
       if(hero){
           if(hero.match(/[a-z]/i))
           getHeroByName(hero).then(function(heroData){populateHeroPage(heroData)});
@@ -77,13 +79,19 @@ module Pzl.heroPage{
         setHeroData('.hero-name',hero.Name);
         if(!hero.Description)jQuery('.hero-desc').hide();
         else setHeroData('.hero-desc',hero.Description);
-        setHeroImg('.hero-img',hero.Photo);        
+        setHeroImg('.hero-img',hero.Photo);   
     }
     
     function setHeroImg(id,url){jQuery(id).attr('src',url);}
     function setHeroData(id,val){jQuery(id).html(val);}
+    function listHeroData(id,val){
+for(var li in val)
+{
+    //WIP
+}
+    }
     
    jQuery(function() {
-       init();
+       init(); 
     });
 }

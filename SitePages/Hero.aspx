@@ -32,16 +32,23 @@
         <div class="container comicgrey pzl-hero-stats">
             <h2><span class="material-icons">assessment</span> Stats</h2>
             <div class="pzl-hero-stat">
+                <h3>Notable Events</h3>
+               <ul id="HeroEvents"></ul>  
             </div>
-            <div class="pzl-hero-stat">
+            <div class="hero-stat">
+                <h3>Appearances in Comics</h3>
+                <div id="hero-comics"></div>
             </div>
-            <div class="pzl-hero-stat">
+            <div class="hero-stat">
+             <h3>Appearances in Series</h3>
+             <span class="hero-series-span"></span>
+             <div clas="hero-series"></div>
             </div>
         </div>
         <div class="container comicblue pzl-hero-items">
                 <div class="pzl-hero-docs half">
                     <h2><span class="material-icons">insert_drive_file</span> Documents</h2>
-            
+                    
                 </div>
                 <div class="pzl-hero-emails half">
             <h2><span class="material-icons">mail</span> E-mails</h2>
@@ -80,7 +87,7 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div> 
     </div>
    
     <SharePoint:UIVersionedContent UIVersion="4" runat="server">
