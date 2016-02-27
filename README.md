@@ -30,14 +30,14 @@ CSS and JavaScript files are forbidden, and will be deleted after deployment. Yo
 
 ### Install the solution
 * After you've gotten the latest from Git, you only have to run build.ps1
-* Run build.ps1 which will do the following
-** Get bower packages
-** Run Pre-Build scripts
-** Build LESS files
-** Build TypeScript files
-** Provision the template
-** Run Post-Build scripts
-** Delete all JavaScript and CSS files
+* Run build.ps1 with the parameter Url to your site collection. The scirpt will do the following
+  * Get bower packages
+  * Run Pre-Build scripts
+  * Build LESS files
+  * Build TypeScript files
+  * Provision the template
+  * Run Post-Build scripts
+  * Delete all JavaScript and CSS files
 
 ### Maintainers
 * Gissur
