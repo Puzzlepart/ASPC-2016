@@ -121,7 +121,7 @@ module Pzl.Provisioning {
     export function Cancel() {
         document.location.href = _spPageContextInfo.webServerRelativeUrl;
     }
-    function RetrieveTemplates() {
+    export function RetrieveTemplates() {
         Utilities.getJSON(`${_spPageContextInfo.siteAbsoluteUrl}/_api/web/GetFolderByServerRelativeUrl('${_spPageContextInfo.siteServerRelativeUrl}/SiteTemplates')/Files?$select=Title,Name&$orderby=TimeLastModified desc`, (response) => {
             response.results.forEach(r => {
                 jQuery(templateSelector).append(`<option value='${r.Name.split(".")[0]}'>${r.Title}</option>`);
@@ -139,8 +139,10 @@ module Pzl.Provisioning {
         jQuery(titleSelector).keyup(function() { jQuery(urlSelector).val(jQuery(this).val().split(' ').join('-')); })
     }
     function IntializeForm() {
-        RetrieveTemplates();
-        AutofillUrl();
+        window.EnsureScriptFunc('jquery.min.js',null,function(){
+            RetrieveTemplates();
+            AutofillUrl();
+        }, 'jquery.min.js');        
     }
     _spBodyOnLoadFunctions.push(IntializeForm);
 }

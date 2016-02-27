@@ -57,7 +57,7 @@
         <div class="container comicgrey pzl-hero-oprooms">
             <h2><span class="material-icons">public</span> Operation Rooms</h2>
         </div>
-        <div class="container pzl-hero-media">
+        <div class="container comicblue pzl-hero-media">
                 <h2><span class="material-icons">burst_mode</span> Media</h2>
         </div>
         <div class="container comicblue">
