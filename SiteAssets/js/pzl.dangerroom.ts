@@ -18,7 +18,8 @@ EnsureScriptFunc('angular-google-maps.min.js', null, function() {
         .service("$siteService", Services.SiteService)
         .service("$marvelService", Services.Marvel)
         .controller("heroesController", Controllers.HeroesController)
-        .controller("opsController", Controllers.OperationsController);
+        .controller("opsController", Controllers.OperationsController)
+        .controller("heroDocumentsController",Controllers.HeroDocumentsController);
         
     angular.bootstrap(document.getElementById('homeApp'), ['app']);
 });

@@ -17,11 +17,13 @@
   ],
   "dependencies": {
     "angular": "latest",
+    "angular-route": "~1.4.4",
+    "angular-sanitize": "~1.4.4",
     "jquery": "latest",
     "moment": "latest",
     "js-sites-core": "dev",
     "angular-google-maps": "^2.3.2",
     "angular-google-chart": "0.1.0",
-    "adal-angular": "^1.0.8"
+    "microsoft.office.js": "*"
   }
 }

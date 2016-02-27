@@ -9,8 +9,8 @@
             SP.SOD.registerSod('angular-google-maps.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/angular-google-maps.min.js`);
             SP.SOD.registerSod('ng-google-chart.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/ng-google-chart.min.js`);
             SP.SOD.registerSod('maps.googleapis.com', `//maps.googleapis.com/maps/api/js?sensor=false`);
-            SP.SOD.registerSod('adal-angular.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/adal-angular.min.js`);
-            SP.SOD.registerSod('adal.min.js', `${_spPageContextInfo.siteAbsoluteUrl}/siteassets/pzl/js/adal.min.js`);
+            SP.SOD.registerSod('adal-angular.min.js', `//secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal-angular.min.js`);
+            SP.SOD.registerSod('adal.min.js', `//secure.aadcdn.microsoftonline-p.com/lib/1.0.0/js/adal.min.js`);
             SP.SOD.registerSodDep('angular-simple-logger.min.js', 'angular.min.js');
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'angular-simple-logger.min.js');
             SP.SOD.registerSodDep('angular-google-maps.min.js', 'angular.min.js');
