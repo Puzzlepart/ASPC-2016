@@ -7,7 +7,7 @@
             "Title": "Tasks",
             "Url": "Lists/Tasks",
             "TemplateType": 171,
-            "RemoveExistingViews": true,
+            "RemoveExistingViews": false,
             "Views": [
                 {
                     "Title": "My Grouped Tasks",
@@ -63,7 +63,7 @@
             "WebParts": []
         },
         {
-            "Dest": "SitePages/UploadImage.txt",
+            "Dest": "SitePages/UploadImage.aspx",
             "Overwrite": true,
             "Src": "{resources}/SitePages/UploadImage.txt",
             "Properties": {},

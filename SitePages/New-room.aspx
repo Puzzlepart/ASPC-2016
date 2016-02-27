@@ -43,9 +43,13 @@
                             .ms-WPBorder {
                                 border: none;
                             }
+                            .ms-propertysheet {
+                                margin-left: auto;
+                                margin-right: auto;
+                                padding: 50px;
+                            }
                         </style>
-                       <table class="ms-propertysheet" border="0" cellspacing="0" cellpadding="0">
-
+                        <table class="ms-propertysheet" border="0" cellspacing="0" cellpadding="0">
                             <tbody>
                                 <tr>
                                     <td class="ms-sectionline" height="1" colspan="2">

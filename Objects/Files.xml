@@ -33,7 +33,7 @@
     <pnp:File Folder="SiteAssets/pzl/css/fonts" Src="SiteAssets\css\fonts\AVENGEANCE.svg" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/css/fonts" Src="SiteAssets\css\fonts\AVENGEANCE.ttf" Overwrite="false" />    
     <pnp:File Folder="SiteAssets/pzl/css/fonts" Src="SiteAssets\css\fonts\AVENGEANCE.woff" Overwrite="false" />     
-    <pnp:File Folder="SiteTemplates" Overwrite="false" Src="SiteTemplates\operationroom.txt">
+    <pnp:File Folder="SiteTemplates" Overwrite="true" Src="SiteTemplates\operationroom.txt">
         <pnp:Properties>
             <pnp:Property Key="Title" Value="Operation Room" />
         </pnp:Properties>
@@ -50,6 +50,7 @@
             <pnp:Property Key="Title" Value="Hero Page" />
         </pnp:Properties>
     </pnp:File>    
-    <pnp:File Folder="SitePages" Overwrite="false" Src="SitePages\New-room.aspx" />   
-    <pnp:File Folder="Resources/SitePages" Overwrite="true" Src="Resources\SitePages\Home.txt" />
+    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\New-room.aspx" />   
+    <pnp:File Folder="Resources/SitePages" Overwrite="true" Src="Resources\SitePages\Home.txt" />   
+    <pnp:File Folder="Resources/SitePages" Overwrite="true" Src="Resources\SitePages\UploadImage.txt" />
 </pnp:Files>

@@ -1,18 +1,9 @@
 /// <reference path="..\..\typings\tsd.d.ts" />
 
-jQuery(document).ready(function ()  
-{   
-    // Check for FileReader API (HTML5) support.   
-    if (!window["FileReader"]) {   
-        alert(' FileReader API does not support Your Current Browser.');   
-    }   
-});   
-   
 // Upload the file.   
 // You can upload files up to 2 GB with the REST API.   
 function uploadFile()  
 {   
-   
     // Define the folder path for this example.   
     var serverRelativeUrlToFolder = '/sites/dev/images1';   
    
@@ -65,7 +56,6 @@ function uploadFile()
     // Add the file to the file collection in the Shared Documents folder.   
     function addFileToFolder(arrayBuffer)    
     {   
-   
         // Get the file name from the file input control on the page.   
         var parts = fileInput[0].value.split('\\');   
         var fileName = parts[parts.length - 1];   
@@ -94,7 +84,6 @@ function uploadFile()
     // Get the list item that corresponds to the file by calling the file's ListItemAllFields property.   
     function getListItem(fileListItemUri)    
     {   
-   
         // Construct the endpoint.   
         // The list item URI uses the host web, but the cross-domain call is sent to the   
         // app web and specifies the host web as the context site.   
@@ -131,7 +120,7 @@ function uploadFile()
         // Send the request and return the promise.   
         // This call does not return response content from the server.   
         return jQuery.ajax({   
-            url: listItemEndpoint,   
+            url: _spPageContextInfo.webAbsoluteUrl,   
             type: "POST",   
             data: body,   
             headers: {   
