@@ -50,7 +50,15 @@
             <pnp:Property Key="Title" Value="Hero Page" />
         </pnp:Properties>
     </pnp:File>    
-    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\New-room.aspx" />   
-    <pnp:File Folder="Resources/SitePages" Overwrite="true" Src="Resources\SitePages\Home.txt" />   
+    <pnp:File Folder="SitePages" Overwrite="true" Src="SitePages\New-room.aspx" >
+        <pnp:Properties>
+            <pnp:Property Key="Title" Value="New Operation" />
+        </pnp:Properties>  
+    </pnp:File>     
+    <pnp:File Folder="Resources/SitePages" Overwrite="true" Src="Resources\SitePages\Home.txt" >
+        <pnp:Properties>
+            <pnp:Property Key="Title" Value="Operation Home" />
+        </pnp:Properties>
+    </pnp:File>       
     <pnp:File Folder="Resources/SitePages" Overwrite="true" Src="Resources\SitePages\UploadImage.txt" />
 </pnp:Files>
