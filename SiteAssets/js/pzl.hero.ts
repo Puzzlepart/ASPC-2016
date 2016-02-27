@@ -83,6 +83,7 @@ module Pzl.heroPage {
         setHeroImg('.hero-img', hero.Photo);
     }
     function setDocuments(){
+        // smoke and mirrors .... 
         var docNames = ["TPS report.docx",
             "Hero appraisal report.docx",
             "Expense report 2016.xlsx",
@@ -100,7 +101,8 @@ module Pzl.heroPage {
         var html = [];
         docNames.forEach(function(item,index){ 
             if(Math.random()>0.7){
-                html.push("<div class='hero-document'>"+item+"</div>");
+                // dirty just got worse... inine styles
+                html.push("<div class='hero-document' style='color: white; font-size: 29px'>"+item+"</div>");
             }
         });    
         jQuery("#hero-documents").html(html.join(""));
